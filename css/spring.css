@@ -1,0 +1,438 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0;}
+.clearfix::after{content: ""; display: block; clear: both;}
+button{border: none; background:none;}
+ul{list-style-type:none;}
+li{text-decoration: none;}
+a{text-decoration: none; color: black;}
+body{margin: 0; height: 100vh;}
+
+.container{
+    height: 100vh;
+    font-size: 30px;
+    box-sizing: border-box;
+    border: 10px solid #ee869a;
+    background-color: #ee869a;
+    overflow: hidden;
+    position: relative;
+    top: -60px;
+}
+
+.circle{
+    width: 65%;
+    height: 100%;
+    position: relative;
+    left: 0;
+    background: #f9ebed;
+    border-radius: 0 700px 700px 0;
+    box-shadow: 13px 0px 8px 3px #f4b3c2;
+}
+
+
+/******************메뉴바******************/
+input#sidebar{
+    display: none;
+}
+
+header{
+    background-color: transparent;
+    position: relative;
+    z-index: 4;
+}
+
+header > div{
+    margin: 0 auto;
+    position: relative;
+    min-height: 60px;
+}
+
+header label.menu{
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    transform: translateY(-40%);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.fa-solid{
+    font-size: 40px;
+}
+
+
+/******************카드 내용******************/
+.inner{
+    width: 750px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.wrapper{
+    display: flex;
+    max-width: 750px;
+    width: 100%;
+    height: 450px;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper i.button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 36px;
+    width: 36px;
+    background-color: #343f4f;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.3s linear;
+    z-index: 100;
+    cursor: pointer;
+}
+
+i.button:active{
+    transform: scale(0.94) translateY(-50%);
+}
+
+i#prev{
+    left: 25px;
+}
+
+i#next{
+    right: 25px;
+}
+
+.image-container{
+    height: 350px;
+    max-width: 500px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-container .carousel{
+    display: flex;
+    height: 100%;
+    width: 1500px;
+    transition: all 0.4s ease;
+    justify-content: space-between;
+    -position: absolute;
+}
+
+.mini_box{
+    width: 500px;
+    height: 100%;
+}
+
+.mini_box h2{
+    font-size: 28px;
+    font-family: 'TAEBAEKfont';
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.text-box{
+    font-family: 'SUITE-Regular';
+    font-size: 16px;
+    padding-top: 30px;
+}
+
+.text{
+    padding-bottom: 12px;
+}
+
+
+/****************스킬박스************/
+
+.skill-box{
+    display: grid;
+    height: 100%;
+    place-items: center;
+}
+
+.skills-bar{
+    width: 500px;
+    height: 100%;
+}
+
+.skills-bar .bar{
+    margin: 10px 0;
+}
+
+.skills-bar .bar:first-child{
+    margin-top: 0px;
+}
+
+.skills-bar .bar .info{
+    margin-bottom: 5px;
+}
+
+.skills-bar .bar .info span{
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'SUITE-Regular';
+}
+
+.skills-bar .bar .progress-line{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05),
+    0px 1px rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+.bar .progress-line span{
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    background: #0085cb;
+    border-radius: 10px;
+}
+
+.progress-line.html span{
+    width: 95%;
+}
+
+.progress-line.css span{
+    width: 95%;
+}
+
+.progress-line.jquery span{
+    width: 75%;
+}
+
+.progress-line.photoshop span{
+    width: 85%;
+}
+
+.progress-line.illustrator span{
+    width: 85%;
+}
+
+.bar .progress-line span::before{
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 0;
+    right: 0;
+    top: -10px;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+}
+
+.bar .progress-line span::after{
+    position: absolute;
+    content: "80%";
+    right: 0;
+    top: -28px;
+    background: #000;
+    color: #fff;
+    font-family: 'SUITE-Regular';
+    font-size: 14px;
+    padding: 1px 8px;
+    border-radius: 3px;
+}
+
+.progress-line.html span::after{
+    content: "95%";
+}
+
+.progress-line.css span::after{
+    content: "95%";
+}
+
+.progress-line.jquery span::after{
+    content: "75%";
+}
+
+.progress-line.photoshop span::after{
+    content: "85%";
+}
+
+.progress-line.illustrator span::after{
+    content: "85%";
+}
+
+
+
+/******************프로필***************/
+.right_box{
+    width: 30%;
+    position: absolute;
+    right: 4%;
+    top: 50%;
+    transform: translate(0%, -45%);
+}
+
+.profile-box{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile{
+    width: 350px;
+    height: 400px;
+}
+
+.profile img{
+    width: 100%;
+}
+
+.profile-text{
+    font-family: 'SUITE-Regular';
+    color: #000;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.profile-text h2{
+    font-size: 20px;
+}
+
+.profile-text span{
+    font-size: 18px;
+    display: block;
+    font-weight: 600;
+    padding-top: 5px;
+}
+
+
+.profile-text span small{
+    font-weight: 400;
+}
+
+
+/********************하트*****************/
+.like-button .heart-icon{
+    height: 100px;
+    width: 100px;
+    background: url("../img/img.png");
+    background-position: left;
+    cursor: pointer;
+    position: absolute;
+}
+  
+.like-button .heart-icon.liked{
+    animation: like-anim 0.7s steps(28) forwards;
+}
+  
+@keyframes like-anim{
+    to {
+      background-position: right;
+    }
+}
+  
+.like-button .heart-bg{
+    background: rgba(255, 192, 200, 0);
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 100ms ease;
+}
+  
+.like-button .heart-bg:hover{
+    background: rgba(255, 192, 200, 0.7);
+}
+  
+.like-button{
+    display: flex;
+    align-items: center;
+}
+  
+.like-button .likes-amount{
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    color: #0085cb;
+    font-weight: 900;
+    margin-left: 6px;
+}
+
+
+/****************사이드바**************/
+.sidebar_content{
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background: #999;
+    transition: all .35s;
+    z-index: 5;
+}
+
+.sidebar_content > ul{
+    margin: 20px;
+    position: relative;
+    top: 80px;
+}
+
+.sidebar_content > ul > li{
+    border-bottom: 1px solid #ccc;
+    list-style: none;
+}
+
+.sidebar_content > ul > li > a{
+    display: inline-block;
+    width: auto;
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+}
+
+.sidebar_content label.menu{
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    transform: translateY(-40%);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.sidebar_content label[for*='sidebar'] {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    transition: all .35s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
+
+/*********인풋********/
+input#sidebar:checked ~ header label{background-position: -24px 0;}
+input#sidebar:checked ~ .sidebar_content{right: 0;}
+input#sidebar:checked ~ .background{opacity:1; visibility: visible;}

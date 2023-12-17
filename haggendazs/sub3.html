@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>sub3</title>
+<link rel="stylesheet" href="css/sub3.css"></link>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<script src="./js/jquery-3.7.0.min.js"></script>
+<script src="js/haggen_sub3.js"></script>
+</head>
+<body>
+    <header class="nav-down">
+        <div class="wrapper">
+            <h1 class="logo"><img src="img/logo1.png"></h1>
+            <div class="nav">	
+                <ul class="menu1">
+                    <li><a href="index.html">MAIN</a></li>
+                    <li><a href="sub1.html">STORY</a></li>
+                </ul>
+                <ul class="menu2">
+                    <li><a href="sub2.html">PRODUCT</a></li>
+                    <li><a href="sub3.html">SERVICE</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section class="sect01">
+        <article class="at-box1">
+            <div class="main">
+                <div class="main-text animate__bounceIn">
+                    <h2>순수한 맛을 위한 특별한 재료</h2>
+                    <p>변하지 않는 퀄리티</p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section class="sect02">
+        <div class="at-box2">
+            <h2>우리들만의 재료</h2>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/haggen-hd.png">
+                </div>
+
+                <div class="popup" id="popup-1">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <div class="close-btn" onclick="togglePopup1()">&times;</div>
+                        <p>설립 이후, 하겐다즈 브랜드는 항상 간단한 맛과 가능한 최상의 재료를 가지고 놀라운 아이스크림 제품을 만들기 위해 품질을 높이는 것이 집중했습니다.</p>
+                    </div>
+                </div>
+
+                <div class="popup" id="popup-2">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <div class="close-btn" onclick="togglePopup2()">&times;</div>
+                        <p>하겐다즈 아이크스림의 한 스푼은 모두 네 가지의 간단한 재료로 시작됩니다. 크림, 우유, 계란, 그리고 설탕. 우리는 그 맛을 살리기 위해 신중하게 선택된 재료를 첨가합니다. 여러분이 간단한 한입으로 시작할 때, 놀라운 맛을 경험할 수 있도록 만듭니다.</p>
+                    </div>
+                </div>
+
+                <div class="popup" id="popup-3">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <div class="close-btn" onclick="togglePopup3()">&times;</div>
+                        <p>합성색소 및 합성향료를 사용하지 않고 좋은 원료의 순수함으로 깊고 부드러운 품격있는 맛을 선사합니다.</p>
+                    </div>
+                </div>
+                <div class="btn-box">    
+                    <button onclick="togglePopup1()" class="btn one outline">품질</button>
+                    <button onclick="togglePopup2()" class="btn two outline">재료</button>
+                    <button onclick="togglePopup3()" class="btn three outline">하겐다즈</button>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+
+    <section class="sect03">
+        <article class="at-box3">
+            <div class="slidewrap">
+                <ul class="slidelist">
+                    <li>
+                        <a>
+                            <img src="img/vanillabin-hd.png">
+                            <div class="box-text">
+                                <h2>Vanilla</h2>
+                                <p>품질 좋은 다섯가지 원료만을 사용하여 만든 하겐다즈 바닐라 아이스크림.<br>깊고 부드러운 맛의 정수를 보여주는 순수한 맛을 경험해보세요.</p>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a>
+                            <img src="img/strawberry.png">
+                            <div class="box-text">
+                                <h2>Strawberry</h2>
+                                <p>가장 완벽한 맛의 딸기 아이스크림을 만들기 위하여 6년간 알맞은 딸기를 찾았습니다.<br>기본 원료부터 다르니까, 오랜 기간동안 하겐다즈의 시그니처 아이스크림일 수 밖에 없죠.</p>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a>
+                            <img src="img/choco1.jpg">
+                            <div class="box-text">
+                                <h2>Chocolate</h2>
+                                <p>초콜릿에 관해서라면 하겐다즈는 최고만을 추구합니다.<br>그게 하겐다즈를 그 어떤 브랜드와도 비교할 수 없는 퀄리티의 아이스크림으로 만들어주니깐요.</p>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a>
+                            <img src="img/caramel-hd.png">
+                            <div class="box-text">
+                                <h2>Caramel</h2>
+                                <p>입안 가득 풍부함을 보여줄 수 있는 가장 알맞은 클래식한 카라멜 소스를 전문가와 함께 찾아냈습니다.<br>중독적인 맛의 카라멜, 한 번 잡으면 손에서 놓을 수가 없는 맛이죠.</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                    <button class="arrow-left"></button>
+                    <button class="arrow-right"></button>
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <div class="inner">
+            <div class="ft-img">
+                <div class="ft-logo"><img src="img/ft-logo.png"></div>
+            </div>
+    
+            <div class="ft-text">
+                <p>© 2023 General Mills. All Rights Reserved.</p>
+                <ul>
+                    <li>문의처</li>
+                    <li>이용 약관</li>
+                    <li>개인정보 처리방침</li>
+                    <li>사이트 이용약관</li>
+                    <li>쿠키 설정 사용자 지정</li>
+                    <li>데이터 프라이버시 요청</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

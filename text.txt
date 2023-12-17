@@ -1,0 +1,138 @@
+장지원
+
+2000.03.17
+
+Phone. 010-2796-1886
+E-Mail rimp3719@gmail.com
+
+
+
+우측 상자 3개
+
+1. 뭐뭐 졸업했는지(고등학교, 대학교, 전공과목 부전공 등등)
+
+
+SBS아카데미컴퓨터아트학원
+10개월 수료
+
+2023.01.30.
+MOS PowerPoint2016 자격증 취득
+
+2023.02
+동양대학교 졸업
+게임아트 전공
+시각디자인 부전공
+
+2019.02
+소래고등학교 졸업
+
+
+
+
+
+
+2. 참가대회 및 상탄거(contest)
+2021.10.01
+PlayX4 : 창업교육센터 인디오락실 전시참가
+
+2021.10.08. ~ 2021.10.08
+제 10회 G-Star 대학생 참여경진대회 공모전 참가
+
+2022.04.13. ~ 2022.04.14
+2022융합콘텐츠 창업지원 경기콘텐츠진흥원 참가
+
+2022.04.15. ~ 2022.04.18
+YES 창업아이디어 경진대회 공모전 플레이엑스포 참여
+
+2023.09.01.
+2023 MWU 유니티 스퀘어 참가
+
+
+
+
+3. 내가 뭐 사용할수 있는지 그래프 보여주기(어빌리티)
+Adobe Photoshop 2022
+
+일러스트레이터
+
+VS code
+
+EditPlus
+
+github
+
+Figma
+
+카페24
+
+JQuery
+
+
+
+-------code
+<div class="mini_box">
+                        <h2>Education</h2>
+                        <div class="text_box">
+                            <div class="text"><span>SBS아카데미컴퓨터아트학원</span><br>10개월 수료</div>
+                            <div class="text"><span>2023.01.30</span><br>MOS PowerPoint2016 자격증 취득</div>
+                            <div class="text"><span>2023.02</span><br>동양대학교 졸업<br>전공 게임아트 / 부전공 시각디자인</div>
+                            <div class="text"><span>2019.02</span><br>소래고등학교 졸업</div>
+                        </div>
+                    </div>
+                    <div class="mini_box">
+                        <h2>Contest</h2>
+                        <div class="text_box">
+                            <div class="text"><span>2021.10.01</span><br>PlayX4 : 창업교육센터 전시참가</div>
+                            <div class="text"><span>2021.10.08. ~ 2021.10.08</span><br>제 10회 G-Star 대학생 공모전 참가</div>
+                            <div class="text"><span>2022.04.13. ~ 2022.04.14</span><br>경기콘텐츠진흥원 참가</div>
+                            <div class="text"><span>2022.04.15. ~ 2022.04.18</span><br>YES 창업아이디어 경진대회 참가</div>
+                            <div class="text"><span>2023.09.01</span><br>MWU 유니티 스퀘어 참가</div>
+                        </div>
+                    </div>
+                    <div class="mini_box">
+                        <h2>Ability</h2>
+                        <div class="text_box">
+                            <div class="text"></div>
+                        </div>
+                    </div>
+
+
+
+<div class="mini_box">
+<h2>Education</h2>
+<div class="text-box">
+<div class="text"></div>
+</div>
+</div>
+
+
+
+//////////////////////////////////////////////
+구겐하임 2023.09.21 ~ 2023.09.29
+
+박물관에서 관람하는 것처럼 꾸며보았습니다.
+
+사용된 효과들
+slide, scroll animation fade up/down
+
+
+
+하겐다즈 2023.10.01 ~ 2023.10.10
+
+하겐다즈 아이스크림의 달콤하고 부드러운 색감을 살려내 새롭게 디자인하여 만들어보았습니다.
+
+사용된 효과들
+click event, bounce animation, slide
+
+
+
+입생로랑 2023.12.10 ~
+
+준비중...
+
+
+
+
+
+
+

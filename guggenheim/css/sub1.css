@@ -1,0 +1,603 @@
+@charset "utf-8";
+
+*{
+	margin:0;
+	padding:0;
+}
+
+.clearfix::after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+button{
+	border:none;
+	background:none;
+}
+
+ul{
+	list-style-type:none;
+}
+
+li{
+	text-decoration:none;
+}
+
+a{
+	text-decoration:none;
+	display:block;
+}
+
+body{
+	font-family: 'Noto Sans KR', sans-serif;
+	overflow-x:hidden;
+	background-color:#fff;
+}
+
+header{
+	width:100%;
+	height:100px;
+	background-color:black;
+	z-index:99;
+	position: relative;
+}
+
+.wrapper{
+	width: 1400px;
+	margin: auto;
+}
+
+.nav{
+	float: right;
+	list-style: none;
+	margin-top: 30px;
+}
+
+.nav li{
+	display: inline-block;
+	padding: 5px 18px;
+}
+
+.nav li a{
+	color: #ffffff;
+	font-size: 18px;
+	position: relative;
+	letter-spacing: 0.5px;
+}
+
+.nav li a::after{
+	content: "";
+	position: absolute;
+	background-color: #fff;
+	height: 3px;
+	width: 0px;
+	left: 0px;
+	bottom: -10px;
+	transition: 0.3s;
+}
+
+.nav li a:hover::after{
+	width: 100%;
+}
+
+.nav-box{
+	width:1400px;
+	height:100px;
+	left:50%;
+	margin-left:-700px;
+	z-index:99;
+	position:absolute;
+}
+
+h1.logo{
+	/*border:1px solid red;*/
+	width:160px;
+	height:100px;
+	position:relative;
+	float:left;
+}
+
+h1.logo img{
+	width:100%;
+	position: absolute;
+    top: 50%;
+    margin-top: -10px;
+}
+
+
+
+
+/*섹션1*/
+.sect01{
+	width:100%;
+	height:800px;
+	background-color:pink;
+	position:relative;
+	background:url("../img/plan.jpg") no-repeat 0px -100px;
+	background-position:0px 0px;
+	background-size:100%;
+}
+
+.main-text{
+	width:100%;
+	height:800px;
+	background-color:rgba(0,0,0,0.4);
+	position:absolute;
+	box-sizing:border-box;
+	padding:80px 250px;
+}
+
+.sect01 .inner{
+	width:1500px;
+	height:600px;
+	margin:auto;
+	position:relative;
+	overflow:hidden;
+}
+
+.main-text h2{
+	width:800px;
+	height:120px;
+	font-size:100px;
+	margin-bottom:-8px;
+	color:#fff;
+}
+
+.main-text p.text1{
+	font-size:26px;
+	font-weight:500;
+	margin-top:30px;
+	color:#fff;
+	animation-duration: 2s;
+}
+
+.main-text p.text2{
+	font-size:18px;
+	font-weight:400;
+	color:#fff;
+	animation-duration: 2.5s;
+}
+
+.sect02{
+	width:100%;
+	height:900px;
+	background-color:#f9f9f9;
+}
+
+.sect02 .inner{
+	width:1400px;
+	height:900px;
+	margin:auto;
+	position:relative;
+	overflow:hidden;
+}
+
+.visit-textbox{
+	float:left;
+	width:600px;
+	height:752px;
+	box-sizing:border-box;
+	padding:120px 0px;
+	position:relative;
+	overflow:hidden;
+}
+
+.title-graybox{
+	width:530px;
+	height:80px;
+	border-bottom:1px solid #b9b9b9;
+	margin-bottom:60px;
+	overflow:hidden;
+}
+
+.visit-textbox h2{
+	font-size:50px;
+	width:530px;
+	height:80px;
+	display:none;
+}
+
+.textbox{
+	width:600px;
+	height:200px;
+	margin-top:80px;
+	box-sizing:border-box;
+	padding:18px 0px;
+	overflow:hidden;
+	animation-duration:1s;
+	display:none;
+}
+
+p.big{
+	width:580px;
+	height:60px;
+	overflow:hidden;
+	font-size:36px;
+	font-weight:600;
+	margin-bottom:8px;
+}
+
+p.middle{
+	width:580px;
+	height:60px;
+	overflow:hidden;
+	font-size:18px;
+	font-weight:300;
+	width:500px;
+	height:60px;
+	margin-bottom:22px;
+}
+
+p.small{
+	width:580px;
+	height:60px;
+	overflow:hidden;
+	font-size:16px;
+	font-weight:500;
+}
+
+.visit-box{
+	width:800px;
+	height:800px;
+	float:right;
+	box-sizing:border-box;
+	padding:130px 0px;
+	overflow:hidden
+}
+
+
+
+/*제이쿼리로 마우스 올렸을때 다른 글씨가 보이면서 사진이 바뀌는 효과*/
+/*블러처리*/
+.go{
+	width:1600px;
+	height:180px;
+	margin-bottom:40px;
+	position:relative;
+}
+
+.subway{
+	width:800px;
+	height:180px;
+	background:url("../img/long1.png") no-repeat;
+	float:left;
+}
+
+.out:nth-of-type(2) .subway{
+	background:url("../img/long2.png") no-repeat;
+}
+
+.out:nth-of-type(3) .subway{
+	background:url("../img/long3.png") no-repeat;
+}
+
+
+p.how{
+	width:800px;
+	height:180px;
+	font-size:18px;
+	font-weight:500;
+	position:absolute;
+	color:#fff;
+	padding-left:30px;
+	padding-top:75px;
+	box-sizing:border-box;
+	background-color:rgba(0,0,0,0.7);
+	-display:none;
+}
+
+p.title{
+	width:800px;
+	height:180px;
+	font-size:30px;
+	font-weight:600;
+	position:absolute;
+	color:#fff;
+	box-sizing:border-box;
+	padding-left:30px;
+	padding-top:70px;
+	background-color:rgba(0,0,0,0.4);
+}
+
+.subway2{
+	width:800px;
+	height:180px;
+	background:url("../img/long_blur1.png") no-repeat;
+	float:right;
+	position:relative;
+}
+
+.out:nth-of-type(2) .subway2{
+	background:url("../img/long_blur2.png") no-repeat;
+}
+
+.out:nth-of-type(3) .subway2{
+	background:url("../img/long_blur3.png") no-repeat;
+}
+
+
+/*섹션3*/
+.sect03{
+	width:100%;
+	height:800px;
+	background-color:#fff;
+}
+
+.sect03 .inner{
+	width:1200px;
+	height:650px;
+	margin:auto;
+	margin-top:200px;
+	overflow:hidden;
+	box-sizing:border-box;
+	position:relative;
+}
+
+.big-box{
+	width:4200px;
+	height:650px;
+	margin:auto;
+	position:relative;
+}
+
+.sect3-box{
+	width:1200px;
+	height:650px;
+	margin:auto;
+	margin-right:130px;
+	float:left;
+	position:relative;
+}
+
+.sect3-box:last-child{
+	margin-right:0px;
+}
+
+.artbox{
+	float:left;
+	width:460px;
+	height:600px;
+	background:url("../img/during.jpg") no-repeat -500px 0px;
+	background-size:250%;
+	display:none;
+}
+
+.sect3-box:nth-of-type(2) .artbox{
+	float:left;
+	width:460px;
+	height:600px;
+	background:url("../img/cafe_rebay.png") no-repeat;
+}
+
+.sect3-box:nth-of-type(2) .art-textbox p{
+	width:320px;
+	height:300px;
+	box-sizing:border-box;
+	float:right;
+	margin-top:100px;
+}
+
+.sect3-box:nth-of-type(3) .artbox{
+	float:left;
+	width:460px;
+	height:600px;
+	background:url("../img/tour_girl.png") no-repeat;
+}
+
+.sect3-box:nth-of-type(3) .art-textbox p{
+	width:320px;
+	height:67px;
+	box-sizing:border-box;
+	float:right;
+	padding-bottom:40px;
+	margin-top:30px;
+}
+
+.sect3-box:nth-of-type(3) .art-textbox span{
+	font-size:18px;
+	font-weight:500;
+	box-sizing:border-box;
+	float:right;
+	width:210px;
+}
+
+.art-textbox{
+	float:right;
+	width:520px;
+	height:600px;
+	text-align:right;
+	position:relative;
+	box-sizing:border-box;
+	padding-top:28px;
+	display:none;
+}
+
+.two-button{
+	width:53px;
+	height:25px;
+	z-index:102;
+	float:right;
+	top:0px;
+	right:0px;
+	position:absolute;
+}
+
+button.prev{
+	width:22px;
+	height:22px;
+	background:url("../img/left_arrows.png") no-repeat;
+	background-size:50%;
+	position:relative;
+}
+
+button.prev:hover{
+	cursor:pointer;
+}
+
+button.next:hover{
+	cursor:pointer;
+}
+
+button.next{
+	width:22px;
+	height:22px;
+	background:url("../img/right_arrows.png") no-repeat;
+	background-size:50%;
+	position:relative;
+	right:-8px;
+	margin-left:5px;
+}
+
+.art-textbox > h2{
+	font-size:60px;
+	margin-bottom:16px;
+}
+
+.art-textbox > h3{
+	font-size:26px;
+	margin-bottom:160px;
+}
+
+.art-textbox > p{
+	font-size:15px;
+	line-height:24px;
+	font-weight:300;
+	height:200px;	
+	margin-top:200px;
+}
+
+.art-textbox > span{
+	font-size:18px;
+	font-weight:500;
+	
+}
+
+
+
+
+
+/*footer*/
+
+footer{
+	width:100%;
+	height:500px;
+	background-color:#1d1d1d;
+}
+
+.last-box{
+	width:1400px;
+	height:300px;
+	margin:auto;
+	position:relative;
+	top:100px;
+}
+
+.left-box{
+	float:left;
+	width:680px;
+	height:200px;
+}
+
+.left-box > h2{
+	color:white;
+	font-size:32px;
+	font-weight:800;
+	line-height:38px;
+	margin-bottom:20px;
+	font-family: 'Roboto Slab', serif;
+	letter-spacing:1px;
+}
+
+.left-box > p{
+	color:#939393;
+	font-size:14px;
+	font-weight:300;
+}
+
+.right-box{
+	float:right;
+	width:400px;
+	height:200px;
+}
+
+.right-box > p{
+	color:#939393;
+	font-size:15px;
+	font-weight:400;
+	margin-top:20px;
+	margin-bottom:8px;
+}
+
+.right-box > address{
+	color:#b3b3b3;
+	font-size:14px;
+	font-weight:400;
+}
+
+.subcribe{
+	width:400px;
+	height:60px;
+	border:1px solid #939393;
+	position:relative;
+}
+
+.subcribe > a{
+	width:400px;
+	height:60px;
+	color:white;
+	font-size:18px;
+	font-weight:300;
+	position:absolute;
+	padding:15px 40px;
+}
+
+.plus{
+	width:20px;
+	height:20px;
+	position:absolute;
+	right:40px;
+	top:20px;
+}
+
+.plus img{
+	width:100%;
+}
+
+@media (max-width:1499px){
+	header{
+		width: 100%;
+		margin: auto;
+		background: black;
+	}
+
+	.nav-box{
+		width: 1000px;
+		margin: auto;
+	}
+
+	.more{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+	}
+
+	.title-box h2{
+		font-size: 100px;
+		line-height: 128px;
+		width: 718px;
+	}
+
+	.title-box p{
+		font-size: 22px;
+	}
+
+	.btn{
+		width: 493px;
+	}
+
+	.button.next{
+		right: 0px;
+	}
+
+}

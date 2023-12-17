@@ -1,0 +1,773 @@
+@charset "utf-8";
+
+*{
+	margin:0;
+	padding:0;
+}
+
+.clearfix::after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+button{
+	border:none;
+	background:none;
+	font-size: 0;
+	line-height: 0;
+}
+
+ul{
+	list-style-type:none;
+}
+
+li{
+	text-decoration:none;
+}
+
+a{
+	text-decoration:none;
+	display:block;
+	color: black;
+}
+
+body{
+	font-family: 'Noto Sans KR', sans-serif;
+	overflow-x:hidden;
+	background-color:#fff;
+}
+
+header{
+	width:100%;
+	height:100px;
+	z-index:99;
+	position:relative;
+}
+
+.wrapper{
+	width: 1400px;
+	margin: auto;
+}
+
+.nav{
+	float: right;
+	list-style: none;
+	margin-top: 30px;
+}
+
+.nav li{
+	display: inline-block;
+	padding: 5px 18px;
+}
+
+.nav li a{
+	color: #ffffff;
+	font-size: 18px;
+	position: relative;
+	letter-spacing: 0.5px;
+}
+
+.nav li a::after{
+	content: "";
+	position: absolute;
+	background-color: #fff;
+	height: 3px;
+	width: 0px;
+	left: 0px;
+	bottom: -10px;
+	transition: 0.3s;
+}
+
+.nav li a:hover::after{
+	width: 100%;
+}
+
+h1.logo{
+	/*border:1px solid red;*/
+	width:160px;
+	height:100px;
+	position:relative;
+	float:left;
+}
+
+h1.logo img{
+	width:100%;
+	position: absolute;
+    top: 50%;
+    margin-top: -10px;
+}
+
+section.sect01{
+	width:100%;
+	background:url("../img/main.png") no-repeat 0 -100px;
+	position:relative;
+	margin-top:-100px;
+}
+
+#wrap{
+	width: 100%;
+	height: 100vh;
+	background-color:rgba(0,0,0,0.4);
+}
+
+.txt-inner{
+	width: 1400px;
+	margin: auto;
+	padding-top: 145px;
+}
+
+.title-box{
+	width:800px;
+	height: 500px;
+	box-sizing:border-box;
+}
+
+.title-box h2{
+	color:white;
+	width:818px;
+	height:300px;
+	font-size:120px;
+	line-height:138px;
+}
+
+.fade-left{
+	width:1100px;
+	height:310px;
+	overflow:hidden;
+}
+
+h2.animate__fadeInLeft{
+	display:inline-block;
+	animation: fadeInLeft; 
+	animation-duration:1.5s;
+}
+
+.fade-left2{
+	width:1100px;
+	height:100px;
+	padding-bottom: 150px;
+	overflow:hidden;
+}
+
+p.animate__fadeInLeft{
+	display:inline-block;
+	animation: fadeInLeft; 
+	animation-duration:3s;
+}
+
+.title-box p{
+	width:1100px;
+	height:100px;
+	color:white;
+	font-size:30px;
+	font-weight:600;
+}
+
+#wrap .inner{
+	width:100%;
+	height:250px;
+	border-top:1px solid white;
+	position:absolute;
+	bottom:0px;
+}
+
+.btn{
+	width: 33.3333333%;
+	height:250px;
+	border-right: 1px solid white;
+	font-family: 'Roboto Slab', serif;
+	font-size:40px;
+	font-weight: 400;
+	background-color: transparent;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	position: relative;
+	transition: all;
+	overflow: hidden;
+	cursor: pointer;
+	margin-right: -3px;
+}
+
+.btn a{
+	padding: 125px 0px;
+	color: white;
+	position: relative;
+}
+
+.btn:focus{
+	outline: none;
+}
+
+.btn::after{
+	content: "Plan your visit";
+	background: rgba(255,255,255,0.3);
+	position: absolute;
+	text-align: center;
+	font-size: 30px;
+	width: 100%;
+	height: 100%;
+	top: 100%;
+	padding: 125px 0px;
+	box-sizing: border-box;
+	left: 0px;
+	transition: all 0.4s;
+	color: #000;
+	z-index: 3;
+}
+
+.btn:nth-child(2)::after{
+	content: "Show Collection";
+}
+
+.btn:nth-child(3)::after{
+	content: "Let us show you around";
+}
+
+.btn:hover::after{
+	transform: translateY(-100%);
+}
+
+.btn::before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background:url("../img/hours1.png") no-repeat;
+	top: 100%;
+	left: 0;
+	transition: all 0.4s;
+	z-index: 2;
+}
+
+.btn:nth-child(2)::before{
+	background: url("../img/ticket2.png") no-repeat;
+}
+
+.btn:nth-child(3)::before{
+	background: url("../img/things3.png")no-repeat;
+}
+
+.btn:hover::before{
+	transform: translateY(-100%);
+}
+
+.btn:hover a{
+	opacity: 0%;
+	transition: 0.4s;
+	z-index: 4;
+}
+
+
+/*두번째 슬라이드*/
+.sect02{
+	width:100%;
+	background-color:#fff;
+	position:relative;
+}
+
+button.prev{
+	width:100px;
+	height:100px;
+	float:left;
+	position:absolute;
+	background:url("../img/left_arrows.png") no-repeat;
+	background-size:50%;
+	top:500px;
+	left:120px;
+	z-index:102;
+}
+
+button.prev:hover{
+	cursor:pointer;
+}
+
+button.next{
+	width:100px;
+	height:100px;
+	float:right;
+	position:absolute;
+	background:url("../img/right_arrows.png") no-repeat;
+	background-size:50%;
+	top:500px;
+	right:65px;
+	z-index:102;
+}
+
+button.next:hover{
+	cursor:pointer;
+}
+
+.big-box{
+	width:1400px;
+	height: 990px;
+	margin:auto;
+	padding: 150px 0px;
+	overflow:hidden;
+	position:relative;
+	z-index:1000;
+	box-sizing: border-box;
+}
+
+.righttext-box{
+	width:680px;
+	height:140px;
+	position:absolute;
+	top:68px;
+	right:0px;
+	z-index:100;
+	display:inline-block;
+}
+
+.right-ex{
+	box-sizing:border-box;
+	font-size:120px;
+	font-weight:700;
+	position:absolute;
+	font-family: 'Roboto Slab', serif;
+	z-index:100;
+	display:none;
+}
+
+.gallery{
+	width:4005px;
+	height:700px;
+	margin:auto;
+	z-index:99;
+	display:none;
+}
+
+.gallery-img{
+	width:1200px;
+	height:700px;
+	position:relative;
+	float:left;
+	left:60px;
+	overflow:hidden;
+	margin-right:200px;
+}
+
+.gallery-img:last-child{
+	margin-right:0px;
+}
+
+.gallery-img img{
+	width:102%;
+	position:absolute;
+	top:-90px;
+	z-index:99;
+}
+
+.gallery-text{
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	color:white;
+	text-align:right;
+	width:720px;
+	height:160px;
+	padding-right:50px;
+	z-index:102;
+}
+
+p.date{
+	font-size:20px;
+	font-weight:400;
+	margin-bottom:4px;
+}
+
+p.title{
+	font-size:30px;
+	font-weight:600;
+	margin-bottom:2px;
+}
+
+p.explain{
+	font-size:14px;
+	font-weight:300;
+}
+
+
+
+/*세번째 슬라이드*/
+/*전체사진잡기*/
+.sect03{
+	width: 100%;
+	background:url("../img/big_pic.jpg") no-repeat 0px -1500px;
+	background-size:cover;
+	background-position: center;
+	box-sizing:border-box;
+	overflow: hidden;
+}
+
+
+.text-box{
+	width:100%;
+	margin:auto;
+	position:relative;
+	text-align:center;
+	padding:250px 0px;
+	color:white;
+	background-color:rgba(0,0,0,0.2);
+	box-sizing:border-box;
+}
+
+.text-box h2{
+	width:900px;
+	height:100px;
+	margin:auto;
+	margin-top:0px;
+	margin-bottom:40px;
+	font-size:70px;
+	font-family: 'Roboto Slab', serif;
+	animation-duration:2s;
+	display:block;
+	
+}
+
+.text-box p{
+	width:580px;
+	height:100px;
+	font-size:20px;
+	margin:auto;
+	animation-duration:2s;
+	display:block;
+}
+
+.text-box a{
+	color:#fff;
+	font-size:16px;
+	margin-top:10px;
+	margin:auto;
+	animation-duration:2s;
+	width:280px;
+	height:28px;
+	border-bottom:1px solid #fff;
+	display:block;
+}
+
+
+
+.sect04{
+	width:100%;
+	background-color:#fafafa;
+}
+
+.sect04 .inner{
+	width:1400px;
+	padding: 455px 0px;
+	margin:auto;
+	position:relative;
+	overflow:hidden;
+}
+
+.sect-text{
+	width:600px;
+	height:600px;
+	position:absolute;
+	left:0px;
+	top:80px;
+	display:none;
+}
+
+.sect-text h2{
+	width:600px;
+	height:300px;
+	font-size:80px;
+	font-weight:600;
+	font-family: 'Roboto Slab', serif;
+	line-height:88px;
+	/*padding-top:80px;
+	margin-left:120px;*/
+}
+
+.btn2{
+	height: 60px;
+	border: 2px solid #000000;
+	color: #000000;
+	font-size:20px;
+	font-weight: 600;
+	background-color: transparent;
+	letter-spacing: 1px;
+	position: relative;
+	transition: all;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.btn2 a{
+	padding: 13px 22px;
+	margin-right: -3px;
+}
+
+.btn2:focus{
+	outline: none;
+}
+
+
+.btn2::before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 28px 0px;
+	background-color: #000000;
+	top: 0px;
+	left: -100%;
+	transition: all 0.4s;
+	z-index: -1;
+}
+
+.btn2:hover::before{
+	transform: translateX(100%);
+	color: #fff;
+}
+
+.btn2:hover a{
+	color: #ffffff;
+}
+
+
+.project{
+	width:780px;
+	height:600px;
+	position:absolute;
+	bottom:30px;
+	right:0px;
+	display:none;
+}
+
+.project-box{
+	width:360px;
+	height:600px;
+	float:left;
+	margin-right:60px;
+}
+
+.project-box:last-child{
+	margin-right:0px;
+}
+
+.project-img{
+	width:360px;
+	height:440px;
+	position:absolute;
+	top:0px;
+	background-color:yellow;
+	overflow:hidden;
+}
+
+
+.project-img img{
+	width:220%;
+	position:absolute;
+	right:100px;
+}
+
+.project-img img:last-child{
+	right:-90px;
+}
+
+.project-box > p{
+	width:360px;
+	height:140px;
+	position:absolute;
+	bottom:0px;
+	font-size:22px;
+	font-weight:400;
+	font-family: 'Roboto Slab', serif;
+	line-height:28px;
+}
+
+
+
+
+/*footer*/
+
+
+footer{
+	width:100%;
+	background-color:#1d1d1d;
+}
+
+.last-box{
+	width:1400px;
+	height: 195px;
+	margin:auto;
+	position:relative;
+	top:0px;
+	padding: 128px 20px;
+}
+
+.left-box{
+	float:left;
+	width:680px;
+	height:200px;
+}
+
+.left-box > h2{
+	color:white;
+	font-size:32px;
+	font-weight:800;
+	line-height:38px;
+	margin-bottom:20px;
+	font-family: 'Roboto Slab', serif;
+	letter-spacing:1px;
+}
+
+.left-box > p{
+	color:#939393;
+	font-size:14px;
+	font-weight:300;
+}
+
+.right-box{
+	float:right;
+	width:400px;
+	height:200px;
+}
+
+.right-box > p{
+	color:#939393;
+	font-size:15px;
+	font-weight:400;
+	margin-top:20px;
+	margin-bottom:8px;
+}
+
+.right-box > address{
+	color:#b3b3b3;
+	font-size:14px;
+	font-weight:400;
+}
+
+.subcribe{
+	width:400px;
+	height:60px;
+	border:1px solid #939393;
+	position:relative;
+}
+
+.subcribe > a{
+	width:400px;
+	height:60px;
+	color:white;
+	font-size:18px;
+	font-weight:300;
+	position:absolute;
+	padding:15px 40px;
+}
+
+.plus{
+	width:20px;
+	height:20px;
+	position:absolute;
+	right:40px;
+	top:20px;
+}
+
+.plus img{
+	width:100%;
+}
+
+@media (max-width:1499px){
+	header{
+		width: 1000px;
+		margin: auto;
+	}
+
+	.more{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+	}
+
+	.title-box h2{
+		font-size: 100px;
+		line-height: 128px;
+		width: 718px;
+	}
+
+	.title-box p{
+		font-size: 22px;
+	}
+
+	.btn{
+		width: 493px;
+	}
+
+	.button.next{
+		right: 0px;
+	}
+
+	.big-box{
+		width: 1000px;
+	}
+
+	.righttext-box{
+		right: -123px;
+		top: 162px;
+	}
+
+	#sect02 h2.right-ex{
+		font-size:100px;
+		font-family: 'Roboto Slab', serif;
+	}
+
+	.gallery{
+		height: 608px;
+	}
+
+	.gallery-img{
+		width: 1000px;
+		height: 537px;
+		margin-top: 85px;
+	}
+
+	#sect04 .inner{
+		width: 1000px;
+	}
+
+	.sect-text h2{
+		width: 380px;
+		font-size: 60px;
+		line-height: 68px;
+	}
+
+	.project{
+		width: 649px;
+	}
+
+	.project-box{
+		width: 300px;
+		height: 506px;
+		margin-right: 49px;
+	}
+
+	.project-img{
+		width: 300px;
+		height: 370px;
+	}
+
+	.project-box > p{
+		width: 300px;
+		height: 215px;
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+	.last-box{
+		width: 1000px;
+		height: 130px;
+		padding: 128px 0px;
+	}
+
+	.left-box{
+		width: 478px;
+	}
+
+	.left-box > h2{
+		font-size: 22px;
+		line-height: 31px;
+	}
+}

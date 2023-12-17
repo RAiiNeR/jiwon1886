@@ -1,0 +1,286 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0;}
+.clearfix::after{content: ""; display: block; clear: both;}
+button{border: none; background:none;}
+ul{list-style-type:none;}
+li{text-decoration: none;}
+a{text-decoration: none; color: black;}
+body{background-color: #fff; width: 100vw; height: 100vh; font-family: 'TAEBAEKfont';}
+
+
+
+/*********************메인화면*******************/
+
+
+.index_big_box{
+    background-color: #f9f0de;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+span.up{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    height: 10px;
+    background-color: #000;
+}
+
+span.down{
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    height: 10px;
+    background-color: #000;
+}
+
+.index_middle_box{
+    width: 60%;
+    position: relative;
+}
+
+.index_middle_box:last-child{
+    width: 40%;
+}
+
+.index_textbox{
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    top: 20%;
+    transform: translateY(-50%);
+}
+
+.textbox_Left{
+    padding-right: 10px;
+    float: left;
+    font-size: 40px;
+    text-align: right;
+    color: #9170a5;
+}
+
+.textbox_Right{
+    border-left: 1px solid #f4a460;
+    padding-left: 10px;
+    float: left;
+    font-size: 40px;
+    position: relative;
+    bottom: 50%;
+    transform: translateY(20%);
+}
+
+.textbox_Right h2{
+    -webkit-text-stroke: 1px #f4a460;
+    color: transparent;
+}
+
+.textbox_Right .text_animation{
+    font-size: 50px;
+}
+
+.text_animation span{
+    position: relative;
+}
+
+.text_animation span::before{
+    content: "PORTFOLIO";
+    color: #f4a460;
+    animation: words 20s infinite;
+}
+
+.text_animation span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #f9f0de;
+    border-left: 2px solid #f4a460;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(10) infinite;
+}
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid #f1637900;
+    }
+}
+
+@keyframes words {
+    0%, 20%{
+        content: "PORTFOLIO";
+    }
+
+    21%, 40%{
+        content: "DESIGN";
+    }
+
+    41%, 60%{
+        content: "PORTFOLIO";
+    }
+
+    61%, 80%{
+        content: "DESIGN";
+    }
+
+    81%, 100%{
+        content: "PORTFOLIO";
+    }
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
+
+.marquee_big_box{
+    position: absolute;
+    right: 0;
+}
+
+.marquee_box{
+    position: relative;
+    height: 100%;
+    writing-mode: vertical-rl;
+    overflow: hidden;
+}
+
+.marquee_box .scroll{
+    width: 100%;
+    display: flex;
+}
+
+.marquee_box .scroll div{
+    color: #f19072;
+    font-size: 4em;
+    background: #6f453e;
+    white-space: nowrap;
+    font-weight: 400;
+    text-transform: uppercase;
+    animation: animate 40s linear infinite;
+}
+
+.marquee_box .scroll div span{
+    -webkit-text-stroke: 2px #f9f0de;
+    color: transparent;
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(0);
+    }
+
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+
+
+/***********************왼쪽 박스4개*****************/
+.index_small_box{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    font-family: 'SUITE-Regular';
+}
+
+.index_season{
+    width: 50%;
+    height: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.index_season_img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(50%)
+}
+
+.index_season_img img{
+    width: 100%;
+}
+
+.season_textbox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.textbox{
+    color: #fff;
+    text-align: center;
+}
+
+.textbox span.season{
+    font-size: 16px;
+}
+
+.textbox h2{
+    font-size: 24px;
+    padding: 15px 0 10px;
+}
+
+
+/***************버튼***************/
+.textbox a{
+    position: relative;
+    color:#f4a460;
+    width: 150px;
+    height: 37px;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    display: inline-flex;
+}
+
+.textbox a:hover{
+    color: #fff;
+}
+
+.textbox a:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: url("../img/btn-bg1.png");
+    background-size: cover;
+    transform-origin: left;
+    transition: 0.5s;
+}
+
+.textbox a:hover:before{
+    width: 100%;
+}
+
+.textbox a span{
+    position: relative;
+    z-index: 1;
+}
+
+
+
+/***********************미디어쿼리*******************/
+
+@media all and (max-width:1553px) {
+    .index_big_box{}
+}
