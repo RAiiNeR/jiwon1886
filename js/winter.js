@@ -74,6 +74,10 @@ $(document).ready(function(){
         tmp();
     })
 
-});
+    //원형메뉴
+    let menuToggle = document.querySelector('.menuToggle');
+    menuToggle.onclick = function(){
+    menuToggle.classList.toggle('active')
+    }
 
-// https://bokartstudio.tistory.com/35 [dev__note:티스토리]
+});

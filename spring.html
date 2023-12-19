@@ -9,17 +9,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
     <script src="./js/jquery-3.7.0.min.js"></script>
-    
-    
     <script src="js/spring.js" defer></script>
 </head>
 <body>
-    <input type="checkbox" id="sidebar">
-    <header>
-        <div>
-            <label for="sidebar" class="menu"><i class="fa-solid fa-bars"></i></label>
+    <div class="nav-box">
+        <div class="navigation">
+            <div class="menuToggle"></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="spring.html">SPRING</a></li>
+                    <li><a href="#">SUMMER</a></li>
+                    <li><a href="#">AUTUMN</a></li>
+                    <li><a href="winter.html">WINTER</a></li>
+                </ul>
+            </div>
         </div>
-    </header>
+    </div>
 
     <div class="container">
         <div class="circle">
@@ -123,18 +129,5 @@
             </div>
         </div>
     </div>
-
-    <div class="sidebar_content">
-        <label for="sidebar" class="menu"><i class="fa-solid fa-xmark-large"></i></label>
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="spring.html">SPRING</a></li>
-            <li><a href="#">SUMMER</a></li>
-            <li><a href="#">AUTUMN</a></li>
-            <li><a href="#">WINTER</a></li>
-        </ul>
-        <label for="sidebar"></label>
-    </div>
-    <label for="sidebar" class="background"></label>
 </body>
 </html>
