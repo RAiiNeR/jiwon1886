@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0;}
+.clearfix::after{content: ""; display: block; clear: both;}
+button{border: none; background:none;}
+ul{list-style-type:none;}
+li{text-decoration: none;}
+a{text-decoration: none; color: black;}
+body{margin: 0; height: 100vh; overflow: hidden; background-color: #4b6b7a;}
+
+/*********************원형 메뉴****************/
+.nav-box{
+    position: relative;
+    right: 5%;
+    top: 47%;
+    display: flex;
+    justify-content:flex-end;
+}
+
+.navigation{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.menuToggle{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    border-radius: 70px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.menuToggle::before{
+    content: "+";
+    position: absolute;
+    font-size: 3em;
+    font-weight: 200;
+    font-family: 'SUITE-Regular';
+    color: #f4a460;
+    transition: 1.5s;
+}
+
+.menuToggle.active::before{
+    transform: rotate(225deg);
+}
+
+.menu{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 70px;
+    z-index: -1;
+    transition: transform 0.5s, width 0.5s, height 0.5s;
+    transition-delay: 1s, 0.5s, 0.5s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.menuToggle.active ~ .menu{
+    width: 90px;
+    height: 350px;
+    z-index: 100;
+    transform: translateX(-125px);
+    transition-delay: 0s, 0.5s, 0.5s;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.menu::before{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    right: calc(50% - 8px);
+    bottom: 48%;
+    transform: rotate(45deg);
+    border-radius: 2px;
+    transition: 0.5s;
+}
+
+.menuToggle.active ~ .menu::before{
+    transition-delay: 0.5s;
+    right: -6px;
+}
+
+.menu ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu ul li{
+    list-style: none;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.25s;
+    transition-delay: 0.3s;
+}
+
+.menuToggle.active ~ .menu ul li{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.menu ul li a{
+    display: block;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #f4a460;
+}
+
+.menu ul li:hover a{
+    color: #f4a460;
+}
+
+/***************준비박스***************/
+.textbox{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    top: 42%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.textbox h2{
+    font-family: 'TAEBAEKfont';
+    font-size: 40px;
+    color: #fabf13;
+}
+
+.textbox p{
+    font-family: 'SUITE-Regular';
+    font-size: 25px;
+    line-height: 32px;
+    padding: 30px 0;
+    color: #cee8e0;
+}
+
+.textbox span{
+    font-family: 'SUITE-Regular';
+    font-size: 18px;
+    color: #b0dcda
+}
