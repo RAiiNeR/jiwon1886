@@ -11,7 +11,7 @@ body{margin: 0;}
 /*********************원형 메뉴****************/
 .nav-box{
     position: relative;
-    right: 5%;
+    right: 2%;
     top: 47%;
     display: flex;
     justify-content:flex-end;
