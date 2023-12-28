@@ -74,7 +74,7 @@ span.down{
     font-size: 40px;
     position: relative;
     bottom: 50%;
-    transform: translateY(20%);
+    transform: translateY(25%);
 }
 
 .textbox_Right h2{
@@ -238,13 +238,6 @@ span.down{
     font-size: 24px;
     padding: 25px 0 10px;
 }
-
-.textbox p{
-    font-size: 14px;
-    font-weight: 600;
-    padding-bottom: 10px;
-}
-
 
 /***************버튼***************/
 .textbox a{
