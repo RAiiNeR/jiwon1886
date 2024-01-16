@@ -111,11 +111,11 @@ section#web .containerbox{width: 1280px; height: 700px; position: relative; left
 
 
 /****************************section design************************/
-section#design{ background: #ffffff; padding: 100px 0;}
+section#design{ background: #fff; padding: 100px 0;}
 .gallery{max-width: 1280px; height: 675px; margin: auto; display: flex;}
 .gallery .controls{display: flex; justify-content: flex-start; padding: 20px 0; list-style: none; position: relative; flex-direction: column;}
-.gallery .controls .buttons2{z-index: 99; height: 50px; width: 170px; background: #fff; color: #666; font-size: 20px; line-height: 50px; cursor: pointer; margin: 20px; box-shadow: 0 3px 5px rgba(0,0,0,.3); text-align: center;}
-.gallery .controls .buttons2.active{background: coral; color: #fff;}
+.gallery .controls .buttons2{z-index: 99; height: 50px; width: 170px; background: #f9f0de; color: #666; font-size: 20px; line-height: 50px; cursor: pointer; margin: 20px; box-shadow: 0 3px 5px rgba(0,0,0,.3); text-align: center;}
+.gallery .controls .buttons2.active{background: #ff953a; color: #fff;}
 .gallery .image-container{display: flex; align-content: flex-start; justify-content: center; flex-wrap: wrap;}
 .gallery .image-container .image{height: 185px; width: 220px; overflow: hidden; box-shadow: 0 3px 5px rgba(0,0,0,.3); margin: 20px;}
 .gallery .image-container .image img{height: 100%; width: 100%; object-fit: cover;}
