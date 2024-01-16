@@ -60,6 +60,16 @@ $(document).ready(function(){
             $(".big-box").addClass("animate__fadeInUp");
         }
 
+        if($(document).scrollTop()>1100){
+            $(".web-titlebox1 h2").css({"display":"block"});
+            $(".web-titlebox1 h2").addClass("animate__fadeInDown");
+        }
+
+        if($(document).scrollTop()>1110){
+            $(".web-titlebox2 p").css({"display":"block"});
+            $(".web-titlebox2 p").addClass("animate__fadeInDown");
+        }
+
     });
 
 });
