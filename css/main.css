@@ -111,11 +111,42 @@ section#web .containerbox{width: 1280px; height: 700px; position: relative; left
 
 
 /****************************section design************************/
-section#design{ background: #fff; padding: 100px 0;}
-.gallery{max-width: 1280px; height: 675px; margin: auto; display: flex;}
+section#design{ background: #fff;}
+.design-box{position: relative; z-index: 10; top: 120px;}
+.gallery{max-width: 1280px; height: 675px; margin: auto; display: flex; position:relative; z-index:10;}
 .gallery .controls{display: flex; justify-content: flex-start; padding: 20px 0; list-style: none; position: relative; flex-direction: column;}
 .gallery .controls .buttons2{z-index: 99; height: 50px; width: 170px; background: #f9f0de; color: #666; font-size: 20px; line-height: 50px; cursor: pointer; margin: 20px; box-shadow: 0 3px 5px rgba(0,0,0,.3); text-align: center;}
 .gallery .controls .buttons2.active{background: #ff953a; color: #fff;}
 .gallery .image-container{display: flex; align-content: flex-start; justify-content: center; flex-wrap: wrap;}
 .gallery .image-container .image{height: 185px; width: 220px; overflow: hidden; box-shadow: 0 3px 5px rgba(0,0,0,.3); margin: 20px;}
 .gallery .image-container .image img{height: 100%; width: 100%; object-fit: cover;}
+.water{position: relative; width: 100%; height:95px; z-index: 1; overflow: hidden;}
+.wave{position: absolute; top: 0; left: 0; width: 100%; height: 100px; background: url("../img/water_wave.png"); background-size: 1000px 100px;}
+.deep{width: 100%; height: 100px; background-color: #ff953a; opacity: 0.9; padding-bottom: 110px;}
+
+.wave.wave1{animation: water 30s linear infinite; opacity: 0.7; animation-delay: 0s; z-index: 8; top: 10px;}
+.wave.wave2{animation: water2 15s linear infinite; opacity: 0.3; animation-delay: -5s; z-index: 7; top: 15px;}
+.wave.wave3{animation: water 30s linear infinite; opacity: 0.2; animation-delay: -2s; z-index: 6; top: 10px;}
+.wave.wave4{animation: water2 15s linear infinite; opacity: 0.5; animation-delay: -5s; z-index: 5; top: 20px;}
+
+@keyframes water{
+  0%{
+    background-position-x: 0;
+  }
+
+  100%{
+    background-position-x: 1000px;
+  }
+}
+
+
+@keyframes water2{
+  0%{
+    background-position-x: 0;
+  }
+
+  100%{
+    background-position-x: -1000px;
+  }
+}
+
