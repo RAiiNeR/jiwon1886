@@ -29,7 +29,7 @@ span.up{
     width: 100%;
     z-index: 2;
     height: 10px;
-    background-color: #000;
+    background-color: #6f453e;
 }
 
 span.down{
@@ -39,7 +39,7 @@ span.down{
     width: 100%;
     z-index: 2;
     height: 10px;
-    background-color: #000;
+    background-color: #6f453e;
 }
 
 .index_middle_box{
@@ -191,93 +191,102 @@ span.down{
 
 
 
-/***********************왼쪽 박스4개*****************/
+/***********************왼쪽 박스*****************/
 .index_small_box{
     display: flex;
     height: 100%;
     width: 100%;
     flex-wrap: wrap;
     font-family: 'SUITE-Regular';
+    background-color: #2a242c;
 }
 
-.index_season{
-    width: 50%;
-    height: 50%;
+.small_textbox{
+    width: 100%;
+    height: 400px;
     position: relative;
-    overflow: hidden;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.index_season_img{
+.text_ani{
+    position: relative;
     width: 100%;
-    height: 100%;
-    filter: brightness(50%)
-}
-
-.index_season_img img{
-    width: 100%;
-}
-
-.season_textbox{
-    position: absolute;
-    top: 52%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-}
-
-.textbox{
-    color: #fff;
+    height: 100px;
     text-align: center;
 }
 
-.textbox span.season{
-    font-size: 18px;
-}
-
-.textbox h2{
-    font-size: 24px;
-    padding: 25px 0 10px;
-}
-
-/***************버튼***************/
-.textbox a{
-    position: relative;
-    color:#f4a460;
-    width: 150px;
-    height: 37px;
-    font-size: 18px;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
-    display: inline-flex;
-}
-
-.textbox a:hover{
-    color: #fff;
-}
-
-.textbox a:before{
-    content: "";
+.text_ani h2{
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: url("../img/btn-bg1.png");
-    background-size: cover;
-    transform-origin: left;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5em;
+    text-transform: uppercase;
+    font-family: 'TAEBAEKfont';
+}
+
+.text_ani h2:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 1px #f4a460;
+}
+
+.text_ani h2:nth-child(2){
+    color: #f4a460;
+    animation: animate2 4s ease-in-out infinite;
+}
+
+@keyframes animate2{
+    0%, 100%{
+        clip-path: polygon(0 49%, 14% 51%, 31% 58%, 52% 65%, 71% 65%, 90% 59%, 100% 53%, 100% 100%, 0% 100%);
+    }
+    50%{
+        clip-path: polygon(0 59%, 15% 69%, 33% 72%, 50% 68%, 66% 53%, 83% 47%, 100% 49%, 100% 100%, 0% 100%);
+    }
+}
+
+.ko_textbox{
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+button.go_main{
+    position: relative;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 40px;
+}
+
+button.go_main a{
+    font-size: 1.8em;
+    color: #fff;
+    background-color: #fff;
+    position: relative;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 20px 30px;
     transition: 0.5s;
 }
 
-.textbox a:hover:before{
-    width: 100%;
+button.go_main a:hover{
+    background: var(--clr);
+    color: var(--clr);
 }
 
-.textbox a span{
+button.go_main a:before{
+    content: '';
+    inset: 2px;
+    background: #2a242c;
+    position: absolute;
+}
+
+button.go_main a span{
     position: relative;
     z-index: 1;
 }
-
 
 
 /***********************미디어쿼리*******************/

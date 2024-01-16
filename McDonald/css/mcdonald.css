@@ -1,0 +1,359 @@
+@charset "utf-8";
+
+*{
+	margin:0;
+	padding:0;
+}
+
+.clearfix::after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+.clear{
+	clear:both;
+}
+
+ul{
+	list-style-type:none;
+}
+
+a{
+	text-decoration:none;
+	display:block;
+}
+
+body{
+	min-width:1200px;
+	overflow-x:hidden;
+	margin:0;
+	padding:0;
+}
+
+header{
+	position:sticky;
+	top:0px;
+	background-color:white;
+	border-bottom: 1px solid gold;
+	z-index:10;
+}
+
+.inner{
+	width:1200px;
+	height:150px;
+	margin:auto;
+	display:flex;
+	justify-content:space-between;
+	align-items:flex-end;
+}
+
+h1.logo{
+	width:120px;
+	height:110px;
+	padding:25px 0;
+}
+
+h1.logo img{
+	width:100%;
+}
+
+nav{
+	width:720px;
+	-border:1px solid red;
+	margin-left:20px;
+}
+
+.sub-menu:nth-child(4){
+	padding-right:15px;
+	border:10px solid pink;
+}
+
+
+.sub-wrap{
+	width:100%;
+	height:400px;
+	display:none;
+	top:150px;
+	left:0px;
+	background-color:white;
+	position:absolute;
+	border-bottom:1px solid gold;
+	border-top:1px solid #ccc;
+	z-index:11;
+}
+
+.gnb > li > a:hover::after{
+	content:"";
+	display:block;
+	width:calc(100% - 90px);
+	position:absolute;
+	border-bottom:4px solid gold;
+	left:50%;
+	transform:translateX(-50%);
+	bottom:0px;
+}
+
+.gnb>li{
+	float:left;
+	/*width로 꼭 맞추는 방법은 아니고 a에 패딩 방법으로 놓는것도 있다*/
+	-width:160px;
+	-padding:65px 10px;
+	-border:1px solid red;
+	background-color:white;
+	position:relative;
+}
+
+.gnb>li>a{
+	color:black;
+	font-family: 'Roboto', sans-serif;
+	font-size:20px;
+	display:block;
+	padding:65px 58px;
+}
+
+.sub-menu{
+	position:absolute;
+	width:100%;
+	left:40px;
+	top:150px;
+	z-index:12;
+	display:none;
+	margin-top:10px;
+}
+
+.sub-menu li{
+	text-align:left;
+	padding:17px 15px;
+}
+
+.sub-menu li a{
+	font-size:15px;
+	color:gray;
+	font-weight:bold;
+	-padding:17px 15px;
+	display:inline;
+}
+
+.sub-menu li a:hover{
+	border-bottom:1px solid black;
+	color:black;
+}
+
+
+
+.btn{
+	width:300px;
+	height:40px;
+	padding:55px 0px;
+}
+
+.mc-btn{
+	width:85px;
+	height:40px;
+	border-radius:50px 50px 50px 50px;
+}
+
+.mc-btn:nth-child(1){
+	background-color:#cc0000;
+	border-style:none;
+}
+
+.mc-btn:nth-child(2){
+	background-color:#cc9900;
+	border-style:none;
+}
+
+.mc-btn:nth-child(3){
+	background-color:#336600;
+	border-style:none;
+}
+
+.mc-btn > a{
+	color:white;
+	font-family: 'Roboto', sans-serif;
+}
+
+h2.search-icon{
+	width:40px;
+	height:40px;
+	padding:50px 0px;
+}
+
+h2.search-icon img{
+	width:100%;
+}
+
+/*메인슬라이드*/
+section#main-slide{
+	width:100%;
+	height:540px;
+	position:relative;
+}
+
+.swiper{
+	width:100%;
+	height:100%;
+}
+
+.swiper-slide{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+}
+
+/*메누박스들 안내*/
+section#MC-live{
+	width:1200px;
+	margin:auto;
+	margin-top:20px;
+}
+
+h3.title{
+	font-size:40px;
+	font-family: 'Roboto', sans-serif;
+	color:black;
+	font-weight:bold;
+	margin-bottom:50px;
+}
+
+.section-inner{
+	width:1210px;
+	height:2400px;
+	margin:auto;
+}
+
+.box1{
+	float:left;
+	width:365px;
+	height:420px;
+	margin-bottom: 60px;
+	margin-right: 52px;
+	border-radius: 20px 20px 20px 20px;
+	box-shadow:1px 2px 5px #ccc;
+	position: relative;
+}
+
+.box1:nth-child(3){
+	margin-right: 0px;
+}
+
+.box1:nth-child(6){
+	margin-right: 0px;
+}
+
+.box1:nth-child(9){
+	margin-right: 0px;
+}
+
+.box1:nth-child(12){
+	margin-right: 0px;
+}
+
+.mc-img{
+	width: 365px;
+	height: 300px;
+	position: absolute;
+	top: 0px;
+}
+
+.mc-img img{
+	width: 100%;
+	border-radius: 20px 20px 0px 0px;
+}
+
+.text{
+	position: absolute;
+	color: black;
+	padding: 0px 30px;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 28px;
+	margin-top: 20px;
+	top: 300px;
+}
+
+
+/*footer*/
+footer{
+	height: 250px;
+	background-color: rgb(29, 29, 29);
+}
+
+#footer-inner{
+	width: 1200px;
+	height: 250px;
+	margin: auto;
+	position: relative;
+}
+
+ul.others{
+	float: left;
+	margin-top: 40px;
+}
+
+.others > li > a{
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 28px;
+	color: white;
+}
+
+/*
+ul.others > li > a:last-child{
+	color: gold;
+}
+*/
+
+
+.mc-address{
+	float: left;
+	margin-top: 40px;
+	margin-left: 75px;
+}
+
+ul.mc-ad > li{
+	font-size: 14px;
+	color: gray;
+	line-height: 25px;
+}
+
+.last-icon{
+	float: right;
+	width: 120px;
+	height: 60px;
+	margin-top: 40px;
+}
+
+.last-icon img{
+	width: 100%;
+}
+
+.sns{
+	float: left;
+	margin-top: 40px;
+	margin-left: 230px;
+}
+
+.sns > h4{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-color: white;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.sns > h4 img{
+	width: 80%;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+

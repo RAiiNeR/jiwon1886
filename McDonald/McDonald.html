@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" href="css/mcdonald.css"></link>
+<script src="js/mc.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+<style>
+/********현재 스와이퍼 css는 이곳에서만 적용이 됩니다. 현재 이유를 알아보고 있으니 추후 수정하도록 하겠습니다.*******/
+.swiper-button-next{
+	width:90px;
+	height:90px;
+	background-color:rgba(0,0,0,0.5);
+	border-radius:20px 0px 0px 20px;
+	z-index: 8;
+}
+
+.swiper-button-next img{
+	width:30%
+}
+
+.swiper-button-next::after{
+	content:"";
+}
+
+.swiper-button-prev{
+	width:90px;
+	height:90px;
+	background-color:rgba(0,0,0,0.5);
+	border-radius:0px 20px 20px 0px;
+	z-index: 8;
+}
+
+.swiper-button-prev img{
+	width:30%
+}
+
+.swiper-button-prev::after{
+	content:"";
+}
+
+.swiper-pagination{
+	z-index: 8;
+}
+</style>
+
+</head>
+
+<body>
+<!--헤더 로고, 리스트, 버튼, 아이콘-->
+	<header>
+		<div class="inner">
+			<h1 class="logo"><img src="img/logo.png"></h1>
+			<nav>
+				<ul class="gnb">
+					<li><a href="#">Menu</a>
+							<ul class="sub-menu">
+								<li><a href="#"><span>버거</span></a></li>
+								<li><a href="#"><span>맥런치</span></a></li>
+								<li><a href="#"><span>맥모닝</span></a></li>
+								<li><a href="#"><span>해피 스낵</span></a></li>
+								<li><a href="#"><span>사이드 & 디저트</span></a></li>
+								<li><a href="#"><span>맥카페 & 음료</span></a></li>
+								<li><a href="#"><span>해피밀</span></a></li>
+							</ul>
+					</li>
+
+
+					<li><a href="#">Store</a>
+						
+							<ul class="sub-menu">
+								<li><a href="#"><span>매장찾기</span></a></li>
+								<li><a href="#"><span>맥딜리버리</span></a></li>
+								<li><a href="#"><span>맥드라이브</span></a></li>
+								<li><a href="#"><span>임차문의</span></a></li>
+							</ul>
+						
+					</li>
+
+					<li><a href="#">What's New</a>
+						
+							<ul class="sub-menu">
+								<li><a href="#"><span>프로모션</span></a></li>
+								<li><a href="#"><span>새로운 소식</span></a></li>
+								<li><a href="#"><span>이달의 해피밀</span></a></li>
+							</ul>
+						
+					</li>
+
+					<li><a href="#">Story</a>
+						
+							<ul class="sub-menu">
+								<li><a href="#"><span>브랜드 소개</span></a></li>
+								<li><a href="#"><span>사회적 책임과 지원</span></a></li>
+								<li><a href="#"><span>맥도날드 품질 이야기</span></a></li>
+								<li><a href="#"><span>맥도날드 사람들</span></a></li>
+							</ul>
+						
+					</li>
+				</ul>
+				<div class="sub-wrap"></div>
+			</nav>
+
+			<div class="btn">
+				<button class="mc-btn"><a href="#">임차문의</a></button>
+				<button class="mc-btn"><a href="#">RECRUIT</a></button>
+				<button class="mc-btn"><a href="#">ENG</a></button>
+			</div>
+
+			<h2 class="search-icon"><img src="img/search.png"></h2>
+		</div>
+	</header>
+
+	<!--메인슬라이드 제이쿼리-->
+	<section id="main-slide">
+		<div class="swiper mySwiper">
+			<div class="swiper-wrapper">
+			  <div class="swiper-slide"><img src="img/bg-img1.jpg"></div>
+			  <div class="swiper-slide"><img src="img/bg-img2.jpg"></div>
+			  <div class="swiper-slide"><img src="img/bg-img3.jpg"></div>
+			  <div class="swiper-slide"><img src="img/bg-img4.jpg"></div>
+			  <div class="swiper-slide"><img src="img/bg-img5.jpg"></div>
+			  <div class="swiper-slide"><img src="img/bg-img6.jpg"></div>
+			  <div class="swiper-slide"><img src="img/bg-img7.jpg"></div>
+			  <div class="swiper-slide"><img src="img/bg-img8.jpg"></div>
+			  <div class="swiper-slide"><img src="img/bg-img9.jpg"></div>
+			  <div class="swiper-slide"><img src="img/bg-img10.jpg"></div>
+			</div>
+		</div>
+
+		<div class="swiper-button-next"><img src="img/next-arrow.png"></div>
+		<div class="swiper-button-prev"><img src="img/prev-arrow.png"></div>
+		<div class="swiper-pagination"></div>
+	</section>
+
+
+	<!--메뉴박스 안내-->
+	<section id="MC-live">
+		<h3 class="title">McDonald's LIVE</h3>
+		<div class="section-inner">
+			<div class="box1">
+				<a href="#">
+					<div class="mc-img"><img src="img/box-img1.jpg"></div>
+					<div class="text">
+						<p>땅 끝자락 진도에서 찾은</p>
+						<p>한국의 맛</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="box1">
+				<a href="#">
+					<div class="mc-img"><img src="img/box-img2.jpg"></div>
+					<div class="text">
+						<p>100% 우리 곡물로 살린</p>
+						<p>고소한 한국의 맛</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="box1">
+				<a href="#">
+					<div class="mc-img"><img src="img/box-img3.jpg"></div>
+					<div class="text">
+						<p>맥크리스피 버거 세트 먹고?</p>
+						<p>슈퍼팝 페스티벌 가자!</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="box1">
+				<a href="#">
+					<div class="mc-img"><img src="img/box-img4.jpg"></div>
+					<div class="text">
+						<p>갓성비 간식 맛집, 맥도날드 해피 스낵!</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="box1">
+				<a href="#">
+					<div class="mc-img"><img src="img/box-img5.jpg"></div>
+					<div class="text">
+						<p>여름의 맛!</p>
+						<p>겉바속쫄 맥윙!</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="box1">
+				<a href="#">
+					<div class="mc-img"><img src="img/box-img6.jpg"></div>
+					<div class="text">
+						<p>달콤한 아이스크림과</p>
+						<p>진~한 라떼의 만남!</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="box1">
+				<a href="#">
+					<div class="mc-img"><img src="img/box-img7.jpg"></div>
+					<div class="text">
+						<p>단짠촉촉 맥그리들 is back!</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="box1">
+				<a href="#">
+					<div class="mc-img"><img src="img/box-img8.jpg"></div>
+					<div class="text">
+						<p>상콤달콤!</p>
+						<p>NEW 자두 천도복숭아 칠러 출시!</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="box1">
+				<a href="#">
+					<div class="mc-img"><img src="img/box-img9.jpg"></div>
+					<div class="text">
+						<p>맥도날드와 함께 성장할</p>
+						<p>크루와 매니저를 찾습니다</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="box1">
+				<a href="#">
+					<div class="mc-img"><img src="img/box-img10.jpg"></div>
+					<div class="text">
+						<p>첫 적립 시 2000포인트 제공!</p>
+						<p>새로워진 마이 맥도날드 리워드!</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="box1">
+				<a href="#">
+					<div class="mc-img"><img src="img/box-img11.png"></div>
+					<div class="text">
+						<p>우리가 엄격해질수록</p>
+						<p>버거는 더 맛있어지니까!</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="box1">
+				<a href="#">
+					<div class="mc-img"><img src="img/box-img12.jpg"></div>
+					<div class="text">
+						<p>0.1초에 1잔!</p>
+						<p>매일 마시는 커피를 더 맛있게</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="box1">
+				<a href="#">
+					<div class="mc-img"><img src="img/box-img13.jpg"></div>
+					<div class="text">
+						<p>전문 코치들의 체계적이고 전문적인</p>
+						<p>교육을 통해 지역사회 행복에 기여합니다</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="box1">
+				<a href="#">
+					<div class="mc-img"><img src="img/box-img14.png"></div>
+					<div class="text">
+						<p>귀하의 토지,건물에 맥도날드를 유치</p>
+						<p>하세요!</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div id="footer-inner">
+			<ul class="others">
+				<li><a href="#">개인정보 처리방침</a></li>
+				<li><a href="#">위치정보 이용약관</a></li>
+				<li><a href="#">사이트맵</a></li>
+				<li><a href="#">임차문의</a></li>
+				<li><a href="#">고객문의</a></li>
+				<li><a href="#">인재채용</a></li>
+			</ul>
+
+			<div class="mc-address">
+				<ul class="mc-ad">
+					<li>한국맥도날드(유)</li>
+					<li>대표이사: 김기원</li>
+					<li>사업자등록번호 : 101-81-26409</li>
+					<li>전화주문 : 1600-5252</li>
+					<li>COPYRIGHT © 2019 ALL RIGHTS RESERVED BY McDonald's.</li>
+				</ul>
+			</div>
+
+			<div class="sns">
+			<!--링크 들어가는 방법 html link 태그 검색하기-->
+				<h4 class="sns-icon"><a href="https://ko-kr.facebook.com/"><img src="img/icon-facebook.png"></a></h4>
+				<h4 class="sns-icon"><a href="https://www.instagram.com/"><img src="img/icon-instagram.png"></a></h4>
+				<h4 class="sns-icon"><a href="https://www.youtube.com/"><img src="img/icon-youtube.png"></a></h4>
+				<h4 class="sns-icon"><a href="https://story.kakao.com/s/login"><img src="img/icon-kakao.png"></a></h4>
+			</div>
+			<div class="last-icon"><a href="http://kwacc.or.kr/CertificationSite/WA/1664/Detail?page=1"><img src="img/web_accessibility.png"></a></div>
+		</div>
+	</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next ",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</body>
+</html>

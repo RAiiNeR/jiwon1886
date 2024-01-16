@@ -1,0 +1,695 @@
+@charset "utf-8";
+
+*{
+	margin:0;
+	padding:0;
+}
+
+.clearfix::after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+.clear{
+	clear:both;
+}
+
+ul{
+	list-style-type:none;
+}
+
+a{
+	text-decoration:none;
+	display:block;
+}
+
+body{
+	font-family: 'IBM Plex Sans KR', sans-serif;
+	color:black;
+	min-width: 1200px;
+	overflow-x:hidden;
+	background-color:white;
+}
+
+header{
+	position:sticky; /*헤더 고정*/
+	top:0px;
+	background-color:white;
+	border-bottom:1px solid #ccc;
+	z-index:10;
+}
+
+#header-top{
+	height:80px;
+	background-color:white;
+}
+
+header .inner{
+	width:1200px;
+	height:80px;
+	margin:auto;
+	z-index:100;
+	position:relative;
+}
+
+.p-logo{
+	width:140px;
+	height:50px;
+	position:absolute;
+	bottom:15px;
+	line-height:50px;
+}
+
+nav#top-link{
+	width:200px;
+	height:50px;
+	position:relative;
+	top:15px;
+	left:150px;
+}
+
+nav#top-link ul{
+	float:left;
+}
+
+nav#top-link ul li{
+	float:left;
+	position:relative;
+}
+
+nav#top-link ul li a{
+	font-size:20px;
+	color:#ababab;
+	padding:0px 10px;
+	line-height:50px;
+	font-weight:bold;
+}
+
+nav#top-link ul li a:hover{
+	color:black;
+}
+
+
+/*검색창*/
+input{
+	width:250px;
+	height:40px;
+	position:absolute;
+	background-color:#e7e7e7;
+	right:220px;
+	bottom:20px;
+	border-radius:20px 20px 20px 20px;
+	outline:none;
+	font-size:15px;
+	padding-left:30px;
+}
+
+.login{
+	width:70px;
+	height:40px;
+	position:absolute;
+	background-color:white;
+	border:0 solid black;
+	bottom:20px;
+	right:120px;
+	font-size:14px;
+}
+
+.login a{
+	color:black;
+}
+
+.login a:hover{
+	color:#3366ff;
+}
+
+.sign-up{
+	width:80px;
+	height:40px;
+	background-color:#3366ff;
+	border:0px solid black;
+	position:absolute;
+	color:white;
+	bottom:20px;
+	right:30px;
+	border-radius:7px 7px 7px 7px;
+}
+
+.sign-up:hover{
+	background-color:#3333ff;
+}
+
+nav#gnb{
+	width:1200px;
+	height:50px;
+	margin:auto;
+	position:relative;
+}
+
+nav#gnb ul{
+	float:left;
+}
+
+nav#gnb ul li{
+	float:left;
+	position:relative;
+}
+
+nav#gnb ul li:nth-child(3){
+	margin-right:20px;
+}
+
+nav#gnb ul li a{
+	font-size:16px;
+	color:#ababab;
+	padding:0px 8px;
+	line-height:50px;
+	font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+nav#gnb ul li:nth-child(3) a::after{
+	content:"";
+	display:block;
+	background-color:#ababab;
+	height:15px;
+	width:1px;
+	position:absolute;
+	top:18px;
+	right:-10px;
+}
+
+nav#gnb ul li a:hover{
+	color:black;
+}
+
+nav#gnb ul li:hover::after{
+	content:"";
+	display:block;
+	/*글자크기와 같도록*/
+	width:calc(100% - 16px);
+	position:absolute;
+	border-bottom:2px solid black;
+	left:8px;
+	bottom:0px;
+}
+
+
+/*메인슬라이드 + 제이쿼리*/
+
+section#main-slide{
+	width:1000px;
+	height:500px;
+	margin:auto;
+	margin-top:30px;
+	font-size:20px;
+	padding:20px 40px;
+	z-index:1;
+	
+}
+
+.swiper-group{
+	width: 1000px;
+	height: 450px;
+	padding: 20px 20px;
+}
+
+.swiper-pagination{
+	width: 400px;
+	height: 20px;
+	position: absolute;
+	bottom: 10px;
+}
+
+.swiper-horizontal{
+	padding: 10px 0;
+}
+
+
+.swiper-wrapper{
+	width:300px;
+	height:450px;
+	position: absolute;
+}
+
+.swiper{
+	width: 1000px;
+	height: 440px;
+	
+}
+
+.swiper-slide {
+	width: 320px;
+	height: 220px;
+	margin-right: 0px;
+	box-shadow:3px 3px 10px #ccc;
+	border-radius:10px 10px 10px 10px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	
+}
+
+.swiper-slide img {
+	width: 313px;
+	height: 180px;
+	display: block;
+	border-radius:10px 10px 0px 0px;
+	object-fit: cover;
+}
+
+
+.swiper-slide h2{
+	font-size:13px;
+	color:rgb(12, 85, 255);
+	padding: 0px 20px;
+	padding-top: 20px;
+	margin-bottom: 10px;
+	font-weight: 500;
+}
+
+.swiper-slide h3{
+	font-size: 22px;
+	font-family: "KoPubWorld돋움체 Bold";
+	padding: 0px 20px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.swiper-slide p{
+	font-family: "KoPubWorld돋움체 Medium";
+	font-size: 14px;
+	line-height: 22px;
+	padding: 0px 20px;
+	margin-bottom: 10px;
+}
+
+.swiper-slide h6{
+	font-family: "KoPubWorld돋움체 Light";
+	font-size: 12px;
+	position: absolute;
+	font-weight: 500;
+	padding: 0px 20px;
+	bottom: 20px;
+	color: #a8a8a8;
+}
+
+
+/*섹션2 여러 포스트들*/
+
+section#more{
+	width:1000px;
+	height:440px;
+	padding:10px 10px;
+	margin:auto;
+	margin-top:30px;
+	position:relative;
+	
+}
+
+.title{
+	width:200px;
+	height:30px;
+	margin-bottom:20px;
+	font-size:20px;
+}
+
+section .inner1{
+	width:1000px;
+	height:390px;
+	margin:auto;
+	position:relative;
+}
+
+.box1{
+	width:480px;
+	height:180px;
+	background-color:white;
+	border-radius:10px 10px 10px 10px;
+	border:1px solid #d0d0d0;
+	float:left;
+	margin-left:8px;
+	margin-right:20px;
+	margin-bottom:20px;
+	padding:20px 20px;
+	box-sizing:border-box;
+	position:relative;
+}
+
+.box1:last-child{
+	margin-right:0px;
+}
+
+.box1:nth-child(2){
+	margin-right:0px;
+	margin-left:0px;
+}
+
+.box1:nth-child(3){
+	margin-bottom:0px;
+}
+
+.box1:nth-child(4){
+	margin-bottom:0px;
+	margin-left:0px;
+}
+
+.bg-img{
+	width:120px;
+	height:120px;
+	position:absolute;
+	right:20px;
+	top:20px;
+}
+
+.bg-img img{
+	width:100%;
+	border-radius:10px 10px 10px 10px;
+	border:1px solid #d0d0d0;
+}
+
+/*썸네일*/
+.box-title1{
+	font-family: "KoPubWorld돋움체 Bold";
+	font-weight:bold;
+	font-size:16px;
+	margin-bottom:8px;
+	width: 300px;
+}
+
+.intro-text{
+	font-family: "KoPubWorld돋움체 Medium";
+	font-size:14px;
+	color:#a6a6a6;
+	line-height:1.5;
+	width:300px;
+	margin-bottom: 10px;
+}
+
+
+/*아이콘과 닉네임*/
+.icon{
+	width:25px;
+	height:25px;
+	position:absolute;
+	left:20px;
+	bottom:12px;
+}
+
+.icon img{
+	width:100%;
+	border-radius:50% 50%;
+}
+
+.name{
+	font-family: "KoPubWorld돋움체 Medium";
+	font-size:13px;
+	font-weight:bold;
+	position:absolute;
+	left:55px;
+	bottom:14px;
+}
+
+
+
+/*이벤트 배너*/
+section#event{
+	width: 980px;
+	height: 220px;
+	background-color: #F7F7F7;
+	border-radius: 10px 10px 10px 10px;
+	border: 1px solid #cbcbcb;
+	margin: auto;
+	margin-top:10px;
+	position:relative;
+}
+
+/*로고*/
+.event-logo{
+	width: 180px;
+	height: 180px;
+	position: absolute;
+	left: 250px;
+	top: 35px;
+}
+
+.event-logo img{
+	width: 100%;
+}
+
+.text1{
+	width: 300px;
+	height: 50px;
+	position: absolute;
+	top: 40px;
+	left: 450px;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.text2{
+	width: 300px;
+	height: 50px;
+	position: absolute;
+	top: 80px;
+	left: 450px;
+	font-family: "KoPubWorld돋움체 Medium";
+	font-size: 16px;
+	color: #949494;
+}
+
+.text3{
+	width: 300px;
+	height: 50px;
+	position: absolute;
+	top: 102px;
+	left: 450px;
+	font-family: "KoPubWorld돋움체 Medium";
+	font-size: 16px;
+	color: #949494;
+}
+
+/*이벤트 버튼*/
+.free-start{
+	width: 100px;
+	height: 40px;
+	background-color: #3366ff;
+	border-radius: 4px 4px 4px 4px;
+	border-style: none;
+	position: absolute;
+	left: 450px;
+	bottom: 43px;
+}
+
+.free-start a{
+	font-family: "KoPubWorld돋움체 Medium";
+	font-size: 14px;
+	color: white;
+}
+
+.free-start:hover{
+	background-color:#3333ff;
+}
+
+.p-intro{
+	width: 120px;
+	height: 40px;
+	background-color: white;
+	border: 1px solid #cbcbcb;
+	border-radius: 4px 4px 4px 4px;
+	position: absolute;
+	left: 560px;
+	bottom: 43px;
+}
+
+.p-intro a{
+	font-family: "KoPubWorld돋움체 Medium";
+	font-size: 14px;
+	color: black;
+}
+
+.p-intro:hover{
+	border:1px solid #3366ff;
+}
+
+.p-intro a:hover{
+	color:#3366ff;
+}
+
+
+
+section#more2{
+	width:1000px;
+	height:800px;
+	padding:20px 20px;
+	margin:auto;
+	margin-top:10px;
+	position:relative;
+}
+
+section .inner2{
+	width:1000px;
+	height:800px;
+	margin:auto;
+	position:relative;
+}
+
+.box2{
+	width:480px;
+	height:180px;
+	background-color:white;
+	border-radius:10px 10px 10px 10px;
+	border:1px solid #d0d0d0;
+	float:left;
+	margin-left:8px;
+	margin-right:20px;
+	margin-bottom:20px;
+	padding:20px 20px;
+	box-sizing:border-box;
+	position:relative;
+}
+
+.box2:last-child{
+	margin-right:0px;
+}
+
+.box2:nth-child(2){
+	margin-right:0px;
+	margin-left:0px;
+}
+
+.box2:nth-child(3){
+	margin-bottom:0px;
+}
+
+.box2:nth-child(4){
+	margin-right: 0px;
+	margin-left:0px;
+}
+
+.box2:nth-child(5){
+	margin-bottom: 0px;
+}
+
+.box2:nth-child(6){
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+.box2:nth-child(7){
+	margin-bottom: 0px;
+}
+
+.box2:nth-child(8){
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+
+
+
+
+/*footer*/
+footer{
+	height: 150px;
+	background-color: white;
+	border-top: 1px solid #d0d0d0;
+}
+
+nav#footer-gnb{
+	width:1000px;
+	height:30px;
+	margin:auto;
+}
+
+nav#footer-gnb ul{
+	margin-left:25px;
+	margin-top:25px;
+	float:left;
+}
+
+nav#footer-gnb ul li{
+	float:left;
+	position:relative;
+}
+
+nav#footer-gnb ul li a{
+	font-size:12px;
+	font-family: "KoPubWorld돋움체 Medium";
+	padding:1px 6px;
+	color:#ababab;
+}
+
+nav#footer-gnb ul li:nth-child(3) a{
+	font-family: 'Noto Sans KR', sans-serif;
+	padding:0px 6px;
+}
+
+nav#footer-gnb ul li:not(:last-child) a::after{
+	content:"";
+	display:block;
+	background-color:#ababab;
+	height:12px;
+	width:1px;
+	position:absolute;
+	top:4px;
+	right:0px;
+}
+
+nav#footer-gnb a:hover{
+	color:#3366ff;
+}
+
+nav#footer-gnb p{
+	float:right;
+	font-family: "KoPubWorld돋움체 Medium";
+	font-size:12px;
+	color:#ababab;
+	font-weight:bold;
+	margin-right:25px;
+	margin-top:25px;
+}
+
+#p-address{
+	width:800px;
+	height:50px;
+	margin:auto;
+	margin-top:25px;
+	
+}
+
+nav#postype-address ul{
+	float:left;
+	text-align:center;
+}
+
+nav#postype-address ul li{
+	position:relative;
+	font-family: "KoPubWorld돋움체 Medium";
+	font-size:12px;
+	padding:2px 4px;
+	color:#ababab;
+	display:inline-block;
+}
+
+nav#postype-address ul li:not(:last-child)::after{
+	content:"";
+	display:block;
+	background-color:#ababab;
+	height:12px;
+	width:1px;
+	position:absolute;
+	top:4px;
+	right:-2px;
+}
+
+#p-address p{
+	font-family: "KoPubWorld돋움체 Medium";
+	color:#ababab;
+	font-size:12px;
+	text-align:center;
+	width:800px;
+	height:20px;
+	margin-top:4px;
+}
+
