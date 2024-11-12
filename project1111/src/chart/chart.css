@@ -1,0 +1,21 @@
+*{margin: 0; padding: 0;}
+.chart-container{padding: 0 30px; margin-top: 30px;}
+p{margin-bottom:30px;}
+tr{border-bottom: 1px solid #ccc;}
+th{padding: 15px 0; background-color: #efefef;}
+td{padding: 10px 0;}
+
+table{
+    width: 800px;
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th,td{border-right: 1px solid #ccc;}
+th:last-child,
+td:last-child{border-right:none}
+
+/* tbody td:hover{background-color: #def0ff; cursor: pointer;} */
+
+.chartbox{width: 450px;}
