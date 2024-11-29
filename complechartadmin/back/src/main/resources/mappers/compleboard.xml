@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.noori.back.dao.CompleBoardDao">
+    <select id="list" resultType="map">
+        SELECT deptno, (SELECT COUNT(*) FROM compleboard c WHERE c.deptno = d.deptno AND c.state = '처리완료') AS 처리완료, 
+        (SELECT COUNT(*) FROM compleboard c WHERE c.deptno =d.deptno AND c.state = '처리중') AS 처리중, 
+        (SELECT COUNT(*) FROM compleboard c WHERE c.deptno =d.deptno AND c.state = '미처리') AS 미처리, 
+        (SELECT COUNT(*) FROM compleboard c WHERE c.deptno =d.deptno AND c.state = '보류') AS 보류, 
+        (SELECT COUNT(*) FROM compleboard c WHERE c.deptno =d.deptno AND c.state = '폐기') AS 폐기 FROM dept d ORDER BY d.deptno
+    </select>
+
+    <select id="detail" resultType="compleboardVO">
+        SELECT * FROM compleboard WHERE deptno=#{deptno}
+    </select>
+</mapper>
