@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Other Page</title>
+    <meta charset="UTF-8" />
+</head>
+<body>
+    <div>
+        <h1>Other Page</h1>
+        <p>현재 로그인한 사용자: <span th:text="${username}"></span></p>
+        <p>현재 로그인한 사용자: <span th:text="${role}"></span></p>
+        <a th:href="@{/logout}">Logout</a>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "AESDemo",
+            "request": "launch",
+            "mainClass": "kr.co.ict.back.encode.AESDemo",
+            "projectName": "back"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-BackApplication<back>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "kr.co.ict.back.BackApplication",
+            "projectName": "back",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=61303 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=back"
+        }
+    ]
+}
