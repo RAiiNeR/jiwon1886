@@ -1,0 +1,7 @@
+.container{max-width: 1200px; margin: auto; padding: 40px 0;}
+h2{font-weight: 400; margin-bottom: 20px;}
+table{width: 100%; border-collapse: collapse; border: 1px solid #ccc;}
+tr{text-align: center; border-bottom: 1px solid #ccc;}
+th, td{padding: 12px 0; font-size: 16px;}
+thead{background-color: rgb(26, 63, 110); color: #fff; border:1px solid rgb(26, 63, 110)}
+tbody > tr:hover{background-color: #eeeeee; cursor: pointer;}
