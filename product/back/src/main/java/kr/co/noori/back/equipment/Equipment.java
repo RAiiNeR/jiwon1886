@@ -27,4 +27,5 @@ public class Equipment {
     private String state; //물품상태 (재고있음/없음)
     
     private int cnt; //현재 갯수
+
 }

@@ -1,10 +1,6 @@
 package kr.co.noori.back.equipment;
 
 import java.time.LocalDateTime;
-<<<<<<< HEAD
-=======
-
->>>>>>> 92962a935f5864cff0ee04ea1dbed5d80dee9300
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

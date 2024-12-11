@@ -1,18 +1,11 @@
 package kr.co.noori.back.equipment;
 
-<<<<<<< HEAD
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-=======
-import java.util.List;
-
-import org.hibernate.sql.Update;
-import org.springframework.beans.factory.annotation.Autowired;
->>>>>>> 92962a935f5864cff0ee04ea1dbed5d80dee9300
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,17 +15,12 @@ public class EquipmentController {
    @Autowired
    private EquipmentService equipmentService;
 
-<<<<<<< HEAD
    // 멤버리스트(확인용)
    @GetMapping("/member")
-=======
-   @GetMapping("/mem")
->>>>>>> 92962a935f5864cff0ee04ea1dbed5d80dee9300
    public List<Member> gettAllMembers() {
     return equipmentService.getAllMember();
    }
 
-<<<<<<< HEAD
 
    //---------2024.12.09 페이징처리
 //    @GetMapping
@@ -65,18 +53,13 @@ public class EquipmentController {
 
 
    // 장비 전체 리스트
-=======
->>>>>>> 92962a935f5864cff0ee04ea1dbed5d80dee9300
    @GetMapping("/equipments")
    public List<Equipment> getAllEquipments() {
        return equipmentService.getAllEquipments();
    }
 
-<<<<<<< HEAD
    
 
-=======
->>>>>>> 92962a935f5864cff0ee04ea1dbed5d80dee9300
     // 재고 업데이트 및 예약 대기자에게 알림
     @PostMapping("/equipments/updateStock")
     public ResponseEntity<?> updateStock(@RequestBody EquipmentVO equipmentVO) {
@@ -89,31 +72,17 @@ public class EquipmentController {
         }
     }
 
-<<<<<<< HEAD
     // 대여신청 메서드
-=======
-    // 대여 신청 메서드
->>>>>>> 92962a935f5864cff0ee04ea1dbed5d80dee9300
     @PostMapping("/renting")
     public ResponseEntity<?> rentEquipment(@RequestBody RentVO rvo) {
         try {
             // 대여 신청 로직 실행
-<<<<<<< HEAD
             String result = equipmentService.rent(
                 rvo.getId(),   // 회원
                 rvo.getRname(),// 물품 이름
                 rvo.getCnt()   // 갯수
             );
-            String resulted = equipmentService.rent(rvo.getId(), rvo.getRname(), rvo.getCnt());
-            return ResponseEntity.ok(resulted);
-=======
-            String result = equipmentService.rentEquipment(
-                rvo.getId(),        // 회원 ID
-                rvo.getRname(),     // 물품 이름
-                rvo.getCnt()        // 대여 수량
-            );
             return ResponseEntity.ok(result);
->>>>>>> 92962a935f5864cff0ee04ea1dbed5d80dee9300
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
@@ -123,11 +92,7 @@ public class EquipmentController {
     @PostMapping("/reserving")
     public ResponseEntity<?> reserveEquipment(@RequestBody RentVO vo) {
         try {
-<<<<<<< HEAD
             String result = equipmentService.reserve(
-=======
-            String result = equipmentService.reserveEquipment(
->>>>>>> 92962a935f5864cff0ee04ea1dbed5d80dee9300
                 vo.getId(), 
                 vo.getRname(),
                 vo.getCnt()

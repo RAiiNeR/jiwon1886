@@ -4,7 +4,6 @@ import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-<<<<<<< HEAD
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
@@ -27,32 +26,6 @@ public class EquipmentService {
 
     @Autowired
     private EmailService emailService; //이메일발송
-=======
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
-import jakarta.mail.MessagingException;
-
-@Service
-public class EquipmentService {
-    @Autowired
-    private EquipmentRepository equipmentRepository;
-
-    @Autowired
-    private MemberRepository memberRepository;
-
-    @Autowired
-    private RentRepository rentRepository;
-
-    @Autowired
-    private ReservationRepository reservationRepository;
-
-    @Autowired
-    private EmailService emailService;
-
-
-    //-----------------------------------------------------------------------
->>>>>>> 92962a935f5864cff0ee04ea1dbed5d80dee9300
 
     public List<Equipment> getAllEquipments() {
         return equipmentRepository.findAll();
@@ -62,21 +35,12 @@ public class EquipmentService {
         return memberRepository.findAll();
     }
 
-<<<<<<< HEAD
     public String rent(String id, String rname, int cnt) {
         Member member = memberRepository.findById(id)  // 회원 ID로 조회
             .orElseThrow(() -> new RuntimeException(id + "인 회원이 존재하지 않습니다."));
             
         Equipment equipment = equipmentRepository.findByRname(rname)  // 물품 이름으로 조회
             .orElseThrow(() -> new RuntimeException(rname + "인 물품이 존재하지 않습니다."));
-=======
-    public String rentEquipment(String id, String rname, int cnt) {
-        Member member = memberRepository.findById(id)  // 회원 ID로 조회
-            .orElseThrow(() -> new RuntimeException("회원 ID가 " + id + "인 회원이 존재하지 않습니다."));
-            
-        Equipment equipment = equipmentRepository.findByRname(rname)  // 물품 이름으로 조회
-            .orElseThrow(() -> new RuntimeException("물품명이 " + rname + "인 물품이 존재하지 않습니다."));
->>>>>>> 92962a935f5864cff0ee04ea1dbed5d80dee9300
     
         // 물품의 재고 확인
         if (equipment.getCnt() < cnt) {
@@ -85,13 +49,8 @@ public class EquipmentService {
     
         // 재고 차감
         equipment.setCnt(equipment.getCnt() - cnt);
-<<<<<<< HEAD
         equipmentRepository.save(equipment); //차감된 재고 저장(업데이트)
 
-=======
-        equipmentRepository.save(equipment);
-    
->>>>>>> 92962a935f5864cff0ee04ea1dbed5d80dee9300
         Rent rent = new Rent();
         rent.setRentDate(new Date());
         rent.setMember(member);
@@ -101,17 +60,7 @@ public class EquipmentService {
         return "신청되었습니다.";
     }
 
-<<<<<<< HEAD
     public String reserve(String id, String rname, int cnt) {
-=======
-    // EquipmentService.java
-
-    // public List<Reservation> getAllReservations() {
-    //     return reservationRepository.findAll();
-    // }
-
-    public String reserveEquipment(String id, String rname, int cnt) {
->>>>>>> 92962a935f5864cff0ee04ea1dbed5d80dee9300
         Member member = memberRepository.findById(id)  // 회원 ID로 조회
             .orElseThrow(() -> new RuntimeException("회원 ID가 " + id + "인 회원이 존재하지 않습니다."));
             
@@ -121,11 +70,7 @@ public class EquipmentService {
         // 물품의 재고 확인
         if (equipment.getCnt() >= cnt) {
             // 대여가 가능하면 대여 로직 실행
-<<<<<<< HEAD
             rent(id, rname, cnt);
-=======
-            rentEquipment(id, rname, cnt);
->>>>>>> 92962a935f5864cff0ee04ea1dbed5d80dee9300
             return "대여 신청되었습니다.";
         } else {
             // 재고가 부족하면 예약 진행
@@ -140,32 +85,6 @@ public class EquipmentService {
         }
     }
 
-<<<<<<< HEAD
-=======
-    // public void reservation(Equipment equipment) {
-    //     List<Reservation> waitingReservations = reservationRepository.findByEquipmentAndStatusOrderByReservedTimeAsc(equipment, ReservationStatus.WAITING);
-    
-    //     System.out.println("대기 중인 예약 수: " + waitingReservations.size());
-
-    //     if (!waitingReservations.isEmpty()) {
-    //         Reservation reservation = waitingReservations.get(0); // 선착순 1번 예약자
-    //         Member member = reservation.getMember();
-    //         try {
-    //             System.out.println("이메일 발송 시도 - 회원: " + member.getEmail());
-    //             emailService.sendOrderAvailableEmail(member, equipment); // 이메일 발송
-    //             System.out.println("이메일 발송 성공");
-
-    //             reservation.setStatus(ReservationStatus.NOTIFIED); // 알림 발송 후 상태 변경
-    //             reservationRepository.save(reservation);
-    //             System.out.println("예약 상태 업데이트 완료");
-    //         } catch (MessagingException e) {
-    //             System.err.println("이메일 발송 실패: " + e.getMessage());
-    //             e.printStackTrace();
-    //         }
-    //     }
-    // }
-
->>>>>>> 92962a935f5864cff0ee04ea1dbed5d80dee9300
     // 재고 업데이트 및 예약 대기자 알림 처리
     @Transactional
     public void update(String rname, int cnt) {
@@ -199,7 +118,6 @@ public class EquipmentService {
             }
         }
     }
-<<<<<<< HEAD
 
 
     //--------------------------2024.12.09 페이징처리
@@ -214,46 +132,4 @@ public class EquipmentService {
         // PageImpl을 사용하여 Page 객체로 반환
         return new PageImpl<>(entity, PageRequest.of(page - 1, size), totalElements);
     }
-=======
-    
-
-
-    //----------------------------------------------------------------
-    // 재고 업데이트 및 예약 대기자 알림 처리
-    // @Transactional
-    // public void update(Long equipmentId, int addedStock) {
-    //     System.out.println("재고 업데이트 시작 - equipmentId: " + equipmentId + ", addedStock: " + addedStock);
-
-    //     Equipment equipment = equipmentRepository.findById(equipmentId)
-    //         .orElseThrow(() -> new RuntimeException("해당 물품이 존재하지 않습니다."));
-
-    //         System.out.println("현재 재고: " + equipment.getCnt());
-        
-    //     // 재고 추가
-    //     equipment.setCnt(equipment.getCnt() + addedStock);
-    //     equipmentRepository.save(equipment);
-
-    //     System.out.println("재고 업데이트 완료 - 새로운 재고: " + equipment.getCnt());
-        
-    //     // 재고가 채워졌을 때 대기자에게 알림
-    //     System.out.println("대기자 알림 프로세스 시작");
-    //     reservation(equipment);
-    //     System.out.println("대기자 알림 프로세스 완료");
-    // }
-
-    // @Transactional
-    // public void update(Long equipmentId, int addedStock) {
-    //     // Step 1: 재고 업데이트
-    //     equipmentRepository.updateStock(equipmentId, addedStock);
-
-    //     // Step 2: 업데이트된 장비를 조회
-    //     Equipment updatedEquipment = equipmentRepository.findById(equipmentId)
-    //         .orElseThrow(() -> new RuntimeException("장비 ID " + equipmentId + "가 존재하지 않습니다."));
-
-    //     // Step 3: 예약 대기자 처리
-    //     reservation(updatedEquipment);
-    // }
-
-
->>>>>>> 92962a935f5864cff0ee04ea1dbed5d80dee9300
 }

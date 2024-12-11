@@ -25,7 +25,7 @@ import lombok.Setter;
 public class Rent {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "rent_seq_gen")
-    private Long num;
+    private Long rental_id;
 
  
     @Temporal(TemporalType.DATE)

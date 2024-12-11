@@ -24,26 +24,51 @@ const ApplicationForm: React.FC = () => {
     formData();
   });
 
+  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  
+  //   try {
+  //     // 서버로 POST 요청 보내기
+  //     const response = await axios.post('http://localhost:81/back/api/rent/renting', {
+  //       headers: { 'Content-Type': 'application/json' },
+  //     });
+  //     console.log('Response:', response.data); // 성공적인 응답을 콘솔에 출력
+  //     alert("신청완료");
+  //     navigate('/rent'); // 성공 후 'rent' 페이지로 이동
+  //   } catch (error) {
+  //     if (axios.isAxiosError(error)) {
+  //       // Axios 오류 처리
+  //       console.log('수정 오류:', error.response?.data || error.message);  // 오류 메시지 출력
+  //     } else {
+  //       console.log('예상치 못한 오류:', error);
+  //     }
+  //   }
+  // };
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   
     try {
       // 서버로 POST 요청 보내기
       const response = await axios.post('http://localhost:81/back/api/rent/renting', {
-        headers: { 'Content-Type': 'application/json' },
+        id,        // 입력받은 아이디
+        rname,     // 입력받은 물품 이름
+        cnt,       // 입력받은 수량
       });
-      console.log('Response:', response.data); // 성공적인 응답을 콘솔에 출력
-      alert("신청완료");
-      navigate('/rent'); // 성공 후 'rent' 페이지로 이동
+  
+      console.log('Response:', response.data);  // 성공적인 응답을 콘솔에 출력
+      alert("신청되었습니다");  // 신청 완료 알림
+      navigate('/rent');  // 성공 후 'rent' 페이지로 이동
     } catch (error) {
       if (axios.isAxiosError(error)) {
-        // Axios 오류 처리
         console.log('수정 오류:', error.response?.data || error.message);  // 오류 메시지 출력
+        alert(error.response?.data || "오류가 발생했습니다.");  // 사용자에게 오류 메시지 알림
       } else {
         console.log('예상치 못한 오류:', error);
+        alert("예상치 못한 오류가 발생했습니다.");
       }
     }
   };
+  
   
 
   return (

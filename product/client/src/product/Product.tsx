@@ -27,26 +27,34 @@ const Product: React.FC = () => {
         const response = await axios.get('http://localhost:81/back/api/rent', {
           params: { page: page, size },
         });
-        console.log('Fetching page:', page);
-        console.log('Response data:', response.data);
   
-        setProductData(response.data.productData); // 서버 응답 데이터에 맞춰 수정
-        setTotalPages(response.data.total_pages);
+        setProductData(response.data.productData);
+        const calculatedTotalPages = Math.ceil(response.data.totalItems / size);
+        setTotalPages(calculatedTotalPages);
       } catch (error) {
         console.error('Error fetching product data:', error);
       }
     };
 
     useEffect(() => {
+      
       setStartPage((Math.floor((currentPage - 1) / pagePerBlock) * pagePerBlock) + 1);
+      console.log("setStartPage 확인 : "+setStartPage);
       let end = (Math.floor((currentPage - 1) / pagePerBlock) + 1) * pagePerBlock;
       end = end > totalPages ? totalPages : end;
+      console.log("확인중"+end);
       setEndPage(end);
     }, [productData])
 
     useEffect(() => {
       getProduct(page);
     }, [page])
+
+    useEffect(() => {
+      console.log('페이지 Page:', page);
+      console.log('시작 페이지 Start Page:', startPage, '끝 페이지 End Page:', endPage);
+      console.log('전체 페이지 : Total Pages:', totalPages);
+    }, [page, startPage, endPage, totalPages]);
   
     const handlePageChange = (newPage: number) => {
       setPage(newPage);
@@ -84,7 +92,7 @@ const Product: React.FC = () => {
           </div>
           <div className="pd-btn">
                     <button><Link to={'/renting'} style={{textDecoration:'none'}} className='link-btn'>신청하기</Link></button>
-                    <button><Link to={'/renting'} style={{textDecoration:'none'}} className='link-btn'>예약하기</Link></button>
+                    <button><Link to={'/reserving'} style={{textDecoration:'none'}} className='link-btn'>예약하기</Link></button>
                   </div>
         </div>
 
