@@ -1,0 +1,108 @@
+/* General styling */
+.ProgramForm {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table layout for form */
+  .ProgramForm form {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  .ProgramForm .mb-3 {
+    display: table-row;
+    margin-bottom: 15px;
+  }
+  
+  .ProgramForm .mb-3 label {
+    display: table-cell;
+    padding: 8px;
+    font-weight: bold;
+    width: 25%; /* Adjust this width as needed */
+  }
+  
+  .ProgramForm .mb-3 input,
+  .ProgramForm .mb-3 select,
+  .ProgramForm .mb-3 textarea {
+    display: table-cell;
+    padding: 8px;
+    width: 75%; /* Adjust this width to align with the labels */
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Input types */
+  .ProgramForm input[type="text"],
+  .ProgramForm input[type="date"],
+  .ProgramForm input[type="time"],
+  .ProgramForm select,
+  .ProgramForm textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Textarea styling */
+  .ProgramForm textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  /* Button styling */
+  .ProgramForm button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .ProgramForm button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Buttons in a horizontal row */
+  .ProgramForm .mapbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .ProgramForm button[type="submit"] {
+    width: auto;
+    display: inline-block;
+    margin-top: 20px;
+  }
+  
+  .ProgramForm input[type="file"] {
+    padding: 5px;
+  }
+  
+
+  .ProgramForm input[type="file"]::file-selector-button:hover {
+    background-color: #218838;
+  }
+  
+  /* Styling for map modal visibility */
+  .ProgramForm .mapbox button {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .ProgramForm .mapbox button:hover {
+    background-color: #218838;
+  }
+  

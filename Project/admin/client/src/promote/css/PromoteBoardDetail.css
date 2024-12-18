@@ -1,0 +1,153 @@
+/* 전체 컨테이너 스타일 */
+.PromoteboardDetail {
+    padding: 50px;
+    font-family: 'Arial', sans-serif;
+}
+
+.PromoteboardDetail .container {
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 80%;
+    max-width: 1200px;
+    min-width: 720px;
+    box-shadow: 0 4px 10px #ccc;
+}
+
+/* 제목 섹션 스타일 */
+.PromoteboardDetail .title-section {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* 작성자, 조회수, 작성일 정보 섹션 스타일 */
+.PromoteboardDetail .info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.PromoteboardDetail .info-left {
+    text-align: left;
+    flex: 1;
+}
+
+.PromoteboardDetail .info-right {
+    margin-left: 15px;
+    text-align: right;
+}
+
+/* 게시글 콘텐츠 섹션 */
+.PromoteboardDetail .content-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.PromoteboardDetail .content-section img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.PromoteboardDetail .content-section p {
+    text-align: left;
+    color: #333;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+/* 첨부파일 스타일 */
+.PromoteboardDetail .attachment {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.PromoteboardDetail .attachment a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.PromoteboardDetail .attachment a:hover {
+    text-decoration: underline;
+}
+
+/* 이전글, 다음글 네비게이션 섹션 */
+.PromoteboardDetail .navigation-section {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.PromoteboardDetail .nav-item p {
+    margin: 0;
+    color: #555;
+}
+
+.PromoteboardDetail .nav-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.PromoteboardDetail .nav-item a:hover {
+    text-decoration: underline;
+}
+
+/* 수정 및 삭제 버튼 스타일 */
+.PromoteboardDetail .register-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.PromoteboardDetail .register-btn-container .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.PromoteboardDetail .btn-warning {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.PromoteboardDetail .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* 메인 페이지 이동 버튼 스타일 */
+.PromoteboardDetail .button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.PromoteboardDetail .main-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.PromoteboardDetail .main-button:hover {
+    background-color: #0056b3;
+}

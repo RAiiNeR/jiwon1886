@@ -1,0 +1,362 @@
+/* PromoteHome CSS */
+.promoteHomeContainer {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+  .promoteHomeContainer h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+  }
+
+  .promoteHomeContainer .product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.promoteHomeContainer .product-item {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.promoteHomeContainer .product-item:hover {
+  transform: translateY(-5px);
+}
+
+.promoteHomeContainer .product-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.promoteHomeContainer .caption {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.promoteHomeContainer .product-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.promoteHomeContainer .info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.promoteHomeContainer .product-hit,
+.promoteHomeContainer .product-date {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 5px 0;
+}
+
+/* Pagination styles */
+.promoteHomeContainer .pagination {
+display: flex;
+justify-content: center;
+margin-top: 20px;
+}
+
+.promoteHomeContainer .pagination button {
+padding: 8px 12px;
+margin: 0 5px;
+border: 1px solid #ddd;
+background-color: #fff;
+color: #333;
+cursor: pointer;
+border-radius: 4px;
+transition: background-color 0.3s, color 0.3s;
+}
+
+.promoteHomeContainer .pagination button.active {
+background-color: #003a6f;
+color: #fff;
+}
+
+.promoteHomeContainer .pagination button:hover {
+background-color: #003a6f;
+color: #fff;
+border-color: #003a6f;
+}
+
+/* 검색 및 버튼 스타일 */
+.promoteHomeContainer .search-box {
+  display: flex;
+  justify-content: space-between; /* 왼쪽 검색과 오른쪽 버튼을 양쪽으로 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  margin-top: 20px;
+}
+/* 검색창 */
+.promoteHomeContainer .search-container {
+  display: flex;
+  gap: 10px; /* 검색창과 검색 버튼 간의 간격 */
+  align-items: center;
+}
+
+.promoteHomeContainer .search-container .btn-primary {
+  background-color: #003a6f;
+  color: white;
+}
+
+.promoteHomeContainer .search-container .btn:hover {
+  opacity: 0.9;
+}
+.promoteHomeContainer .search-box .btn {
+  padding: 8px 16px;
+  margin-bottom: 13px;
+  font-size: 14px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #003a6f;
+  color: white;
+  display: flex;
+  align-items: center; /* 버튼 텍스트 수직 중앙 정렬 */
+  justify-content: center;
+  height: 38px; /* 버튼 높이를 입력창과 맞춤 */
+}
+.promoteHomeContainer .search-container > input {
+  display: block;
+  width: 300px; /* 검색창 너비를 줄임 */
+  padding: 8px 12px; /* 높이를 맞추기 위해 패딩을 조정 */
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  appearance: none;
+  height: 38px; /* 버튼 높이에 맞게 설정 */
+}
+
+.promoteHomeContainer .search-box .action-buttons {
+  display: flex;
+  gap: 10px; /* 등록과 삭제 버튼 간의 간격 */
+}
+
+/* translate style */
+.promoteHomeContainer .translation select{
+  height: 30px;
+  margin: 5px; 
+  border-radius: .25rem;
+  border-color: #bdbdbd;
+}
+.promoteHomeContainer .translation > button{
+  padding: 3px;
+  padding :auto;
+  height: 31px;
+  background-color: #003a6f;
+  color:#ffff;
+  border-radius: .35rem;
+  border-color: #ffff;
+}
+.promoteHomeContainer .translation > button:hover{
+  background-color: #004691;
+}
+
+
+
+/* ------------------------------------------------------------------------------------- */
+/* PromoteDetail CSS */
+.PromoteDetailcontainer {
+
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  
+
+  .title-section {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .content-box{
+    padding-top: 20px;
+    text-align: left;
+  }
+
+  .info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    color: #555;
+    margin: 8px 0;
+  }
+  
+  .info-left {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .info-right {
+    display: flex;
+    gap: 20px;
+    text-align: right;
+    margin-right: 15px;
+  }
+  
+  
+  .content-section {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .styled-image {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+  }
+  
+  .attachment {
+    text-align: left;
+    font-size: 14px;
+    margin: 15px 0;
+  }
+  
+  .attachment a {
+    color: #666;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  
+  .attachment a:hover,
+  .nav-item a:hover {
+    text-decoration: underline;
+    color: #003a6f;
+  }
+  
+  .navigation-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 각 항목 간격 추가 */
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .nav-item {
+    display: flex;
+    justify-content: space-between; /* 왼쪽에 제목, 오른쪽에 날짜 */
+    align-items: center; /* 수직 정렬 */
+    padding: 5px 0;
+    width: 100%;
+  }
+  
+  .nav-item p {
+    margin: 0;
+    color: black;
+    font-size: 14px;
+  }
+  
+  .nav-item a {
+    color: #666;
+    font-size: 14px;
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  
+  .nav-item span {
+    text-align: right;
+    margin-left: auto; /* 날짜를 오른쪽으로 밀기 */
+    color: #999; /* 날짜 색상 */
+    font-size: 12px;
+    text-align: right;
+  }
+  
+  .button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .main-button {
+    background-color: #003a6f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .main-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .attachment p {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+  }
+  
+  .attachment a {
+    margin-right: auto; 
+  }
+  
+  .btn-outline-primary {
+    margin-left: 10px; 
+  }
+
+  /* translate style */
+  .translation select{
+    border-color: #bdbdbd;
+    height: 30px;
+    margin: 0 5px 0 2px;
+    border-radius: .25rem;
+  }
+  .translation > button{
+    padding: 3px;
+    padding :auto;
+    height: 31px;
+    background-color: #003a6f;
+    color:#ffff;
+    border-radius: .35rem;
+    border-color: #ffff;
+  }
+  .translation > button:hover{
+    background-color: #0056b3;
+  }
+}

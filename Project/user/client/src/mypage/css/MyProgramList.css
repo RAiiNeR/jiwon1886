@@ -1,0 +1,78 @@
+ /*개인 강좌 프로그램 신청 확인현황-12.12추가*/
+ .myProgramlist {
+    width: 90%;
+    margin: 20px auto;
+    /* margin-top: 20px; */
+    padding: 20px 0;
+}
+
+.myProgramlist h2 {
+    font-weight: 600;
+    color: #333;
+    /* Q&A 색상에 맞춤 */
+    text-align: center;
+    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
+    font-size: 2.0rem;
+}
+
+.myprogramlist.search:hover {
+    background-color: #00284d;
+    color: white;
+}
+
+.myprogram-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.myprogram-table th,.myprogram-table td {
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.myprogram-table th {
+    background-color: #003a6f;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.myprogram-table td {
+    background-color: #f9f9f9;
+    /* 테이블의 기본 배경색 */
+}
+
+.myprogram-table tr:nth:child(even) td {
+    background-color: #f2f2f2;
+    /* 짝수 행 배경색 */
+}
+
+.myprogram-table tr:hover {
+    background-color: #f1f1f1;
+    /* 마우스 호버 효과 */
+}
+
+/* 추가적인 레이아웃 조정 */
+.myProgramlist .mb-4 {
+margin-bottom: 20px;
+}
+
+.myProgramlist .d-flex {
+display: flex;
+justify-content: center;
+}
+
+.myProgramlist .mt-4 {
+margin-top: 30px;
+}
+
+
+
+

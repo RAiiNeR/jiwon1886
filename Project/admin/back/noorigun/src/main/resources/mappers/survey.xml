@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.noorigun.survey.SurveyDao">
+
+<!-- 설문조사 추가 -->
+  <insert id = "addSurvey" parameterType = "survey">
+    INSERT INTO SURVEY VALUES(SURVEY_SEQ.NEXTVAL,#{code},SYSDATE,#{sub})
+  </insert>
+
+<!-- 설문조사 내용 삽입-->
+  <insert id = "addSurveyContent" parameterType = "java.util.List">
+  <!-- Survey(subcode) 안에 surveycontent 삽입 -->
+    <selectKey keyProperty = "subcode" resultType = "int" order = "BEFORE">
+      SELECT SURVEY_SEQ.CURRVAL FROM DUAL
+    </selectKey>
+<!-- surveycontent안에 값 추가 -->
+    <foreach collection = "list" item = "content" separator = " " open = "INSERT ALL" close = "SELECT * FROM DUAL">
+      INTO SURVEYCONTENT VALUES(#{subcode}, 0, #{content.surveyTitle}, #{content.surveytype})
+    </foreach>
+  </insert>
+
+<!-- 설문조사 목록 내림차순 조회 -->
+   <select id = "getSurveyList" resultType = "map">
+      SELECT s.num, s.SUB,SUM(b.surveycnt) AS cnt, s.sdate FROM SURVEY s, SURVEYCONTENT b WHERE s.num = b.subcode GROUP BY s.num, s.sub, s.sdate
+   </select>
+
+<!-- 특정 설문조사 조회 -->
+  <select id = "getSurveyByNum" resultType = "survey" parameterType = "int">
+    SELECT * FROM SURVEY WHERE NUM = #{num}
+  </select>
+
+<!-- 특정 설문조사 항목내용 조회 -->
+  <select id = "getSurveyContentBySubcode" resultType = "surveycontent" parameterType = "int">
+    SELECT * FROM SURVEYCONTENT WHERE SUBCODE = #{subcode}
+  </select>
+
+<!-- 특정 설문조사 항목내용 삭제 -->
+  <delete id = "deleteSurveyContents" parameterType = "int">
+    DELETE FROM SURVEYCONTENT WHERE SUBCODE = #{num}
+  </delete>
+
+<!-- 특정 설문조사 삭제 -->
+  <delete id = "deleteSurvey" parameterType = "int">
+      DELETE FROM SURVEY WHERE NUM = #{num}
+  </delete>
+
+</mapper>

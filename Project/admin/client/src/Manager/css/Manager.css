@@ -1,0 +1,48 @@
+.managerlist{
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 4px 10px #CCC;
+    width: 80%;
+    min-width: 900px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    h1{
+        margin-bottom: 15px;
+    }
+
+    input[type='text']{
+        margin-right: 10px;
+    }
+
+    thead{
+        background-color: #00438f;
+        color: white;
+        text-align: center;
+    }
+
+    tbody{
+        text-align: center;
+        line-height: 150px;
+    }
+}
+
+.managerForm{
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 4px 10px #CCC;
+    width: 80%;
+    min-width: 720px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    h1{
+        margin-bottom: 15px;
+    }
+
+    .check-btn{
+        font-size: 0.9rem !important;
+    }
+}

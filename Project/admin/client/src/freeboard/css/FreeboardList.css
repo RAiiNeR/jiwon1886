@@ -1,0 +1,116 @@
+/* 기본적인 페이지 레이아웃 설정 */
+.bulletin-board {
+  font-family: 'Arial', sans-serif;
+  width: 80%;
+  max-width: 1200px;
+  min-width: 720px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;  /* 연한 파란색 배경 */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* 헤더 스타일 */
+.bulletin-board h1 {
+  color: #1e3a5f;  /* 진한 파란색 */
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+/* 검색창 및 버튼을 오른쪽에 배치 */
+.bulletin-board .search-box {
+display: flex;
+justify-content: flex-end;  /* 오른쪽 정렬 */
+align-items: center;  /* 수직 가운데 정렬 */
+margin-bottom: 20px; /* 테이블 위 여백 */
+ padding-right: 10px;
+}
+
+.bulletin-board .search {
+border: 1px solid #007bff;
+background-color: #007bff;
+color: white;
+border-radius: 5px;
+cursor: pointer;
+margin-left: 10px; /* input과 버튼 사이 간격 */
+width: 50px; /* input과 동일한 너비 */
+}
+
+.bulletin-board .search-input {
+padding: 10px;
+font-size: 13px;
+border-radius: 5px;
+border: 1px solid #ccc;
+width: 250px;  /* 고정 너비 */
+height: 8px;
+
+}
+
+.bulletin-board .del-btn:disabled{
+  background-color: #ccc;
+  border: none;
+}
+
+/* 테이블 스타일 */
+.bulletin-board table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bulletin-board th,
+.bulletin-board td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;  /* 연한 회색 선 */
+}
+
+/* 테이블 헤더 스타일 */
+.bulletin-board th {
+  background-color: #004997;  /* 파란색 배경 */
+  color: white;
+  font-weight: bold;
+}
+
+/* 테이블 내용 스타일 */
+.bulletin-board td {
+  background-color: #fff;
+  color: #333;
+}
+
+/* 마우스 파란 줄*/
+.bulletin-board td.title:hover{
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* 테이블 테두리 */
+.bulletin-board table, 
+.bulletin-board th, 
+.bulletin-board td {
+  border: 1px solid #ddd;
+}
+
+/* 글씨 색상 및 정렬 */
+.bulletin-board td {
+  font-size: 0.9rem;
+}
+
+.bulletin-board .btn-box{
+  margin-top: 20px;
+  display: flex;
+  justify-content:flex-end;
+
+}
+
+.bulletin-board .btn{
+  padding: 8px 15px;
+  color: white;
+}
+
+/* 화면 크기에 따라 반응형 설정 */
+@media (max-width: 768px) {
+  .bulletin-board table {
+    font-size: 0.8rem;
+  }
+}

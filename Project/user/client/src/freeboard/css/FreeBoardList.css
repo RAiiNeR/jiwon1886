@@ -1,0 +1,211 @@
+/* 전체 레이아웃 설정 */
+.bulletin-board {
+  font-family: 'Arial', sans-serif;
+  max-width: 1200px; /* 최대 폭 설정 */
+  margin: 20px auto; /* 화면 가운데 배치 */
+  padding: 20px;
+  background-color: #f9fafe; /* 연한 파란색 배경 */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 헤더 스타일 */
+.bulletin-board h1 {
+  color: #333; /* 진한 파란색 */
+  font-weight: 600;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+/* 검색창 스타일 */
+.search-box {
+  display: flex;
+  justify-content: flex-end; /* 오른쪽 정렬 */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 14px; /* 폰트 크기 */
+  border: 2px solid #ccc; /* 진한 파란색 보더 */
+  border-radius: 5px; /* 보더 라운드 */
+  width: 300px; /* 검색창 크기 */
+  transition: all 0.3s ease; /* 포커스 애니메이션 */
+  height: 40px;
+}
+
+.search-input:focus {
+  border-color: #0056b3; /* 포커스 시 보더 색상 */
+  outline: none; /* 기본 아웃라인 제거 */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* 포커스 효과 */
+}
+
+.search {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: white;
+  background-color: #003a6f; /* 파란색 버튼 */
+  border: none;
+  border-radius: 8px; /* 버튼 라운드 */
+  cursor: pointer;
+  margin-left: 10px; /* 버튼과 입력창 간격 */
+}
+
+.search:hover {
+  background-color: #0056b3; /* 버튼 호버 색상 */
+}
+
+
+/* 테이블 스타일 */
+.bulletin-board table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+}
+
+.bulletin-board th,
+.bulletin-board td {
+  text-align: center;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+}
+
+.bulletin-board th {
+  background-color: #003a6f;
+  color: white;
+  font-weight: bold;
+}
+
+.bulletin-board td {
+  color: #333;
+  font-size: 14px;
+}
+
+.bulletin-board td img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.bulletin-board td.title a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.bulletin-board td.title a:hover {
+  text-decoration: underline;
+}
+
+/* 테이블 하단 링크 */
+tfoot td {
+  text-align: right;
+  padding: 10px;
+}
+
+tfoot a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+tfoot a:hover {
+  text-decoration: underline;
+}
+
+/* 페이지네이션 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.pagination li {
+  margin: 0 3px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination button:hover {
+  background-color: #f1f1f1;
+}
+
+.pagination .active button {
+  background-color: #003a6f;
+  color: white;
+  border-color: #003a6f;
+}
+
+.write-button {
+  display: inline-block; /* 버튼처럼 동작 */
+  padding: 10px 20px; /* 버튼 내부 여백 */
+  font-size: 14px; /* 글씨 크기 */
+  font-weight: bold; /* 글씨 강조 */
+  color: white; /* 글씨 색상 */
+  background-color: #003a6f; /* 파란색 배경 */
+  border: none; /* 기본 테두리 제거 */
+  border-radius: 5px; /* 둥근 모서리 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+  text-decoration: none; /* 링크 밑줄 제거 */
+  cursor: pointer; /* 마우스 커서 변경 */
+}
+
+.write-button:hover {
+  background-color: #0056b3; /* 호버 시 색상 변경 */
+  color: white;
+  text-decoration: none;
+}
+
+.write-button:active {
+  background-color: #003f8c; /* 클릭 시 색상 */
+  transform: scale(0.98); /* 클릭 시 살짝 줄어드는 효과 */
+}
+
+.write-button-container {
+  display: flex; /* 버튼을 컨테이너에서 조정 */
+  justify-content: center; /* 오른쪽 정렬 */
+}
+
+/* 반응형 설정 */
+@media (max-width: 768px) {
+  .bulletin-board {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .bulletin-board h1 {
+    font-size: 1.5rem;
+  }
+
+  .search-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-input {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .bulletin-board table {
+    font-size: 12px;
+  }
+
+  .bulletin-board td img {
+    width: 60px;
+    height: 60px;
+  }
+}

@@ -1,0 +1,157 @@
+/* 기본적인 리셋 */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f9fd; /* 배경 색상 */
+   /* color: #333; /* 기본 텍스트 색상 */
+   /* display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  } */
+  
+  
+  /* 폼 컨테이너 스타일 */
+  .SuggestionForm {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 3px 5px 5px #ccc;
+    min-width: 1000px;
+    height: 110;
+  }
+  .post-form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .SuggestionForm h2 {
+    font-weight: bold;
+    text-align: left;
+    color: #333; /* 파란색 */
+    margin-bottom: 1rem;
+  }
+  .writer{
+    padding-top: 3px;
+  }
+
+  .col-sm-1{
+    font-size: 17px;
+  }
+
+  .center > input{
+    border-radius: 4px;
+    border-color: #444;
+  }
+  .writer > input{
+    border-radius: 4px;
+    border-color: #444;
+  }
+  
+  .SuggestionForm .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* 제목, 작성자, 내용 입력 필드 스타일 */
+  .SuggestionForm .form-group label {
+    font-weight: bold;
+    display: block;
+    color: #444;
+    margin-bottom: 0.5rem;
+  }
+  
+  .SuggestionForm .form-group input,
+  .SuggestionForm .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  .SuggestionForm .form-group input:focus,
+  .SuggestionForm .form-group textarea:focus {
+    margin-left: 10px;
+    outline: none;
+    /* border-color: #003a6f; 파란색 */
+    background-color: #ffffff;
+  }
+  
+  .SuggestionForm textarea {
+    resize: vertical;
+    height: 150px;
+  }
+  
+  .SuggestionForm input[type="file"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .SuggestionForm input[type="file"]:focus {
+    border-color: #004280; /* 파란색 */
+    background-color: #ffffff;
+  }
+  
+  /* 버튼 스타일 */
+  /* .SuggestionForm button {
+    background-color: #0066cc;
+    color: #ffffff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 1rem;
+  } */
+
+  /* 버튼 */
+   .btn-primary{
+    margin-top: 15px;
+    background-color: #003a6f;
+    border-color: #003a6f;
+   }
+  .SuggestionForm button:hover {
+    background-color: #0254a1; /* 더 어두운 파란색 */
+  }
+  
+  /* .SuggestionForm button[type="button"] {
+    background-color: #f1f1f1;
+    color: #0066cc;
+  } */
+  
+  /* .SuggestionForm button[type="button"]:hover {
+    background-color: #e0e0e0;
+  } */
+  
+  /* 이미지 파일 input 위치 */
+  .SuggestionForm input[type="file"] {
+    margin-top: 0.5rem;
+    display: block;
+  }
+  
+  /* 폼 버튼들 위치 */
+  /* .SuggestionForm button[type="button"] {
+    margin-top: 1rem;
+    display: inline-block;
+    width: auto;
+    padding: 0.8rem 1.5rem;
+    text-align: center;
+  } */
+ 
+  
