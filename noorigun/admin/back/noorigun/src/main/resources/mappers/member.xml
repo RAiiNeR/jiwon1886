@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.noorigun.member.MemberDao">
+
+  <!-- 멤버 전체 리스트 -->
+  <select id="list" resultType="mem">
+        SELECT * FROM MEMBER ORDER BY NUM DESC
+  </select>
+  <!-- 전체 인원 수 -->
+  <select id="count" resultType="int">
+        SELECT COUNT(*) FROM MEMBER
+  </select>
+  <!-- 특정 인원 삭제 -->
+  <delete id="delete" parameterType="int">
+        DELETE FROM mem WHERE NUM=#{num}
+  </delete>
+
+  <!-- 이용자 증가량 차트용 -->
+  <select id="incrementChart" resultType="map">
+    SELECT SUM(CASE WHEN MDATE &lt; SYSDATE - 5 THEN 1 ELSE 0 END) AS D_FIVE,
+      SUM(CASE WHEN MDATE &lt; SYSDATE - 4 THEN 1 ELSE 0 END) AS D_FORE,
+      SUM(CASE WHEN MDATE &lt; SYSDATE - 3 THEN 1 ELSE 0 END) AS D_THREE,
+      SUM(CASE WHEN MDATE &lt; SYSDATE - 2 THEN 1 ELSE 0 END) AS D_TWO,
+      SUM(CASE WHEN MDATE &lt; SYSDATE - 1 THEN 1 ELSE 0 END) AS D_ONE, 
+      SUM(CASE WHEN MDATE &lt;= SYSDATE THEN 1 ELSE 0 END) AS D_DAY
+    FROM MEMBER
+  </select>
+</mapper>

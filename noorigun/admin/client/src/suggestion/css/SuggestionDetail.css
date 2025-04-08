@@ -1,0 +1,237 @@
+/* 기본 배경색, 텍스트 색상 설정 */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+.suggestiondetail {
+  width: 80%;
+  min-width: 720px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 상단 헤더, 제목 */
+.suggestiondetail h3 {
+  color: #003A6F;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.suggestiondetail h1, .suggestiondetail h2 {
+  color: #003A6F;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* 게시글 내용 */
+.post-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.post-content p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+hr.divider {
+  border: 1px solid #003A6F;
+  margin: 20px 0;
+}
+
+/* 이미지 스타일 */
+.post-content img {
+  border-radius: 8px;
+  margin: 10px;
+  max-width: 100%;
+  /* max-height: 150px; */
+  object-fit: cover;
+}
+
+/* 상태 선택 라디오 버튼 */
+.state-selector {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.state-selector label {
+  margin-right: 20px;
+  font-weight: normal;
+}
+
+.state-selector input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* 리스트 및 삭제 버튼 */
+.suggestiondetail a {
+  color: #003A6F;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.suggestiondetail button {
+  background-color: #003A6F;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin: 0 10px;
+}
+
+.suggestiondetail button:hover {
+  background-color: #002a57;
+}
+
+.suggestiondetail .state-selector {
+  margin-top: 20px;
+}
+
+/* 전반적인 버튼과 링크에 대한 스타일 */
+button, a {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* 댓글 영역 */
+.scomm {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.scomm-toggle {
+  margin-bottom: 10px;
+}
+
+.scomm-toggle-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #007bff !important;
+  background-color: #007bff !important;
+  color: white;
+  border-radius: 4px;
+}
+
+.scomm-list {
+  margin-top: 20px;
+}
+
+.scomm-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+
+.scomm-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px; /* 버튼 간 간격을 좁게 설정 */
+  margin-top: 10px; /* 상단 여백 */
+}
+
+.scomm-pagination button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background-color: #007bff !important;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.scomm-pagination button:disabled {
+  background-color: #e0e0e0 !important;
+  color: #a0a0a0 !important;
+  cursor: not-allowed;
+}
+
+.scomm-pagination button:hover:not(:disabled) {
+  background-color: #0056b3 !important;
+}
+
+.scomm-pagination .scomm-page-number.active {
+  background-color: #0056b3 !important;
+  color: white;
+  font-weight: bold;
+  border-color: #004085 !important;
+}
+
+.scomm-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.scomm-pagination .active-page {
+  background-color: #007bff !important;
+  color: white;
+}
+.scomm-pagination button {
+  margin: 0 5px;
+}
+
+.scomm-textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+  overflow-y: auto;
+}
+
+.scomm-submit-btn {
+  align-self: flex-end;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff !important; 
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.scomm-controls {
+  display: flex;
+  justify-content: flex-end; /* 오른쪽 정렬 */
+  align-items: center;
+  gap: 10px; /* 버튼과 체크박스 사이 간격 */
+  margin-bottom: 10px;
+}
+
+.scomm-select-all {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.scomm-delete-btn {
+  padding: 8px 16px;
+  background-color: #dc3545 !important;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.scomm-delete-btn:hover {
+  background-color: #a71d2a !important;
+}

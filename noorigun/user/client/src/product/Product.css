@@ -1,0 +1,142 @@
+.product {
+  * {
+    paddings: 0;
+    margin: 0;
+  }
+
+  .inner {
+    padding: 0 30px;
+    max-width: 1200px;
+    margin: 30px auto;
+  }
+
+  .product-tt h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .product-tt p {
+    font-size: 18px;
+    color: #666;
+  }
+
+  .container {
+    margin-top: 40px;
+  }
+
+  .pd-flex {
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .pd-box {
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0;
+    display: flex;
+  }
+
+  .tt-box {
+    padding: 12px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .pd-box ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .pd-box ul li:nth-child(1) {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #333;
+  }
+
+  .pd-box ul li:nth-child(2) {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 2px;
+  }
+
+  .pd-box ul li:nth-child(3) {
+    font-size: 14px;
+    color: #666;
+  }
+
+  .pd-btn {
+    position: relative;
+    top: 50%;
+    transform: translateY(-15%);
+  }
+
+  .pd-btn>button {
+    padding: 0;
+  }
+
+  .pd-btn button:nth-child(1) {
+    border: 1px solid #459cff;
+    background-color: #459cff;
+    margin-right: 12px;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: 0.3s;
+  }
+
+  .link-btn {
+    display: block;
+  }
+
+  .link-btn:nth-child(1) {
+    color: #fff;
+    padding: 9px 15px;
+
+  }
+
+  .link-btn:nth-child(1):hover {
+    color: #459cff;
+  }
+
+  .pd-btn button:nth-child(1):hover {
+    background-color: #fff;
+  }
+
+  .pd-btn button:nth-child(2) {
+    border: 1px solid #2067ff;
+    background-color: #2067ff;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: 0.3s;
+  }
+
+  .link-btn:nth-child(2) {
+    padding: 9px 15px;
+    color: #fff;
+  }
+
+  .link-btn:nth-child(2):hover {
+    color: #2067ff;
+  }
+
+  .pd-btn button:nth-child(2):hover {
+    background-color: #fff;
+  }
+
+  .img-box {
+    width: 200px;
+    height: 200px;
+    /* background-color: tomato; */
+
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}

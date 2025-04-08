@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.noorigun.equipmentadmin.dao.ReserveDao">
+
+    <!-- 예약 수량 증가 -->
+    <update id="incrementReservedCount" parameterType="map">
+    UPDATE RESERVE
+    SET RECNT = RECNT + #{recnt}
+    WHERE REUID = #{reuid} AND REQUIP = #{requip}
+    </update>
+
+    <!-- 예약자 목록을 조회 -->
+    <!-- <select id="reservelist" resultType="reserve">
+    SELECT * FROM RESERVE
+    ORDER BY REUID
+    </select> -->
+
+    <select id="reservelist" resultType="map">
+    SELECT 
+        ROW_NUMBER() OVER(ORDER BY a.NUM DESC) AS row_num,
+        b.RNAME,
+        a.RECNT,
+        c.ID,
+        c.EMAIL
+    FROM 
+        "RESERVE" a
+    JOIN 
+        "EQUIPMENT" b ON a.REQUIP = b.NUM
+    JOIN 
+        "MEMBER" c ON a.REUID = c.NUM
+    ORDER BY 
+        a.NUM DESC
+</select>
+
+</mapper>

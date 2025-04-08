@@ -1,0 +1,165 @@
+.RL {
+    font-family: Arial, sans-serif;
+    background-color: #F4F7FA;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .RL h2 {
+    color: #003A6F;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .RL .RLtable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .RL .RLtable th,
+  .RL .RLtable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .RL .RLtable th {
+    background-color: #003A6F;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .RL .RLtable td {
+    background-color: white;
+  }
+  
+  .RL .RLtable td img {
+    border-radius: 5px;
+  }
+  
+  .RL .RL-thead th {
+    margin-right: 80px !important;
+  }
+  
+  .RL .RLsearch-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .RL input[type='text'] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #003A6F;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .RL .RLbtn-RLsearch {
+    background-color: #003A6F;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .RL .RLbtn-RLsearch:hover {
+    background-color: #002B58;
+  }
+  
+  .RL .RLaction-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .RL .RLbtn-RLdelete {
+    background-color: #FF6347;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .RL .RLbtn-RLdelete:hover {
+    background-color: #E55347;
+  }
+  
+  .RL .RLpagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .RL .RLpagination-container button {
+    background-color: #003A6F;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .RL .RLpagination-container button:hover {
+    background-color: #002B58;
+  }
+  
+  .RL .RLpagination-container button:disabled {
+    background-color: #B0C4DE;
+    cursor: not-allowed;
+  }
+  
+  .RL .RLtable input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .RL .RLpagination {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .RL .RLpagination .page-item {
+    display: inline-block;
+    margin: 0 5px;
+  }
+  
+  .RL .RLpagination .page-link {
+    padding: 8px 16px;
+    background-color: #F4F7FA;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #003A6F;
+    cursor: pointer;
+  }
+  
+  .RL .RLpagination .page-link:hover {
+    background-color: #003A6F;
+    color: white;
+  }
+  
+  .RL .RLpagination .active .page-link {
+    background-color: #003A6F;
+    color: white;
+  }
+  
+  .RL .RLpagination .page-link:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+
+  .RL .EDmain-button {
+    margin-top: 10px; 
+}

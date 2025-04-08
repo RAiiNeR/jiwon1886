@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.noorigun.equipmentadmin.dao.RentDao">
+
+    <!-- 모든 대여 내역을 조회 -->
+    <select id="getAllRentals" resultType="map">  
+    SELECT 
+    r.RENTAL_ID,
+    e.RNAME,  
+    r.RCNT,   
+    c.ID,     
+    r.RDATE   
+    FROM 
+        "RENTAL" r
+    JOIN 
+        "EQUIPMENT" e ON r.ITEM_ID = e.NUM  
+    JOIN 
+        "MEMBER" c ON r.USER_ID = c.NUM   
+    ORDER BY 
+        r.RENTAL_ID DESC
+    </select>
+
+     <!-- 대여 가능 여부 확인 -->
+    <select id="getEquipmentById" resultType="evo" parameterType="Long">
+        SELECT * FROM EQUIPMENT WHERE NUM = #{itemid}
+    </select>
+
+    <!-- 대여 내역 저장 -->
+    <insert id="insertRental" parameterType="java.util.List">
+        <!-- <selectKey keyProperty="rentalId" resultType="int" order="BEFORE">
+            SELECT RENTAL_SEQ.NEXTVAL FROM DUAL
+        </selectKey> -->
+    <foreach collection="list" item="rental" separator=";">
+        INSERT INTO RENTAL (RENTAL_ID,RCNT, USER_ID, ITEM_ID, RDATE)
+        VALUES (RENTAL_SEQ.NEXTVAL, #{rental.userId},#{rental.rcnt}, #{rental.itemId}, #{rental.rdate})
+    </foreach>
+    </insert>
+
+    <!-- 대여 수량 증가 -->
+    <update id="incrementRentedCount" parameterType="map">
+    <foreach collection="itemRentCountMap" item="entry" separator=";">
+        UPDATE EQUIPMENT
+        SET RCNT = RCNT + #{entry.value}  <!-- rcnt를 참조 -->
+        WHERE NUM = #{entry.key}          <!-- num 참조 -->
+    </foreach>
+    </update>
+
+
+
+</mapper>

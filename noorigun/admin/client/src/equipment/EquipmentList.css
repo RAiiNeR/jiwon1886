@@ -1,0 +1,226 @@
+
+.ELEquipmentList {
+    font-family: Arial, sans-serif;
+    background-color: #F4F7FA; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  
+  .ELEquipmentList h2 {
+    color: #003A6F;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  
+  .ELEquipmentList .ELsearch-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .ELEquipmentList input[type='text'] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #003A6F;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .ELEquipmentList .ELbtn-ELsearch {
+    background-color: #003A6F;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .ELEquipmentList .ELbtn-ELsearch:hover {
+    background-color: #002B58; 
+  }
+  
+  
+  .ELEquipmentList .ELtable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .ELEquipmentList .ELtable th,
+  .ELEquipmentList .ELtable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .ELEquipmentList .ELtable th {
+    background-color: #003A6F;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .ELEquipmentList .ELtable td {
+    background-color: white;
+  }
+  
+  .ELEquipmentList .ELtable td img {
+    border-radius: 5px;
+  }
+  
+  
+  .ELEquipmentList .ELaction-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .ELEquipmentList .ELbtn-ELdelete {
+    background-color: #FF6347; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .ELEquipmentList .ELbtn-ELdelete:hover {
+    background-color: #E55347; 
+  }
+  
+  
+  .ELEquipmentList .ELpagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .ELEquipmentList .ELpagination-container button {
+    background-color: #003A6F;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .ELEquipmentList .ELpagination-container button:hover {
+    background-color: #002B58; 
+  } 
+  
+  .ELEquipmentList .ELpagination-container button:disabled {
+    background-color: #B0C4DE; 
+    cursor: not-allowed;
+  }
+  
+ 
+  .ELEquipmentList .ELtable input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  
+  .ELEquipmentList .ELpagination {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .ELEquipmentList .ELpagination .page-item {
+    display: inline-block;
+    margin: 0 5px;
+  }
+  
+  .ELEquipmentList .ELpagination .page-link {
+    padding: 8px 16px;
+    background-color: #F4F7FA;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #003A6F;
+    cursor: pointer;
+  }
+  
+  .ELEquipmentList .ELpagination .page-link:hover {
+    background-color: #003A6F;
+    color: white;
+  }
+  
+  .ELEquipmentList .ELpagination .active .page-link {
+    background-color: #003A6F;
+    color: white;
+  }
+  
+  .ELEquipmentList .ELpagination .page-link:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+
+  .EL-thead th{
+    margin-right: 80px !important;
+  }
+
+  .EL-button-cell {
+    display: flex;
+    justify-content: flex-end; /* 버튼을 우측 끝으로 정렬 */
+    padding: 10px; /* 여백 추가 */
+  }
+  
+  .EL-nav-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .EL-nav-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .EL-nav-button:focus {
+    outline: none;  /* 포커스 시 기본 스타일 제거 */
+  }
+  
+  .EL-nav-button:active {
+    background-color: #004085; /* 클릭 시 효과 */
+  }
+
+  .ELbtn-danger {
+    padding: 4px 12px; /* 버튼에 여백을 추가 */
+    background-color: #dc3545; /* 삭제를 나타내는 빨간색 */
+    color: white; /* 텍스트 색상은 흰색 */
+    border: none; /* 기본 버튼 테두리 제거 */
+    border-radius: 6px; /* 모서리 둥글게 */
+    cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+    font-size: 14px; /* 폰트 크기 */
+    transition: background-color 0.3s ease, transform 0.1s ease; /* 배경색과 효과에 부드러운 전환 효과 추가 */
+    width: auto;         /* 너비 자동 설정 */
+    height: auto;        /* 높이 자동 설정 */
+  }
+  
+  .ELbtn-danger:hover {
+    background-color: #c82333; /* 마우스를 올렸을 때 배경색을 좀 더 어두운 빨간색으로 */
+  }
+  
+  .ELbtn-danger:focus {
+    outline: none; /* 포커스 시 기본적으로 나타나는 외곽선 제거 */
+  }
+  
+  .ELbtn-danger:active {
+    background-color: #bd2130; /* 클릭 시 더 어두운 빨간색 */
+    transform: scale(0.98); /* 클릭 효과로 버튼이 약간 줄어드는 효과 */
+  }
+
+  

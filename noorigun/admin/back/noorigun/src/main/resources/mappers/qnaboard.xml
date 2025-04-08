@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.noorigun.qna.QnaBoardDao">
+
+  <!-- 오라클의 select문과 순서가 동일해야 함 -->
+  <insert id="add" parameterType="qvo">
+     INSERT INTO QNABOARD (NUM, CONTENT, HIT, QDATE, TITLE, WRITER, PARENTNUM)
+     VALUES(QNABOARD_SEQ.NEXTVAL, #{content}, 0, SYSDATE, #{title}, #{writer}, #{parentNum})
+  </insert>
+
+  <!--  vo동일 해야함(@Alias("qvo")),  list는 dao에 있는 메서드명  -->
+  <!--
+    SELECT NUM, HIT, PARENTNUM, QDATE, TITLE, WRITER FROM (
+      SELECT qna.NUM, qna.HIT, qna.PARENTNUM, qna.QDATE, qna.TITLE, qna.WRITER, ROWNUM AS ROW_NUM
+      FROM (SELECT q.NUM, q.HIT, q.PARENTNUM, q.QDATE, q.TITLE, q.WRITER
+      FROM QNABOARD q
+      START WITH PARENTNUM IS NULL
+      CONNECT BY PRIOR q.NUM = q.PARENTNUM
+      ORDER SIBLINGS BY NUM DESC) qna
+    ) WHERE ROW_NUM BETWEEN 1 AND 10 ORDER BY ROW_NUM;
+  -->
+  <select id="list" resultType="qvo" parameterType="map">
+      SELECT NUM, HIT, PARENTNUM, QDATE, TITLE, WRITER FROM (
+        SELECT qna.NUM, qna.HIT, qna.PARENTNUM, qna.QDATE, qna.TITLE, qna.WRITER, ROWNUM AS ROW_NUM
+        FROM (SELECT q.NUM, q.HIT, q.PARENTNUM, q.QDATE, q.TITLE, q.WRITER
+        FROM QNABOARD q
+    <if test="searchType != null and searchValue != null">
+      <where>
+        <choose>
+          <when test="searchType==1"> TITLE LIKE '%'||#{searchValue}||'%' </when>
+          <when test="searchType==2"> WRITER LIKE '%'||#{searchValue}||'%' </when>
+          <when test="searchType==3"> CONTENT LIKE '%'||#{searchValue}||'%' </when>
+        </choose>
+      </where>
+    </if>
+     START WITH PARENTNUM IS NULL
+      CONNECT BY PRIOR q.NUM = q.PARENTNUM
+      ORDER SIBLINGS BY NUM DESC) qna
+    ) WHERE ROW_NUM BETWEEN #{begin} AND #{end}
+      ORDER BY ROW_NUM
+  </select>
+
+  <select id="counting" resultType="int" parameterType="map">
+        SELECT COUNT(*) FROM QNABOARD
+    <if test="searchType != null and searchValue != null">
+      <where>
+        <choose>
+          <when test="searchType==1"> TITLE LIKE '%'||#{searchValue}||'%' </when>
+          <when test="searchType==2"> WRITER LIKE '%'||#{searchValue}||'%' </when>
+          <when test="searchType==3"> CONTENT LIKE '%'||#{searchValue}||'%' </when>
+        </choose>
+      </where>
+    </if>
+  </select>
+
+  <select id="detail" resultType="qvo" parameterType="int">
+        SELECT * FROM QNABOARD WHERE NUM=#{num}
+  </select>
+
+  <select id="checkReply" parameterType="int" resultType="int">
+        SELECT COUNT(*) FROM QNABOARD WHERE PARENTNUM = #{num}
+  </select>
+
+  <update id="update" parameterType="qvo">
+        UPDATE QNABOARD SET TITLE=#{title}, CONTENT=#{content} WHERE NUM=#{num}
+  </update>
+  
+  <delete id="deleteReply" parameterType="int">
+        DELETE FROM QNABOARD WHERE PARENTNUM=#{num}
+  </delete>
+
+  <delete id="delete" parameterType="int">
+        DELETE FROM QNABOARD WHERE NUM=#{num}
+  </delete>
+</mapper>

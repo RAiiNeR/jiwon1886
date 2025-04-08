@@ -1,0 +1,362 @@
+/* 마이페이지 css */
+.mypage{
+    *{margin: 0; padding: 0;}
+
+    .mypage-container{
+        padding: 40px 30px; 
+        max-width: 1000px; 
+        margin: auto;
+    }
+    .mypage-container > h2{
+        font-size: 30px;
+        position: relative;
+        margin-left: 15px;
+        color: #234192;
+    }
+    .mypage-container > h2::before{
+        position: absolute;
+        content: "";
+        width: 5px;
+        height: 28px;
+        background-color: #0a1f58;
+        left: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    table.profile-table{
+        margin-top:30px;
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #0a1f58;
+    }
+    table.profile-table tr{
+        border-bottom: 1px solid #234192;
+    }
+    table.profile-table tr:last-child{
+        border-bottom: none;
+    }
+    table.profile-table > th,td{
+        padding: 18px 0;
+        font-size: 18px;
+    }
+    table.profile-table th{
+        background-color: #0a1f58;
+        color: #fff;
+        width: 260px;
+        text-align: center;
+    }
+    table.profile-table td{
+        padding-left: 15px;
+        color: #234192;
+        font-size: 16px;
+    }
+
+    .btn{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .btn > .link-btn{
+        width: 140px;
+        height: 50px;
+        border: 1px solid #0a1f58;
+        color: #0a1f58;
+        background-color: #fff;
+        transition: 0.3s;
+        margin: 30px 0;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn > .link-btn:hover{
+        background-color: #0a1f58;
+        color: #fff;
+    }
+
+    .mypage-box{
+        width: 100%;
+    }
+    .mypage-box > p{
+        font-size: 18px;
+        margin: 0 0 22px 15px;
+        position: relative;
+        color: #234192;
+        font-weight: 600;
+    }
+    .mypage-box > p::before{
+        position: absolute;
+        content: "";
+        width: 4px;
+        height: 17px;
+        background-color: #0a1f58;
+        left: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .mypage-box .flexbox{
+        display: flex;
+        justify-content: space-between;
+    }
+    .mypage-box .left-box{
+        width: 450px;
+        height: 100%;
+        padding: 30px;
+        box-sizing: border-box;
+        border: 1px solid #0a1f58;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+    }
+    /* .mypage-box .left-box .imgBox{
+        position: relative;
+        width: 550px;
+        height: 200px;
+        bottom: 85%;
+        right: -10%;
+        z-index: -1;
+    } */
+    .mypage-box .left-box > img{
+        position: absolute;
+        width: 100%;
+        opacity: 0.4;
+        top: -5.6rem;
+        right: -8.5rem;
+        z-index: -1;
+    }
+    .mypage-box .left-box > .text-box > .count >span{
+        font-size: 16px;
+        color: #666;
+    }
+    .mypage-box .left-box > .text-box > .count > h2{
+        margin-bottom: 8px;
+        font-size: 32px;
+        color: #333;
+        margin-top: 0;
+    }
+    .mypage-box .left-box > .text-box > p{
+        font-size: 62px;
+        font-weight: 800;
+        color: #0a1f58;
+        line-height: 35px;
+    }
+    .mypage-box .left-box > .text-box > p > span{
+        font-size: 22px;
+        display: inline-block;
+        margin-left: 6px;
+        color: #234192;
+    }
+    .mypage-box .left-box > .page-box .page-btn{
+        border: 1px solid #0a1f58;
+        background-color: #fff;
+        color: #0a1f58;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+    .mypage-box .left-box > .page-box .page-btn:hover{
+        background-color: #0a1f58;
+        color: #fff;
+        cursor: pointer;
+    }
+    .mypage-box .right-box{
+        width: 450px;
+        height: 100%;
+        padding: 30px;
+        box-sizing: border-box;
+        border: 1px solid #0a1f58;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+    }
+    .mypage-box .right-box .imgBox{
+        position: relative;
+        width: 400px;
+        height: 200px;
+        bottom: 83%;
+        right: -22%;
+    }
+    .mypage-box .right-box > img{
+        position: absolute;
+        width: 75%;
+        opacity: 0.4;
+        top: -2rem;
+        right: -3.5rem;
+        z-index: -1;
+    }
+    .mypage-box .right-box > .text-box > .count > span{
+        font-size: 16px;
+        color: #666;
+    }
+    .mypage-box .right-box > .text-box > .count > h2{
+        margin-bottom: 8px;
+        font-size: 32px;
+        color: #333;
+        margin-top: 0;
+    }
+    .mypage-box .right-box > .text-box > p{
+        font-size: 62px;
+        font-weight: 800;
+        color: #0a1f58;
+        line-height: 35px;
+    }
+    .mypage-box .right-box > .text-box > p > span{
+        font-size: 22px;
+        display: inline-block;
+        margin-left: 6px;
+        color: #234192;
+    }
+
+    .mypage-box .right-box > .page-box .page-btn{
+        border: 1px solid #0a1f58;
+        background-color: #fff;
+        color: #0a1f58;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+    .mypage-box .right-box > .page-box .page-btn:hover{
+        background-color: #0a1f58;
+        color: #fff;
+        cursor: pointer;
+    }
+    .page-box{
+        display: inline-flex;
+    }
+    .text-box{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 25px;
+    }
+    .count{
+        display: flex;
+        flex-direction: column;
+    }
+
+    table.boxTable{
+        border-collapse: collapse;
+        margin-top: 45px;
+        width: 100%;
+        border: 1px solid #0a1f58;
+    }
+    table.boxTable thead{
+        background-color: #0a1f58;
+        color: #fff;
+    }
+    table.boxTable thead,
+    table.boxTable tbody{
+        padding: 0 5px;
+        text-align: center;
+    }
+    table.boxTable th{
+        padding: 7px 5px;
+        font-size: 16px;
+    }
+    table.boxTable td{
+        padding: 8px 5px;
+        font-size: 16px;
+        text-align: center;
+        border-right: 1px solid #234192;
+        border-bottom: 1px solid #234192;
+    }
+
+    /**********개인 프로그램 신청 현황 들어가는곳 2024.12.12***********/
+    .program {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 10px;
+    }
+    .program>.link-btn {
+        width: 140px;
+        height: 50px;
+        border: 1px solid #0a1f58;
+        color: #0a1f58;
+        background-color: #fff;
+        transition: 0.3s;
+        margin: 30px 0;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .program>.link-btn:hover {
+        background-color: #0a1f58;
+        color: #fff;
+    }
+    /***************여기 까지*******************/
+}
+
+/* 업데이트 css */
+.myPageUpdate{
+    max-width: 800px;
+    background-color: #fff;
+    margin: 50px auto 0 auto;
+
+
+    *{padding: 0; margin: 0;}
+
+    h2{
+        margin-bottom: 25px;
+        font-size: 26px;
+        font-weight: 600;
+        margin-left: 15px;
+        position: relative;
+        color: #333;
+    }
+    h2:before{
+        position: absolute;
+        content:'';
+        width: 5px;
+        height: 26px;
+        left: -15px;
+        top: 3px;
+        background-color: #0d6efd;
+    }
+    form{
+        width: 100%;
+        padding: 40px 35px 50px 35px;
+        background-color: #f9fcff;
+        border: 1px solid #9ac7e8;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-btnBox > a{
+        padding: 10px 20px;
+    }
+
+    .form-btnBox > button{
+        margin-left: 15px;
+        padding: 10px 20px;
+    }
+    .label-font{
+        font-size: 18px;
+        color: #333;
+    }
+    .update-text{
+        margin-top: 8px;
+        padding: 8px 15px;
+        color: #333;
+    }
+    .phone{
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+    }
+    .phone-box{
+        width: 30%;
+    }
+    /* 웹킷툴로 숫자입력할시 브라우저가 지원해주는 기본 css제거(화살표) */
+    .phone > input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type="number"] {
+        -moz-appearance: textfield;
+        appearance: textfield;
+    }
+}

@@ -1,0 +1,219 @@
+/*programdetail.css*/
+.programdetailform  {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  
+} 
+
+.programdetailform .detail-header {
+  width: 80%;
+  border-bottom: 2px solid #ddd;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  height: 50px;  /* h3가 수직 중앙에 배치되도록 적당한 높이 설정 */
+}
+
+
+
+.programdetailform .detail-header h3 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+/* 이 부분에서 margin-top을 추가하여 아래로 내림 */
+.programdetailform .detail-meta,
+.programdetailform .post-content,
+.programdetailform .detail-content,
+.programdetailform p {
+  margin-top: 50px; /* 원하는 만큼 내리기 */
+}
+
+.programdetailform .detail-meta {
+  /* display: flex;
+  flex-wrap: wrap;
+  gap: 15px; */
+  /* 항목 간격 */
+  font-size: 14px;
+  color: #555;
+  margin-top: 20px;
+}
+.programdetailform .detail-meta span {
+  margin-right: 15px;
+
+}
+.programdetailform .detail-meta span strong{
+  margin-right: 15px;
+  font-weight: bold;
+  color: #333;
+}
+/* 
+.programdetailform .post-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.8rem;
+} */
+.programdetailform .detail-content img {
+  display: inline-block;
+  margin: 5px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.programdetailform .detail-content {
+  width: 80%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.programdetailform p {
+  border-radius: 5px;
+
+  margin: 20px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+  /* 등록 버튼 스타일링 */
+.submit-btn {
+    background-color: #0066cc;
+    /* 파란색 배경 */
+    color: #fff;
+    /* 글자색 흰색 */
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+.submit-btn:hover {
+    background-color: #004080;
+    /* 마우스 호버 시 어두운 파란색 */
+}
+.list-btn {
+    background-color: chocolate;
+    /* 파란색 배경 */
+    color: #fff;
+    /* 글자색 흰색 */
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+.list-btn:hover {
+    background-color: #004080;
+    /* 마우스 호버 시 어두운 파란색 */
+}
+
+
+
+/*여기부터 programList.css*/
+.programlist {
+    width: 90%;
+    margin: 20px auto;
+    /* margin-top: 20px; */
+    padding: 20px 0;
+}
+.programlist h2 {
+    font-weight: 600;
+  color: #333; /* Q&A 색상에 맞춤 */
+  text-align: center;
+  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
+  font-size: 2.0rem;
+}
+.programlist-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .programlist-table th, .programlist-table td {
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+  .programlist-table th {
+    background-color: #003a6f; 
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  }
+  .programlist-table td{
+    background-color: #f9f9f9; /* 테이블의 기본 배경색 */
+  }
+  .programlist-table tr:nth-child(even) td {
+    background-color: #f2f2f2; /* 짝수 행 배경색 */
+  }
+  .programlist-table tr:hover {
+    background-color: #f1f1f1; /* 마우스 호버 효과 */
+  }
+  /* 이미지 스타일 */
+.programlist-table img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+/* 페이지 네비게이션 */
+.programlist .pagination {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    margin: 0;
+  }
+  
+  .programlist .pagination .page-item {
+    margin: 0 5px;
+  }
+  
+  
+  .suggestionlist .pagination .page-item.active .page-link {
+    background-color: #003a6f;
+    color: white;
+    border-color: #003a6f;
+  }
+  
+  .suggestionlist .pagination .page-item.disabled .page-link {
+    color: #ccc;
+    cursor: not-allowed;
+  }
+/* 추가적인 레이아웃 조정 */
+.programlist .mb-4 {
+    margin-bottom: 20px;
+  }
+  
+  .programlist .d-flex {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .programlist .mt-4 {
+    margin-top: 30px;
+  }
+  
+  .programlist .btn-box {
+    text-align: center;
+  }
+  

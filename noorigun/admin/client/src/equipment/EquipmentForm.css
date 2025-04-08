@@ -1,0 +1,93 @@
+
+.EFupPromoteContainer {
+    font-family: Arial, sans-serif;
+    background-color: #F4F7FA; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  
+  .EFupPromoteContainer h2 {
+    color: #003A6F;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  
+  .EFform-control {
+    padding: 12px;
+    width: 92%;
+    border: 1px solid #003A6F;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    background-color: #fff;
+  }
+  
+  .EFform-control:focus {
+    border-color: #002B58; 
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 58, 111, 0.3);
+  }
+  
+  
+  .EFform-label {
+    font-size: 16px;
+    color: #003A6F;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  
+  .EFbtn {
+    background-color: #003A6F;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .EFbtn:hover {
+    background-color: #002B58; 
+  }
+  
+  .EFbtn:disabled {
+    background-color: #B0C4DE; 
+    cursor: not-allowed;
+  }
+  
+  
+  .EFmb-3 {
+    margin-bottom: 20px;
+  }
+  
+  
+  .EFform-control[type="file"] {
+    padding: 8px;
+    background-color: #f4f7fa;
+    border: 1px solid #ddd;
+  }
+  
+  .EFform-control[type="file"]:focus {
+    border-color: #003A6F;
+  }
+  
+  .EFmb-4 {
+    margin-bottom: 30px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .EFupPromoteContainer {
+      width: 90%; 
+    }
+  }
+  

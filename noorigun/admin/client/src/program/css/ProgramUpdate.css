@@ -1,0 +1,162 @@
+.ProgramUpdate {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ProgramUpdate h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .ProgramUpdate form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .ProgramUpdate .mb-3 {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ProgramUpdate .mb-3 label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .ProgramUpdate .mb-3 input,
+  .ProgramUpdate .mb-3 select,
+  .ProgramUpdate .mb-3 textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .ProgramUpdate .mb-3 input[type="file"] {
+    border: none;
+  }
+  
+  .ProgramUpdate .mb-3 textarea {
+    height: 150px;
+  }
+  
+  .ProgramUpdate button[type="submit"] {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .ProgramUpdate button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .ProgramUpdate button[type="button"] {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .ProgramUpdate button[type="button"]:hover {
+    background-color: #218838;
+  }
+  
+  .ProgramUpdate form input[type="date"],
+  .ProgramUpdate form input[type="time"] {
+    width: auto;
+    display: inline-block;
+  }
+  
+  .ProgramUpdate img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  .ProgramUpdate .mb-3 img {
+    max-width: 100%;
+  }
+  
+  .ProgramUpdate select:focus,
+  .ProgramUpdate input:focus,
+  .ProgramUpdate textarea:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .ProgramUpdate .mb-3 select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  .ProgramUpdate select option {
+    padding: 5px;
+  }
+  
+  .ProgramUpdate .form-label {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .ProgramUpdate input[type="file"] {
+    margin-top: 10px;
+  }
+  
+  .ProgramUpdate input[type="file"]::-webkit-file-upload-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  .ProgramUpdate input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .ProgramUpdate .map-container {
+    display: flex; /* 요소들을 가로로 정렬 */
+    flex-direction: row; /* 수평 방향으로 배치 */
+    justify-content: space-between; /* 요소들 간의 간격을 고르게 배분 */
+    align-items: flex-start; /* 요소들을 위쪽으로 정렬 */
+    gap: 20px; /* 요소들 간의 간격 설정 */
+    max-width: 100%; /* 전체 화면 크기에 맞게 최대 크기 설정 */
+  }
+  
+  .ProgramUpdate .map-container .address-input {
+    flex: 1; /* 주소 입력창이 가능한 많은 공간을 차지 */
+  }
+  
+  .ProgramUpdate .map-container .search-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ProgramUpdate .map-container .search-button:hover {
+    background-color: #0056b3;
+  }
+  

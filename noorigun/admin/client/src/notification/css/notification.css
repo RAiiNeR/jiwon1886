@@ -1,0 +1,125 @@
+.notificationForm {
+    /* min-width: 1000px; */
+    height: 100vh;
+    padding: 50px;
+    overflow: hidden;
+}
+
+.noti-form {
+    max-width: 1200px;    
+    width: 80%;
+    min-width: 720px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 5px #ccc;
+    border-radius: 15px;
+
+    .noti-content {
+        min-height: 200px;
+        height: calc(100vh - 320px);
+        width: 100%;
+    }
+
+    .btn-div {
+        display: flex;
+        justify-content: end;
+    }
+}
+
+.notification-List {
+    min-width: 560px;
+    width: 80%;
+    max-width: 1200px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 0 auto;
+    box-shadow: 5px 5px 5px 2px #ccc;
+
+    .noti-type {
+        padding: 5px;
+        border-radius: 50%;
+        text-align: center;
+    }
+
+    >div {
+        input {
+            border-radius: 15px;
+            margin-right: 15px;
+        }
+
+        button {
+            background-color: #0035a8;
+            font-weight: 800;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #00287c;
+            color: white;
+        }
+
+        a{
+            background-color: #007c06;
+            color: white;
+            font-weight: 800;
+        }
+
+        a:hover{
+            background-color: #005f05;
+            color: white;
+        }
+    }
+
+    .notification-table {
+        width: 100%;
+        border: 1px solid #ccc;
+
+        th,
+        td {
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        thead {
+            background-color: #00287c;
+            color: white;
+            height: 30px;
+        }
+    }
+}
+
+.noti-detail{
+    min-width: 560px;
+    width: 80%;
+    max-width: 1200px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 0 auto;
+    box-shadow: 5px 5px 5px 2px #ccc;
+
+    >p{
+        text-align: end;
+    }
+
+    hr{
+        height: 3px;
+        background-color: #0046df;
+    }
+
+    .noti-content{
+        border: 1px solid #ccc;
+        padding: 15px;
+        box-shadow: inset 0px 0px 3px 1px ;
+    }
+
+    .button-box{
+        button{
+            margin: 0 10px;
+        }
+    }
+}

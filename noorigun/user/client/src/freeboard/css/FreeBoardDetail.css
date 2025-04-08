@@ -1,0 +1,125 @@
+.reply-container {
+  width: 80%;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.reply-container h2 {
+  text-align: center;
+  color: #1e3a8a; 
+}
+
+.reply-container .poser-date {
+  text-align: right;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.reply-container .writer {
+  margin-right: 8px; /* writer와 date 사이에 간격을 추가 */
+}
+
+.reply-container .post-details {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.reply-container .post-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.reply-container p {
+  color: #4b5563; /* 회색 텍스트 */
+  font-size: 16px;
+}
+
+.reply-container .divider {
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.reply-container .before a {
+  text-decoration: none;
+}
+
+.reply-container .comment-form {
+  background-color: #f3f4f6; /* 연한 회색 배경 */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reply-container .comment-form h3 {
+  color: #1e3a8a; 
+}
+
+.reply-container .form-group {
+  margin-bottom: 15px;
+}
+
+.reply-container label {
+  display: block;
+  font-weight: bold;
+  color: #1e3a8a;
+}
+
+.reply-container input,
+.reply-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.reply-container textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+/* 버튼 스타일 */
+.reply-container button.submit-btn,
+.reply-container button.delete-btn,
+.reply-container a.list-btn {
+  display: inline-block; /* Link를 버튼처럼 표시 */
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px; /* 버튼 간격 */
+  text-decoration: none; /* 링크 기본 스타일 제거 */
+}
+
+.reply-container button.submit-btn:hover,
+.reply-container button.delete-btn:hover,
+.reply-container a.list-btn:hover {
+  background-color: #2563eb;
+}
+
+/* 댓글 영역 */
+.reply-container .comments-list {
+  margin-top: 40px;
+}
+
+.reply-container .comment-item {
+  background-color: #f9fafb;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.reply-container .comment-item p {
+  margin: 5px 0;
+}
+
+.reply-container .comment-item strong {
+  color: #1e3a8a;
+}
