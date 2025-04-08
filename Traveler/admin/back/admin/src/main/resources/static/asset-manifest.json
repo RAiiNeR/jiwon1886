@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/travelerAdmin/static/css/main.8ed78e03.css",
+    "main.js": "/travelerAdmin/static/js/main.3f967eb6.js",
+    "static/media/Ownglyph UNZ.ttf": "/travelerAdmin/static/media/Ownglyph UNZ.ba6c9b6a63ce94c73447.ttf",
+    "static/media/icofont.svg": "/travelerAdmin/static/media/icofont.4c76d7b49e5381310656.svg",
+    "static/media/icofont.eot": "/travelerAdmin/static/media/icofont.1ece44607007ca3ce484.eot",
+    "static/media/icofont.ttf": "/travelerAdmin/static/media/icofont.02bfbc3c0c51f6238205.ttf",
+    "static/media/icofont.woff": "/travelerAdmin/static/media/icofont.dad3accba068281878f1.woff",
+    "static/media/2.jpg": "/travelerAdmin/static/media/2.df53326b77f25e324225.jpg",
+    "static/media/Diaryinner.jpg": "/travelerAdmin/static/media/Diaryinner.e7e22a71d8b126e3b156.jpg",
+    "static/media/1.jpg": "/travelerAdmin/static/media/1.f4b7f8127f9d02e118c9.jpg",
+    "static/media/Diarycoverback.png": "/travelerAdmin/static/media/Diarycoverback.dac5dbe1694ec21e7feb.png",
+    "static/media/diary.jpg": "/travelerAdmin/static/media/diary.83fea10db53766c8915a.jpg",
+    "static/media/interview.svg": "/travelerAdmin/static/media/interview.1710874b575c5c9a24cde4ad43a4c04b.svg",
+    "static/media/avatar10.jpg": "/travelerAdmin/static/media/avatar10.14ba6a7378450f09f9d1.jpg",
+    "static/media/avatar4.jpg": "/travelerAdmin/static/media/avatar4.14ba6a7378450f09f9d1.jpg",
+    "static/media/avatar1.jpg": "/travelerAdmin/static/media/avatar1.207e668ffe106473b1e6.jpg",
+    "static/media/avatar7.jpg": "/travelerAdmin/static/media/avatar7.207e668ffe106473b1e6.jpg",
+    "static/media/avatar2.jpg": "/travelerAdmin/static/media/avatar2.3ef6eaa7d15ccc6dd265.jpg",
+    "static/media/avatar8.jpg": "/travelerAdmin/static/media/avatar8.3ef6eaa7d15ccc6dd265.jpg",
+    "static/media/avatar12.jpg": "/travelerAdmin/static/media/avatar12.eab92b5518d49a808817.jpg",
+    "static/media/avatar11.jpg": "/travelerAdmin/static/media/avatar11.0a8cb622a37a045bacb0.jpg",
+    "static/media/avatar5.jpg": "/travelerAdmin/static/media/avatar5.0a8cb622a37a045bacb0.jpg",
+    "static/media/avatar3.jpg": "/travelerAdmin/static/media/avatar3.750b25a3830b1be60112.jpg",
+    "static/media/avatar9.jpg": "/travelerAdmin/static/media/avatar9.750b25a3830b1be60112.jpg",
+    "index.html": "/travelerAdmin/index.html",
+    "main.8ed78e03.css.map": "/travelerAdmin/static/css/main.8ed78e03.css.map",
+    "main.3f967eb6.js.map": "/travelerAdmin/static/js/main.3f967eb6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8ed78e03.css",
+    "static/js/main.3f967eb6.js"
+  ]
+}

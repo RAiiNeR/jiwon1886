@@ -1,0 +1,565 @@
+
+.hotel-reservForm {
+    margin-top: 36px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-reservForm__fields {
+    margin: 0;
+}
+
+.hotel-reservForm__custom-margin {
+    margin-bottom: 20px;
+}
+
+/* 검색 영역 스타일 */
+.hotel-search-section {
+    padding: 20px 0;
+    background-color: #f8f9fa;
+}
+
+.hotel-search-form .hotel-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hotel-search-form .hotel-form-group {
+    margin-bottom: 0;
+}
+
+.hotel-btn-primary {
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.hotel-btn-primary:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+}
+
+/* 인원 선택 스타일 */
+.hotel-count-container {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-count-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 14px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hotel-count-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.hotel-count-buttons span {
+    margin: 0 15px;
+    font-size: 16px;
+    color: #495057;
+}
+
+.hotel-total-count-display {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.hotel-total-count-display i {
+    font-size: 20px;
+    color: #495057;
+}
+
+.hotel-total-count-display span {
+    font-size: 16px;
+    color: #495057;
+}
+
+/* 선택 상자 스타일 */
+.hotel-reservForm__select-wrap {
+    position: relative;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    padding-right: 30px;
+}
+
+.hotel-reservForm__select-wrap select.form-control {
+    width: 100%;
+    height: 40px;
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.hotel-reservForm__select-wrap .icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* 객실 상세 정보 스타일 */
+.hotel-reservForm__room-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.hotel-reservForm__room-details img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.hotel-reservForm__room-details h5 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.hotel-reservForm__room-details p {
+    font-size: 16px;
+}
+
+.hotel-reservForm__room-details p strong {
+    font-size: 18px;
+    color: #007bff;
+}
+
+/* 버튼 스타일 */
+.hotel-reservForm__submit-btn,
+.hotel-reservForm__go-back-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hotel-reservForm__submit-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.hotel-reservForm__submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.hotel-reservForm__go-back-btn {
+    background-color: #6c757d;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.hotel-reservForm__go-back-btn:hover {
+    background-color: #5a6268;
+}
+
+/* 제목 스타일 */
+.hotel-reservForm__title {
+    font-size: 77px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.hotel-reservForm__title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #007bff;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .hotel-reservForm__room-details {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hotel-reservForm__room-details img {
+        max-width: 80%;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .hotel-reservForm__submit-btn,
+    .hotel-reservForm__go-back-btn {
+        width: 100%;
+    }
+
+    .hotel-detail-ml-auto,
+    .mx-auto {
+        margin-left: auto !important;
+    }
+}
+
+/* 기타 스타일 */
+.hotel-icon-map-o {
+    cursor: pointer;
+}
+
+.hotel-detail-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.hotel-detail-price .per-price {
+    text-align: right;
+    font-size: 14px;
+    color: #6c757d;
+    margin-top: 5px;
+}
+
+.hotel-search-form .form-control {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+}
+
+.hotel-search-form .btn {
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #e02b34;
+    color: #fff;
+}
+
+.hotel-row {
+    padding: 20px 0;
+    margin-top: 50px;
+    background-color: #f8f9fa;
+}
+
+.rate .hotel-icon-star {
+    font-size: 1.2rem;
+    color: gold;
+}
+
+.hotel-rate {
+    background-color: gold;
+    padding: 7px;
+    border-radius: 10px;
+    width: 50px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    min-width: 20px;
+    height: 30px;
+}
+
+.hotel-detail-col-lg-9 {
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.hotel-detail-rating-value {
+    background-color: gold;
+    padding: 5px 5px;
+    border-radius: 5px;
+    margin-right: 10px;
+    white-space: nowrap;
+    font-size: 14px;
+    display: flex;
+}
+
+.hotel-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.hotel-detail-rate .hotel-detail-content {
+    flex-grow: 1;
+    height: 30px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #0056b3;
+}
+
+.hotel-detail-rate {
+    background-color: gold;
+    padding: 7px;
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+    border: 50px;
+}
+
+.hotel-detail-rate .hotel-icon-star {
+    color: black;
+}
+
+.hotel-detail-rate .hotel-rating-value {
+    color: black;
+}
+
+.hotel-detail-rate {
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 30px;
+}
+
+.hotel-address {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.hotel-address p {
+    margin-right: 20px;
+}
+
+.hotel-detail-map {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #351515;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.hotel-rate.mb-5 {
+    background-color: gold;
+    padding: 7px;
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+}
+
+.hotel-total-count-display {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.hotel-count-buttons {
+    display: flex;
+    align-items: center;
+}
+.hotel-search-section {
+    padding: 20px 0;
+    background-color: #f8f9fa;
+}
+
+.hotel-search-form {
+    display: flex;
+    flex-wrap: wrap; /* 반응형을 위해 flex-wrap 추가 */
+    align-items: center;
+    gap: 10px;
+    max-width: 1200px; /* 최대 너비 설정 */
+    margin: 0 auto; /* 중앙 정렬 */
+}
+
+.hotel-search-form .hotel-form-group {
+    margin-bottom: 0;
+    flex: 1 1 200px; /* 각 요소의 크기 조절 */
+}
+
+.hotel-search-form .hotel-form-control {
+    border-radius: 8px;
+    padding: 12px 15px;
+    width: 300px;
+    border: 1px solid #ced4da;
+    box-sizing: border-box;
+}
+
+.hotel-total-count-display {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.hotel-total-count-display i {
+    font-size: 20px;
+    color: #495057;
+}
+
+.hotel-total-count-display span {
+    font-size: 16px;
+    color: #495057;
+}
+
+.hotel-count-buttons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.hotel-count-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 14px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hotel-count-button:hover {
+    background-color: #0056b3;
+}
+
+.hotel-count-buttons span {
+    font-size: 16px;
+    color: #495057;
+}
+
+.hotel-btn-primary {
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+}
+
+.hotel-btn-primary:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .hotel-search-form {
+        flex-direction: column; /* 모바일에서는 세로로 배치 */
+        align-items: stretch; /* 전체 너비 사용 */
+    }
+
+    .hotel-search-form .hotel-form-group {
+        flex: 1 1 auto; /* 전체 너비 사용 */
+    }
+}
+
+.hotel-search-section {
+    padding: 20px 0;
+    background-color: #f8f9fa;
+}
+
+.hotel-search-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hotel-search-form .hotel-form-group {
+    margin-bottom: 0;
+    flex: 1 1 200px;
+}
+
+
+.hotel-total-count-display {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.hotel-total-count-display i {
+    font-size: 20px;
+    color: #495057;
+}
+
+.hotel-total-count-display span {
+    font-size: 16px;
+    color: #495057;
+}
+
+.hotel-count-buttons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.hotel-count-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 14px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hotel-count-button:hover {
+    background-color: #0056b3;
+}
+
+.hotel-count-buttons span {
+    font-size: 16px;
+    color: #495057;
+}
+
+.hotel-btn-primary {
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    white-space: nowrap;
+}
+
+.hotel-btn-primary:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+}
+
+/* 추가 스타일 */
+.hotel-search-form .col-md-4,
+.hotel-search-form .col-md-3,
+.hotel-search-form .col-md-2 {
+    padding: 0; /* col-md-*의 기본 padding 제거 */
+}
+
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .hotel-search-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hotel-search-form .hotel-form-group {
+        flex: 1 1 auto;
+    }
+}

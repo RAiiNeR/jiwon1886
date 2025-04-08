@@ -1,0 +1,54 @@
+/*2.14추가*/
+.transport {
+    background-size: cover;
+    background-position: center;   /*이미지 위치를 중앙에 맞추기*/
+    background-repeat: no-repeat;
+    position: relative;         /*요소의 위치를 상대적으로 설정*/
+    z-index: -2;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.transport::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* 50% 투명한 검은 배경 */
+    z-index: -1; /* 배경 이미지 위, 텍스트 아래에 위치 */
+}
+.statustrain{
+    padding: 3.0rem;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.75rem;
+}
+.statustrain h1{
+    font-size: 2.5rem;
+    font-weight:bold;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.lineselect{
+    font-weight: bold;
+    background-color: #f0f0f0;  /*Select 박스 배경색*/
+    color:#333;             /*Select 박스 글자색*/
+}
+.lineselect .ant-select-dropdown {
+    font-weight: bold;
+    background-color: #fff;
+    color: #333;
+}
+.traininformation {
+    font-size: 1.0rem;
+    margin-top: 10;
+    width: 80%;
+    padding: 5px;
+    max-width: 250px;
+    height: 200px;
+    box-sizing: border-box;
+}

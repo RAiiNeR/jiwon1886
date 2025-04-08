@@ -1,0 +1,14 @@
+.LikeDetail {
+    .like-button {
+        background-color: transparent;
+        border: none;
+        font-size: 30px;
+    }
+
+    .tag-cloud-link {
+        text-decoration: none !important;
+        /* 밑줄 제거 */
+        color: inherit;
+        /* 부모 요소 색상 상속 또는 원하는 색상 지정 */
+    }
+}

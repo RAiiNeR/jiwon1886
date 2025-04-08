@@ -1,0 +1,28 @@
+@media screen and (max-width: 1024px) {
+  .like-memo-edit-wrap {
+      width: 90%;
+      max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .like-memo-edit-wrap {
+      width: 100%;
+  }
+
+  .like-memo-autocomplete-dropdown {
+      max-height: 150px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .like-memo-edit-wrap {
+      width: 100%;
+      padding: 10px;
+  }
+
+  .like-memo-autocomplete-dropdown {
+      width: 95%;
+      font-size: 12px;
+  }
+}

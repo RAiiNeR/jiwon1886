@@ -1,0 +1,179 @@
+/* 📌 전체 컨테이너 스타일 */
+.tour-schedule-container {
+    width: 100%;
+    padding: 25px;
+    background: linear-gradient(135deg, #f9f9f9, #ffffff);
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 40px;
+    
+}
+
+.tour-schedule-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* 📌 Day 선택 버튼 스타일 */
+.tour-schedule-tabs {
+    display: flex;
+    justify-content: start;
+    gap: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 10px;
+    width: fit-content;
+    background: white;
+}
+
+.tour-schedule-tab-btn {
+    padding: 8px 16px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.tour-schedule-tab-btn.active {
+    background: #f85959;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px rgba(0, 123, 255, 0.4);
+}
+
+/* 📌 일정 순서도 스타일 */
+.tour-schedule-timeline {
+    position: relative;
+    padding-left: 30px;
+    border-left: 3px solid #f85959;
+}
+
+.tour-schedule-step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.tour-schedule-step-number {
+    width: 32px;
+    height: 32px;
+    background: #f85959;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 50%;
+    position: absolute;
+    left: -18px;
+    top: 5px;
+    z-index: 2;
+}
+
+.tour-schedule-step-content {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-left: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.tour-schedule-step-content:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.tour-schedule-step-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.tour-schedule-step-desc {
+    font-size: 14px;
+    color: #666;
+}
+
+/* 📌 일정 없을 때 */
+.tour-schedule-no-data {
+    color: #777;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    font-weight: 500;
+}
+
+/* 📌 버튼 스타일 */
+.tour-schedule-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.tour-schedule-save-btn, .tour-schedule-edit-btn,.tour-schedule-ref-btn {
+    padding: 12px 18px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #7DE2FC, #B9B6E5);
+    box-shadow: 0px 4px 8px rgba(125, 226, 252, 0.4);
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.tour-schedule-save-btn {
+    background: linear-gradient(135deg, #20c997, #17a2b8);
+    box-shadow: 0px 4px 8px rgba(23, 162, 184, 0.4);
+    color: white;
+}
+
+.tour-schedule-save-btn:hover {
+    transform: scale(1.05);
+}
+
+.tour-schedule-edit-btn {
+    color: white;
+    background: linear-gradient(135deg, #f4a261, #e76f51);
+    box-shadow: 0px 4px 8px rgba(231, 111, 81, 0.4);
+}
+
+/* .tour-schedule-ref-btn {
+    background: linear-gradient(135deg, #ffffff);
+    box-shadow: 0px 4px 8px rgba(255, 152, 0, 0.4);
+} */
+
+.tour-schedule-edit-btn:hover {
+    transform: scale(1.05);
+}
+
+/* 📌 수정 모드 입력창 */
+.tour-schedule-edit-input {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.tour-schedule-edit-input:focus {
+    border-color: #f85959;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.4);
+}
+

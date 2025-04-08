@@ -1,0 +1,7 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/*.war
+trained_model.pth
+빌드 순서.txt
+장고 모듈 설치.txt

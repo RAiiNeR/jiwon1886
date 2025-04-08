@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'Ownglyph UNZ';
+    src: url('../../assets/fonts/Ownglyph UNZ.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+
+/* 전체 책 스타일 */
+.book .album-web {
+    width: 60%;
+    max-width: 600px;
+    height: auto;
+    text-align: center;
+}
+
+/* 각 페이지에 그림자 추가 */
+.book .page {
+    font-family: 'Ownglyph UNZ', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #333;
+    background-image: url('/public/images/Diaryinner.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: 0 1.5em 3em -1em rgb(48, 47, 47);
+}
+
+/* 커버 페이지 스타일 */
+.book .cover {
+    background-color: rgb(248, 255, 225);
+    box-shadow: 0 1.5em 3em -1em rgb(70, 69, 69);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+.book .cover h2 {
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* 첫 번째, 마지막 페이지 스타일 */
+.book .firstcover, 
+.book .lastcover {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: 0 1.5em 3em -1em rgb(70, 69, 69);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #000;
+}
+
+
+
+.book .firstcover {
+    /* transform: translateX(-250px); */
+    /* background-image: url('/public/images/Diarycover.jpg'); */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.book .lastcover {
+    /* transform: trasnslateX(250px); */
+    background-image: url('/public/images/Diarycoverback.png');
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* 텍스트 가운데 정렬 */
+.book .firstcover h2, 
+.book .lastcover h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.box{
+    margin-top: 80px;
+}
+
+/* 첫 번째와 마지막 페이지 배경 제거 */
+.book .page:first-child,
+.book .page:last-child {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/* 페이지 번호 스타일 */
+.book .page-number {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* 책 배경 스타일 */
+.book {
+    background-image: url('/public/images/diary.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* 책 내용 스타일 */
+.book .bookinfo {
+    width: 70vw;
+    max-width: 1000px;
+    height: auto;
+    padding: 20px;
+}
+
+.book .bookinfo .img{
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /* 이미지에 그림자 추가 */
+    border-radius: 10px; /* 모서리를 둥글게 */
+}
+
+/* 버튼과 폼 스타일 */
+.book .btn,
+.book .form-control {
+    padding: 0.5em var(--padding-x);
+    border-width: 2px;
+    border-style: solid;
+    font-size: 1em;
+    line-height: 1.2;
+    color: inherit;
+    appearance: none;
+}
+
+.book .btn {
+    background-color: aquamarine;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    --padding-x: 1.2em;
+    border-color: transparent;
+}
+
+.book .form-control {
+    --padding-x: 0.5em;
+}
+
+.book input {
+    text-align: center;
+}
+
+.book .formContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

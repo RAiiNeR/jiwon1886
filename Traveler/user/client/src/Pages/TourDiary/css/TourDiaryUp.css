@@ -1,0 +1,260 @@
+.TourDiaryUpload {
+  background-image: url('/public/images/woodwall.jpg');
+}
+
+/* 다이어리 컨테이너 배경 색상 */
+.book-container {
+  background-color: #ffffff;  /* 배경색을 파란색으로 설정 */
+  /* background-image: url('/public/images/woodwall.jpg'); */
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 다이어리 제목 입력창 */
+.book-container .title-container {
+  margin-bottom: 20px;
+}
+
+.book-container .title-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+/* 표지 선택 */
+.book-container .cover-options {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.book-container .cover-item {
+  width: 150px;
+  cursor: pointer;
+}
+
+.book-container .cover-item img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.book-container .cover-item.selected img {
+  border: 2px solid #007BFF;
+}
+
+/* 다이어리 생성 버튼 */
+.book-container .create-book-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007BFF;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.book-container .create-book-button:hover {
+  background-color: #0056b3;
+}
+
+.book-container .create-book-button:disabled {
+  background-color: #d1d1d1;
+  cursor: not-allowed;
+}
+
+/* 다이어리 작성 폼 */
+.book-container .diarypageForm {
+  padding: 20px;
+  background-color: #e0dd20;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 기본적인 텍스트 스타일 */
+.book-container .rounded-lg {
+  border-radius: 8px;
+}
+
+.book-container .shadow-md {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-container .p-6 {
+  padding: 24px;
+}
+
+.book-container .mb-6 {
+  margin-bottom: 24px;
+}
+
+.book-container .pb-4 {
+  padding-bottom: 16px;
+}
+
+.book-container .border-b {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.book-container .text-lg {
+  font-size: 1.125rem;
+}
+
+.book-container .font-medium {
+  font-weight: 500;
+}
+
+.book-container .space-y-6 {
+  margin-bottom: 24px;
+}
+
+/* 이미지 업로드 박스 */
+.book-container .relative {
+  position: relative;
+}
+
+.book-container .w-32 {
+  width: 120px;
+}
+
+.book-container .h-32 {
+  height: 120px;
+}
+
+.book-container .border-2 {
+  border: 2px dashed #007BFF;
+}
+
+.book-container .border-dashed {
+  border-style: dashed;
+}
+
+.book-container .rounded-lg {
+  border-radius: 8px;
+}
+
+.book-container .flex {
+  display: flex;
+}
+
+.book-container .items-center {
+  align-items: center;
+}
+
+.book-container .justify-center {
+  justify-content: center;
+}
+
+.book-container .overflow-hidden {
+  overflow: hidden;
+}
+
+.book-container .cursor-pointer {
+  cursor: pointer;
+}
+
+.book-container .opacity-0 {
+  opacity: 0;
+}
+
+.book-container .w-full {
+  width: 100%;
+}
+
+.book-container .h-full {
+  height: 100%;
+}
+
+.book-container .object-cover {
+  object-fit: cover;
+}
+
+.book-container .text-gray-400 {
+  color: #b0b0b0;
+}
+
+.book-container svg {
+  width: 50px;
+  height: 50px;
+}
+
+.book-container input[type="file"] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+/* 입력 필드 스타일 */
+.book-container input,
+.book-container textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s;
+}
+
+.book-container input:focus,
+.book-container textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+/* 다이어리 페이지 네비게이션 */
+.book-container .flex-gap-2 {
+  display: flex;
+  gap: 10px;
+}
+
+.book-container button {
+  margin-top: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.book-container button:hover {
+  background-color: #f1f1f1;
+}
+
+.book-container button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* 페이지 버튼 */
+.book-container button[type="button"] {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+}
+
+.book-container button[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+}
+
+.book-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.book-container button[type="button"]:hover {
+  background-color: #f9f9f9;
+}

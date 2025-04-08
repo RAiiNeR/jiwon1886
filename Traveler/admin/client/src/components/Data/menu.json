@@ -1,0 +1,202 @@
+{
+    "menu": [
+        {
+            "name": "마이페이지",
+            "routerLink": [""],
+            "iconClass": "icofont-user fs-5",
+            "children": []
+        },
+        {
+            "name": "회원팀",
+            "routerLink": [""],
+            "identifier": "dashboard",
+            "iconClass": "icofont-home fs-5",
+            "breadcrumbMessage": "Welcome to Analytics Dashboard.",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+                {
+                    "name": "커뮤니티",
+                    "routerLink": ["community"],
+                    "identifier": "community",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                },
+                {
+                    "name": "AI 블랙리스트",
+                    "routerLink": ["blacklist"],
+                    "identifier": "community",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                },
+                {
+                    "name": "회원목록",
+                    "routerLink": ["userlist"],
+                    "identifier": "community",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                },
+                {
+                    "name": "직원관리",
+                    "routerLink": ["memberlist"],
+                    "identifier": "community",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                },
+                {
+                    "name": "배낭톡",
+                    "routerLink": ["bagtalk"],
+                    "identifier": "community",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                }
+                
+            ]
+        },
+        {
+            "name": "여행",
+            "routerLink": [""],
+            "identifier": "Projects",
+            "iconClass": "icofont-briefcase",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+                {
+                    "name": "투어 통계",
+                    "routerLink": ["tourstaus"],
+                    "identifier": "투어 통계",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                },
+
+                {
+                    "name": "투어 목록",
+                    "routerLink": ["tourlist"],
+                    "identifier": "투어 목록",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                },               
+                {
+                    "name": "여행다이어리",
+                    "routerLink": ["tourdiary"],
+                    "identifier": "여행다이어리",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                }
+
+            ]
+        },
+        
+        {
+            "name": "교통",
+            "routerLink": [""],
+            "identifier": "Projects",
+            "iconClass": "icofont-briefcase",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+                {
+                    "name": "버스 예매 내역",
+                    "routerLink": ["pay"],
+                    "identifier": "pay",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                },
+                {
+                    "name": "교통 이슈",
+                    "routerLink": ["Transportissue"],
+                    "identifier": "Transportissue",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                }
+                
+
+            ]
+        },
+
+        {
+            "name": "숙박 관리",
+            "routerLink": [""],
+            "identifier": "숙박 관리",
+            "iconClass": "icofont-ticket",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": true,
+            "children": [
+                {
+                    "name": "예약자 리스트",
+                    "routerLink": ["HotelReservation"],
+                    "identifier": "예약자 리스트",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                },
+                {
+                    "name": "Hotel",
+                    "routerLink": ["Hotel"],
+                    "identifier": "Hotel",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Other Pages",
+            "routerLink": [],
+            "identifier": "Other Pages",
+            "iconClass": "icofont-code-alt",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+                                {
+                    "name": "서버 관리",
+                    "routerLink": ["ServerManagement"],
+                    "identifier": "서버 관리",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,899 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:700&display=swap');
+
+.MyPage {
+  padding: 70px 60px;
+  background-color: #b06036;
+
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  .ftco-section {
+    height: 100%;
+  }
+
+  .title-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+
+  .title-box>button {
+    width: 100px;
+    height: 40px;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  /* *******************************차트******************************** */
+  /* .chart-container{
+      border-radius: 7px;
+      background: #fff5eb;
+      padding: 0 15px
+    } */
+
+  .myChart .chart-container {
+    width: 100%;
+    height: 423px;
+    border-radius: 7px;
+    background: #fff5eb;
+    padding: 0 15px 0 15px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .myChart .chart-container svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .myChart .chart-container>img {
+    position: absolute;
+    /* top: 0; */
+    width: 53.33333%;
+    bottom: -86px;
+    right: -10px;
+    opacity: 0.5;
+  }
+
+  .history-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 20px;
+    flex-wrap: wrap;
+    height: 485px;
+    position: relative;
+  }
+
+  .apexcharts-bar-series.apexcharts-plot-series {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* ✅ 바 사이 간격 조정 */
+  }
+
+  .myChart {
+    /* flex: 1; */
+    width: 45%;
+    /* ✅ 그래프가 적절한 비율로 축소 */
+    /* min-width: 300px; ✅ 최소 크기 지정 */
+    margin-top: 20px;
+  }
+
+
+  .inner {
+    max-width: 1360px;
+    margin: 50px auto;
+    box-sizing: border-box;
+    padding: 30px 50px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 6px 8px 6px #774820;
+  }
+
+  h2.title {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 0;
+    /* margin-bottom: 20px; */
+    /* border-bottom: 1px solid #ccc; */
+  }
+
+  .profile-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    border-top: 1px solid #ccc;
+  }
+
+  .profile {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+  }
+
+  .pro-left {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 30px;
+  }
+
+  .pro-left>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .pro-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .right-box {
+    margin-right: 60px;
+  }
+
+  .text-box>p {
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  .text-box>span {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  ul.my-prolist {
+    margin-top: 20px;
+    display: flex;
+  }
+
+  ul.my-prolist>li {
+    margin-right: 35px;
+  }
+
+  .mbti {
+    width: 200px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-right: 50px;
+    /* height: 100%; */
+  }
+
+  .mbti>h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .my-history {
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
+  }
+
+  .log {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ccc;
+  }
+
+  .diary-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .no-diary {
+    height: 330px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .no-diary>a {
+    margin-top: 10px;
+    font-weight: 700;
+    color: #f85959;
+    padding: 15px 30px;
+    border: 1px solid #f85959;
+    border-radius: 5rem;
+    transition: 0.3s;
+  }
+
+  .no-diary>a:hover {
+    background-color: #f85959;
+    color: #fff;
+  }
+
+  .my-Box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .my-list {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+  }
+
+  .my-buslist{
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+  }
+  .my-bag {
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 40%;
+  }
+
+  .my-blog {
+    margin-top: 20px;
+    width: 96%;
+  }
+
+  .my-bag>h2,
+  .my-blog>h2,
+  .chatting>h2,
+  .myChart>h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .my-blog-text {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .my-bus-text {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .my-bus-text > h2 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .my-blog-text>h2 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .my-blog-text>a {
+    color: #555;
+    margin-right: 10px;
+  }
+
+  .my-blog-text>a>i {
+    font-size: 13px;
+    margin-right: 3px;
+    font-weight: 500;
+  }
+
+  .my-blog>ol>li>a {
+    color: #333;
+  }
+
+  .my-blog>ol>li>a:hover {
+    color: #f85959;
+  }
+
+  .bag-list>li {
+    margin-bottom: 7px;
+  }
+
+  .bag-list>li>a {
+    color: #333;
+  }
+
+  .chatting {
+    margin-top: 20px;
+    height: 95%;
+    width: 53%;
+  }
+
+  ol {
+    counter-reset: li;
+    /* Initiate a counter */
+    margin-left: 10px;
+    padding: 0;
+    font-family: sans-serif;
+    /* width: 330px; */
+    word-break: keep-all;
+
+    li {
+      list-style: none;
+      /* Disable the normal item numbering */
+      position: relative;
+      /* Create a positioning context */
+      margin: 0 0 16px 0;
+      /* Give each list item a left margin to make room for the numbers */
+      padding: 6px 18px;
+      /* Add some spacing around the content */
+      background: rgba(221, 122, 129, 0.1);
+
+      &:before {
+        content: counter(li);
+        /* Use the counter as content */
+        counter-increment: li;
+        /* Increment the counter by 1 */
+        /* Position and style the number */
+        position: absolute;
+        top: -16px;
+        left: -30px;
+        box-sizing: border-box;
+        width: 2em;
+        /* Some space between the number and the content in browsers that support
+                 generated content but not positioning it (Camino 2 is one example) */
+        margin-right: 8px;
+        color: rgba(237, 65, 87, 1.00);
+        font-weight: bold;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-size: 30px;
+        text-align: center;
+      }
+    }
+  }
+
+  /* mbti 버튼 css */
+  * {
+    box-sizing: border-box;
+  }
+
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+  }
+
+  button.learn-more {
+    font-weight: 600;
+    color: #382b22;
+    text-transform: uppercase;
+    padding: 1.25em 2em;
+    background: #fff0f0;
+    border: 2px solid #b18597;
+    border-radius: 0.75em;
+    transform-style: preserve-3d;
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+      background 150ms cubic-bezier(0, 0, 0.58, 1);
+  }
+
+  button.learn-more::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f9c4d2;
+    border-radius: inherit;
+    box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+    transform: translate3d(0, 0.75em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+      box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+  }
+
+  button.learn-more:hover {
+    background: #ffe9e9;
+    transform: translate(0, 0.25em);
+  }
+
+  button.learn-more:hover::before {
+    box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+    transform: translate3d(0, 0.5em, -1em);
+  }
+
+  button.learn-more:active {
+    background: #ffe9e9;
+    transform: translate(0em, 0.75em);
+  }
+
+  button.learn-more:active::before {
+    box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+    transform: translate3d(0, 0, -1em);
+  }
+
+  /* *****************************발자국 테이블****************************** */
+  .foot {
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+
+  .foot>h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border: 1px solid #55608f;
+  }
+
+  th,
+  td {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  th {
+    text-align: center;
+    color: #fff;
+  }
+
+  td {
+    color: #333;
+    border-bottom: 1px solid #55608f;
+    border-right: 1px solid #55608f;
+    text-align: left;
+    max-width: 246px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  td:nth-of-type(3) {
+    max-width: 166px;
+  }
+
+  thead {
+    th {
+      background-color: #55608f;
+    }
+  }
+
+  /* 최근 문의내역 */
+  .talkBox {
+    display: flex;
+    flex-direction: column;
+    height: 93%;
+    /* flex-wrap:wrap; */
+    justify-content: space-between;
+  }
+
+  .tt {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  .tt>p {
+    line-height: 0;
+    margin-right: 7px;
+  }
+
+  .talk {
+    /* margin-bottom: 15px; */
+    max-width: 660px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 15px 18px;
+    overflow: hidden;
+    height: 48%;
+  }
+
+  .talk:nth-child(2) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .tt-list ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .tt-list li {
+    list-style: none;
+    padding: 2px 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .tt-list li a {
+    display: block;
+    /* 블록 요소로 변경 */
+    width: 100%;
+    /* 부모(li)의 너비를 따름 */
+    white-space: nowrap;
+    /* 텍스트 줄 바꿈 방지 */
+    overflow: hidden;
+    /* 넘치는 텍스트 숨김 */
+    text-overflow: ellipsis;
+    /* 넘치는 부분 '...' 표시 */
+    text-decoration: none;
+    color: black;
+  }
+
+  /* ****************수정폼***************** */
+  /* 수정 폼 스타일 */
+  .btn-flex>button {
+    width: 100px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .btn-flex>button:nth-child(2) {
+    margin-right: 0;
+  }
+
+  .edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* 각 요소 사이 간격 */
+    max-width: 620px;
+    /* 최대 너비 */
+  }
+
+  /* 위쪽 input과 textarea는 전체 너비 */
+  .edit-form input,
+  .edit-form textarea {
+    width: 100%;
+    /* 전체 너비 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  /* 하단 리스트 입력 요소 (가로 정렬) */
+  .edit-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* 반응형 적용 */
+    gap: 10px;
+    /* 입력칸 간격 */
+  }
+
+  .list-input {
+    flex: 1;
+    /* 자동 너비 조정 */
+    min-width: 120px;
+    /* 최소 너비 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .mybox2 {
+    padding: 20px 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 12px 1px #ccc;
+  }
+
+  .mybox2:last-child{
+    margin-bottom: 0;
+  }
+
+  .mybox2>p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .mybox2>ul>li {
+    padding-bottom: 1px;
+  }
+
+  .mybox2>ul>li:nth-of-type(3) {
+    padding-bottom: 0;
+  }
+
+  .mybox2>ul>li>a {
+    color: #333;
+  }
+
+  .mybox2>ul>li>a:hover {
+    color: #f85959;
+  }
+
+
+  /* ************************************다이어리 박스****************************** */
+  .diary-box {
+    margin-top: 20px;
+    /* max-width: 500px; */
+  }
+
+  .big-box {
+    display: flex;
+    /* grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1f); */
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    justify-content: space-around;
+  }
+
+  .diary {
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 5px;
+    position: relative;
+  }
+
+  .diary:hover img {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+
+  .diary:hover button.diary-btn {
+    opacity: 1;
+  }
+
+  .diary>button.diary-btn {
+    /* padding: 10px; */
+    width: 90px;
+    height: 90px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid #222;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: 0.3s;
+    color: #fff;
+    opacity: 0;
+  }
+
+  .diary>img {
+    width: 100%;
+    transition: 0.3s;
+  }
+
+  /* *************************다이어리 차트*********************** */
+  .diary-chart {
+    width: 100%;
+  }
+
+  .diary-chart>h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .diary-chart-container {
+    max-width: 100%;
+    height: 230px;
+    /* 높이를 줄여도 잘리지 않도록 설정 */
+    overflow: visible;
+    /* 잘리지 않도록 설정 */
+    padding-bottom: 10px;
+    /* 차트 내부 여백 추가 */
+    background-color: #f3f3f3;
+    border-radius: 7px;
+  }
+
+  .diary-chart-container svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* **********************************태블릿 미디어쿼리********************************* */
+  @media (max-width: 1220px) {
+    .profile-box {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .profile {
+      width: 100%;
+      margin-bottom: 35px;
+      justify-content: flex-start;
+    }
+
+    .pro-left {
+      margin-right: 0;
+    }
+
+    .mbti {
+      margin-right: 0px;
+
+    }
+
+    .right-box {
+      margin-right: 0;
+      padding-left: 30px;
+    }
+
+    ul.my-prolist {
+      /* flex-direction: column; */
+      margin-top: 15px;
+    }
+
+    ul.my-prolist>li {
+      margin-right: 20px;
+      margin-top: 2px;
+    }
+
+    ul.my-prolist>li:first-child {
+      margin-top: 0;
+    }
+
+    .log {
+      flex-direction: column;
+    }
+
+    .diary-box {
+      max-width: none;
+    }
+
+    .big-box {
+      flex-wrap: nowrap;
+    }
+
+    .talk {
+      margin-bottom: 15px;
+      max-width: none;
+    }
+
+    .talkBox {
+      display: block;
+    }
+
+    .history-container {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .chatting,
+    .myChart {
+      width: 100%;
+    }
+
+    .myChart .chart-container>img {
+      width: 25.33333%;
+      bottom: -45px;
+      right: 5px;
+    }
+
+    .diary-chart-container {
+      /* max-width: 100%;
+          height: 250px; ✅ 차트 높이 줄이기 */
+    }
+
+    .my-Box {
+      width: 100%;
+    }
+
+    .diary-container {
+      width: 100%;
+    }
+  }
+
+
+
+  /* **********************************모바일 미디어쿼리********************************* */
+
+}
+
+@media (max-width: 780px) {
+  .MyPage {
+    padding: 30px;
+
+    .inner {
+      padding: 30px 15px;
+      margin: 0;
+    }
+
+    .profile {
+      flex-direction: column;
+      justify-content: none;
+    }
+
+    .pro-left {
+      margin: auto;
+    }
+
+    .pro-right {
+      flex-direction: column;
+      margin-top: 30px;
+      align-items: none;
+    }
+
+    .right-box {
+      margin: 0;
+      padding: 0;
+    }
+
+    .my-history {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 40px;
+      border-top: 1px solid #ccc;
+      gap: 20px;
+      /* ✅ 문의내역과 그래프 사이 간격 추가 */
+    }
+
+    ol {
+      width: 95%;
+    }
+
+    .log {
+      flex-direction: column;
+    }
+
+    .diary-box {
+      max-width: none;
+    }
+
+    .big-box {
+      justify-content: center;
+      margin-top: 25px;
+    }
+
+    .diary:nth-child(2),
+    .diary:nth-child(3),
+    .diary:nth-child(4) {
+      display: none;
+    }
+
+    .myChart .chart-container>img {
+      width: 33.33333%;
+      bottom: -30px;
+      right: -3px;
+    }
+
+    .diary-chart-container {
+      /* height: 200px; ✅ 더 작은 화면에서는 차트 높이 더 줄이기 */
+    }
+
+    .my-bag {
+      margin-right: 0;
+      width: 100%;
+    }
+
+    .my-blog {
+      width: 100%;
+    }
+  }
+}

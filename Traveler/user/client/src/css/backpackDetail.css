@@ -1,0 +1,93 @@
+@media screen and (max-width: 1024px) {
+    .backpackDetail .inner {
+        width: 90%;
+        padding: 40px 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .backpackDetail .hero-wrap {
+        height: 150px;
+    }
+
+    .backpackDetail .inner {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .question {
+        flex-direction: column; /* 세로 배치 */
+        text-align: center;
+    }
+
+    .question > img {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .backpackDetail .hero-wrap {
+        height: 120px;
+    }
+
+    .backpackDetail .inner {
+        padding: 20px;
+    }
+
+    .question {
+        text-align: center;
+    }
+
+    .text-box h2 {
+        font-size: 18px;
+    }
+
+    .text-box p {
+        font-size: 14px;
+    }
+}
+
+/* ✅ 수정 및 삭제 버튼 스타일 추가 */
+.post-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.edit-button, .delete-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.edit-button {
+    background-color: #6c757d;
+    color: white;
+}
+
+.delete-button {
+    background-color: #f85959;
+    color: white;
+}
+
+/* ✅ 반응형 스타일 (작은 화면에서 버튼 크기 조정) */
+@media screen and (max-width: 768px) {
+    .post-actions {
+        justify-content: center; /* 작은 화면에서는 중앙 정렬 */
+    }
+
+    .edit-button, .delete-button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .edit-button, .delete-button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}

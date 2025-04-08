@@ -1,0 +1,268 @@
+.like-container {
+    .container {
+        margin: auto;
+    }
+
+    .like-BigBox > .container{
+        margin: 0;
+    }
+
+    .like-BigBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    /* ✅ 차트 2개 나란히 배치 (디자인 변경 없음) */
+    .chart-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1200px;
+        margin-bottom: 20px;
+    }
+
+    /* 막대 그래프 크기 증가 */
+    .bar-chart {
+        width: 500px;  /* 기존보다 크기 증가 */
+        height: 350px;
+        margin: auto;
+    }
+
+/* 도넛 차트 크기 감소 */
+    .pie-chart {
+        width: 300px;  /* 크기 축소 */
+        height: 350px;
+        margin: auto;
+    }
+
+    .chart-box {
+        flex: 1;
+        min-width: 300px;
+        max-width: 500px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .like-chart-container {
+        width: 100%;
+        height: auto;
+    }
+
+    /* ✅ 게시글 리스트 */
+    .container-fluid {
+        width: 100%;
+    }
+
+    .search-box {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 100;
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid #ccc;
+        padding: 8px;
+        width: 100%;
+        max-width: 400px;
+        background: white;
+        border-radius: 30px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .form-search {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        border-radius: 30px;
+        outline: none;
+        cursor: text;
+        background: white;
+    }
+
+    .btn-primary {
+        padding: 10px 20px; 
+        border: none;
+        background: #FF5A5F;
+        color: white;
+        border-radius: 30px;
+        cursor: pointer;
+        font-weight: 600; 
+        width: auto; 
+        height: auto;
+        box-sizing: border-box; 
+        transition: background-color 0.3s ease, color 0.3s ease; 
+    }
+
+    .btn-primary:hover {
+        background: #E04848;
+        color: white !important;
+        padding: 10px 20px;
+        border: none;
+        font-weight: 600; 
+    }
+
+    .btn-primary:hover {
+        transform: none !important;
+    }
+
+    .mini-backpack {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .minimini-backpack {
+        height: auto;
+        padding: 15px;
+        width: 250px;
+        border-radius: 20px;
+        border: 3px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .block-20 {
+        width: 100%;
+        height: 180px; /* 이미지 높이 줄이기 */
+        background-size: contain;  /* 이미지가 잘리지 않고 박스 안에 맞춤 */
+        background-position: center;
+        background-repeat: no-repeat; /*이미지 반복 제거 */
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .write-button {
+        display: inline-block;
+        background-color: #FF5A5F;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+        cursor: pointer;
+        border: none;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        width: 150px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .write-button:hover {
+        background-color: #E04848;
+    }
+
+    .chart-box {
+        /* width: 500px; */
+    }
+
+    /* ✅ 4개씩 한 줄로 정렬, 크기 조정 */
+    .mini-backpack {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4개씩 배치 */
+        gap: 15px; /* 카드 간 간격 */
+        justify-content: center;
+        }
+    
+    /* .minimini-backpack {
+        height: 320px; 
+        padding: 15px;
+        background: #fff;
+        width: 250px; 
+        border-radius: 15px;
+        border: 5px solid #ccc;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden; 
+        } */
+
+    .backpack-textbox h3 {
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* 최대 2줄 */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        }   
+
+        .tt-box {
+            position: relative;
+            z-index: 3;
+        }
+
+        .backpackImg {
+            position: relative;
+        }
+
+        .backpackImg::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        .backpack-container {
+            width: 1400px;
+            margin: auto;
+        }
+
+        .backpacklistAndBtn {
+            display: flex;
+            flex-direction: column;
+        }
+
+    /* 반응형 조정 */
+    @media screen and (max-width: 1024px) {
+        .chart-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .mini-backpack {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .mini-backpack {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .minimini-backpack {
+            width: 220px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .mini-backpack {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .minimini-backpack {
+            width: 100%;
+        }
+    }
+}

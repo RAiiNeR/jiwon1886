@@ -1,0 +1,204 @@
+/* 배경 및 컨테이너 */
+.tour-recommended-container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #4a90e2, #002c75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Arial", sans-serif;
+    animation: fadeIn 0.8s ease-in-out;
+}
+.tour-recommended-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+.tour-recommended-title::before {
+    content: "✈️";
+    font-size: 24px;
+}
+
+.tour-recommended-subtitle {
+    font-size: 18px;
+    color: #444;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tour-recommended-box {
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    border-radius: 12px;
+    padding: 25px;
+    width: 90%;
+    max-width: 750px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    margin-top: 100px;
+}
+/* ✅ 버튼 컨테이너 정렬 */
+.tour-recommended-button-container {
+    display: flex;
+    justify-content: center; /* 버튼들을 가운데 정렬 */
+    gap: 10px; /* 버튼 간격 조정 */
+    margin-top: 20px;
+}
+
+/* ✅ 버튼 크기 통일 */
+.tour-recommended-btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #007bff, #0044aa);
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 12px rgba(0, 123, 255, 0.4);
+    min-width: 100px; /* 💡 버튼 최소 크기 설정 */
+    text-align: center;
+}
+
+/* ✅ 버튼 호버 효과 */
+.tour-recommended-btn:hover {
+    background: linear-gradient(45deg, #0056b3, #002c75);
+    transform: scale(1.05);
+}
+
+/* ✅ 비활성화된 버튼 스타일 */
+.tour-recommended-btn.disabled {
+    background: #ccc;
+    pointer-events: none;
+}
+
+/* 선택 버튼 스타일 */
+.tour-recommended-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.tour-recommended-grid-item {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid #ccc;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.tour-recommended-grid-item p {
+    margin-top: 6px;
+    font-size: 0.9rem; /* 💡 텍스트 크기 조정 */
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.tour-recommended-grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tour-recommended-grid-item img {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.tour-recommended-grid-item.selected {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    box-shadow: 0px 4px 12px rgba(0, 123, 255, 0.5);
+}
+
+.tour-recommended-grid-item.selected p {
+    color: white !important;
+}
+
+/* 진행 바 */
+.tour-recommended-progress-bar {
+    width: 80%;
+    height: 8px;
+    background: #ddd;
+    border-radius: 10px;
+    margin: 10px auto 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tour-recommended-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4a90e2, #0056b3);
+    width: 0%;
+    transition: width 0.4s ease-in-out;
+}
+.tour-recommended-text-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.tour-recommended-text-item {
+    background: white;
+    border: 2px solid #ccc;
+    padding: 18px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    width: 80%;
+    transition: all 0.3s ease-in-out;
+}
+
+.tour-recommended-text-item:hover {
+    background: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.tour-recommended-text-item.selected {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.5);
+}
+
+/* 선택된 항목의 텍스트 색상을 흰색으로 변경 */
+.tour-recommended-grid-item.selected p {
+    color: white !important;
+}

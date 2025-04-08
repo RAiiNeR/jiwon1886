@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/traveler/static/css/main.b174188e.css",
+    "main.js": "/traveler/static/js/main.6647bc86.js",
+    "static/media/Ownglyph UNZ.ttf": "/traveler/static/media/Ownglyph UNZ.ba6c9b6a63ce94c73447.ttf",
+    "static/media/icomoon.svg?6tt51o": "/traveler/static/media/icomoon.9cc47145c3e61b03d8b8.svg",
+    "static/media/ionicons.svg?v=4.0.0-19": "/traveler/static/media/ionicons.b26f853631d2fc5d412b.svg",
+    "static/media/icomoon.eot?6tt51o": "/traveler/static/media/icomoon.f76c54c12541e67c3ab1.eot",
+    "static/media/icomoon.woff?6tt51o": "/traveler/static/media/icomoon.1b3e525e9b8ab061f068.woff",
+    "static/media/icomoon.ttf?6tt51o": "/traveler/static/media/icomoon.31964debf8ad35e86c51.ttf",
+    "static/media/index.cjs": "/traveler/static/media/index.c05687ef19f5bac24939.cjs",
+    "static/media/ionicons.eot?v=4.0.0-19": "/traveler/static/media/ionicons.82062ff4bc04bebd3953.eot",
+    "static/media/ionicons.ttf?v=4.0.0-19": "/traveler/static/media/ionicons.d4df1d7d4c44ce76dd56.ttf",
+    "static/media/Diaryinner.jpg": "/traveler/static/media/Diaryinner.e7e22a71d8b126e3b156.jpg",
+    "static/media/ionicons.woff?v=4.0.0-19": "/traveler/static/media/ionicons.ba380afcae404f46d5ac.woff",
+    "static/media/open-iconic.svg": "/traveler/static/media/open-iconic.f88a8f004d6c024e07ae.svg",
+    "static/media/woodwall.jpg": "/traveler/static/media/woodwall.afe1656c0ec83b61ebb2.jpg",
+    "static/media/ionicons.woff2?v=4.0.0-19": "/traveler/static/media/ionicons.07feb1edb7a3f9f4dc78.woff2",
+    "static/media/Flaticon.svg": "/traveler/static/media/Flaticon.6847a3989c80fbbecf3d.svg",
+    "static/media/Diarycoverback.png": "/traveler/static/media/Diarycoverback.dac5dbe1694ec21e7feb.png",
+    "static/media/diary.jpg": "/traveler/static/media/diary.83fea10db53766c8915a.jpg",
+    "static/media/open-iconic.eot": "/traveler/static/media/open-iconic.2442644a7a4429aaf45b.eot",
+    "static/media/open-iconic.ttf": "/traveler/static/media/open-iconic.7f224b54c9aa6dcea763.ttf",
+    "static/media/open-iconic.otf": "/traveler/static/media/open-iconic.bff1e040a7ef4f0d0b47.otf",
+    "static/media/open-iconic.woff": "/traveler/static/media/open-iconic.42125a176cf7bfb24819.woff",
+    "static/media/Flaticon.eot": "/traveler/static/media/Flaticon.7a6d12a7c2254b465eac.eot",
+    "static/media/Flaticon.ttf": "/traveler/static/media/Flaticon.c76bc8e95083fcefd2e6.ttf",
+    "static/media/Flaticon.woff": "/traveler/static/media/Flaticon.ac162728f3d5ef000540.woff",
+    "index.html": "/traveler/index.html",
+    "main.b174188e.css.map": "/traveler/static/css/main.b174188e.css.map",
+    "main.6647bc86.js.map": "/traveler/static/js/main.6647bc86.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b174188e.css",
+    "static/js/main.6647bc86.js"
+  ]
+}

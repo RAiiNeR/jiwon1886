@@ -1,0 +1,349 @@
+.TravelTogether{
+    *{
+        padding: 0; margin: 0;
+    }
+    ul{
+        list-style: none;
+    }
+    button.searchFriend-btn{
+        border: none;
+        background: transparent;
+        position: absolute;
+        right: 0;
+        width: 50px;
+        height: 100%;
+    }
+    .not-logged-in-message{
+        text-align: center;
+        margin: auto 0;
+    }
+    .not-logged-in-message > p{
+        font-size: 22px;
+        font-weight: 500;
+        color: #333;
+    }
+    .not-logged-in-message > span{
+        font-size: 18px;
+        font-weight: 400;
+        color: #666;
+    }
+    .search-box{
+        position: relative;
+    }
+    input{
+        border: none;
+        padding: 12px 20px;
+        width: 100%;
+        font-size: 16px;
+        border-radius: 50px;
+    }
+    ul.friend-list-big > li > a.active{
+        color: #fff;
+        background: #187abb;
+    }
+    h2.tt{
+        font-weight: 700;
+        font-size: 3.5rem;
+        line-height: 90px;
+    }
+    .tspan{
+        font-size: 1rem;
+        font-weight: 400;
+        color: #666;
+    }
+    h2.tt2{
+        font-weight: 700;
+        font-size: 3.5rem;
+        line-height: 75px;
+    }
+    .t-container{
+        /* height: 450px; */
+        /* width: 100%; */
+        /* background-color: #FFE2C2; */
+        overflow: hidden;
+    }
+    .img-box{
+        height: 450px;
+        position: relative;
+        overflow: hidden;
+        background: #FFE2C2;
+    }
+
+    .img-box > img{
+        width: 635px;
+        position: absolute;
+        right: 5rem;
+        z-index: 1;
+    }
+
+    .img-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2); /* 오렌지색 반투명 오버레이 */
+        z-index: 2;
+    }
+
+    .tt-box{
+        max-width: 1140px;
+        margin: auto;
+        top: 50%;
+        position: relative;
+        transform: translateY(-50px);
+        z-index: 3;
+    }
+
+    .tt-box > span{
+        font-size: 13px;
+        color: #ffffffb3;
+    }
+
+    .tt-box > h2{
+        font-weight: 700;
+        font-size: 60px;
+        color: #fff;
+    }
+    .inner{
+        /* padding: 0 30px; */
+        background-color: #fff;
+        padding: 75px 0px 0px;
+        
+    }
+    .travel1{
+        padding: 0 30px;
+    }
+    .tf-box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .travel2{
+        background: #eee;
+        padding: 5rem 2rem;
+        margin-top: 4.5rem;
+    }
+    .travel-section{
+        max-width: 1140px;
+        margin: auto;
+        /* display: flex; */
+        /* justify-content: space-between; */
+        /* flex-wrap:wrap; */
+    }
+    .travel-chart-box{
+        padding: 20px 15px;
+        width: 45em;
+    }
+
+    .travel-chart-box > h2{
+        margin-bottom: 20px;
+    }
+
+    .travel-chart-box > h2::after{
+        content: "\f080"; /* Font Awesome의 bar-chart 유니코드 */
+        font-family: "FontAwesome"; /* Font Awesome 폰트 지정 */
+        font-weight: normal; /* Font Awesome 아이콘이 제대로 표시되도록 설정 */
+        margin-left: 10px; /* 아이콘과 텍스트 사이 간격 */
+        color: #ff5f5f; /* 원하는 색상 */
+        font-size: 25px; /* 아이콘 크기 */
+    }
+
+    .friend > h2::after{
+        content: "\f2b9"; /* Font Awesome의 bar-chart 유니코드 */
+        font-family: "FontAwesome"; /* Font Awesome 폰트 지정 */
+        font-weight: normal; /* Font Awesome 아이콘이 제대로 표시되도록 설정 */
+        margin-left: 10px; /* 아이콘과 텍스트 사이 간격 */
+        color: #1d448b; /* 원하는 색상 */
+        font-size: 25px; /* 아이콘 크기 */
+    }
+
+    .friend{
+        width: 480px;
+        background-color: #e1f3ff;
+        border-radius: 7px;
+        padding: 20px 15px;
+    }
+    .friend > h2,
+    .travel-chart-box > h2{
+        font-size: 22px;
+        font-weight: 600;
+        color: #333;
+    }
+    ul.friend-list-big{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #000;
+        margin-top: 15px;
+    }
+    ul.friend-list-big > li{
+        position: relative;
+        width: 33.333%;
+        text-align: center;
+    }
+    ul.friend-list-big > li > a{
+        text-align: center;
+        padding: 15px 25px;
+        font-weight: 600;
+        font-size: 18px;
+        color: #8393b1;
+        display: block;
+        cursor: pointer;
+    }
+    .f-box1, .f-box2, .f-box3{
+        display: none;
+    }
+    .f-box1.active, .f-box2.active, .f-box3.active {
+        display: block;
+    }
+    .f-box1 > ul > li{
+        padding: 15px;
+        font-size: 17px;
+        font-weight: 600;
+        box-sizing: border-box;
+        border-bottom: 1px solid #000;
+    }
+    .f-box1 > ul > li > span{
+        /* display: block; */
+        margin-left: 1rem;
+        font-weight: 500;
+        color: #333;
+    }
+    .f-box1 > ul > li > img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 1rem;
+    }
+
+    .f-box3 > ul > li{
+        padding: 15px;
+        font-size: 17px;
+        font-weight: 600;
+        box-sizing: border-box;
+        border-bottom: 1px solid #000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .f-box3 > ul > li > .unknownFriend > img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 1rem;
+    }
+
+    .friend-btn > button{
+        padding: 5px 14px;
+        font-size: 14px;
+        border: none;
+        border-radius: 3px;
+        transition: 0.3s;
+        color: #fff;
+    }
+
+    .friend-btn > button:nth-child(1){
+        margin-right: 8px;
+        background-color: #27a9ff;
+        /* ff4949 */
+    }
+
+    .friend-btn > button:nth-child(1):hover{
+        background-color: #187abb;
+    }
+
+    .friend-btn > button:nth-child(2){
+        background-color: #ff4949;
+        /* 49b6ff */
+    }
+
+    .friend-btn > button:nth-child(2):hover{
+        background-color: #d81c1c;
+    }
+
+    .f-box2{
+        margin-top: 15px;
+        /* display: none; */
+    }
+    .group-travel-history{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .group-travel-history > h2{
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    .group-travel-history > h2::after{
+        content: "\f54b"; /* 운동화 아이콘 */
+        font-family: "Font Awesome 5 Free"; /* 폰트 지정 */
+        font-weight: 900; /* 굵은 아이콘 사용 */
+        margin-left: 10px;
+        color: #1d8b42; /* 원하는 색상 */
+        font-size: 22px; /* 아이콘 크기 */
+    }
+
+    .search-result{
+        /* width: 100%; */
+        margin-top: 10px;
+    }
+
+    .search-result > li{
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .userProfile{
+        display: flex;
+        align-items: center;
+    }
+
+    .userImage{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #ccc;
+        margin-right: 1rem;
+        overflow: hidden;
+    }
+
+    .userImage > img{
+        width: 100%;
+    }
+
+    .no-friend-message{
+        margin-top: 30px;
+        font-size: 22px;
+        font-weight: 600;
+        text-align: center;
+        color: #1d448b;
+    }
+
+
+    /* ************************잔디달력 데이터 스타일************************* */
+    .react-calendar-heatmap rect {
+        rx: 2px; /* 가로 둥글게 */
+        ry: 2px; /* 세로 둥글게 */
+    }
+    
+    .react-calendar-heatmap .color-empty {
+        fill: #fff;
+    }
+    .react-calendar-heatmap .color-scale-1 {
+        fill: #c6e48b;
+    }
+    .react-calendar-heatmap .color-scale-2 {
+        fill: #7bc96f;
+    }
+    .react-calendar-heatmap .color-scale-3 {
+        fill: #239a3b;
+    }
+    .react-calendar-heatmap .color-scale-4 {
+        fill: #196127;
+    }
+}

@@ -1,0 +1,130 @@
+/* 전체 책장 스타일 */
+.bookshelf {
+    padding-top: 100px;
+    background-image: url('/public/images/woodwall.jpg'); /* 배경 이미지 */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: auto; /* 최소 높이 자동 조절 */
+    padding: 1rem; /* 여백 조절 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* 제목 박스 스타일 */
+.titlebox {
+    position: absolute;
+    top: 0; /* 화면 상단에 고정 */
+    left: 50%;
+    transform: translateX(-50%); /* 가로 중앙 정렬 */
+    width: 100%;
+    padding: 20px 0; /* 위아래 여백 */
+    z-index: 10; /* 책장 위로 표시되도록 설정 */
+  }
+  
+  /* 제목 스타일 */
+  .bookshelf h2 {
+    font-size: 2rem; /* 제목 크기 조정 */
+    color: #c16b2e; /* 흰색 텍스트 */
+    margin: 0; /* 기본 마진 제거 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    font-weight: bold;
+  }
+
+  .titlebox {
+    position: absolute;
+    top: 0; /* 화면 상단에 고정 */
+    left: 50%;
+    transform: translateX(-50%); /* 가로 중앙 정렬 */
+    width: 100%;
+    padding: 20px 0; /* 위아래 여백 */
+    z-index: 10;
+  }
+  
+/* 선반 컨테이너 */
+.shelfContainer {
+    width: 100%;
+    max-width: 800px; /* 최대 너비 감소 */
+    margin: 0 auto;
+    padding: 0.5rem;
+}
+
+/* 각 선반 스타일 */
+.shelf {
+    position: relative;
+    margin-bottom: 2rem; /* 간격 조절 */
+}
+
+/* 책 그리드 (3개씩 배치) */
+.shelfGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem; /* 간격 감소 */
+    margin-bottom: 0.5rem;
+}
+
+/* 책 이미지 스타일 */
+.shelfItem {
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.shelfImage {
+    width: 140px; /* 너비 감소 */
+    height: 210px; /* 높이 감소 */
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* 호버 효과: 책이 위로 이동 */
+.shelfItem:hover {
+    transform: translateY(-6px); /* 이동 거리 감소 */
+}
+
+/* 나무 선반 스타일 */
+.woodenShelf {
+    height: 0.6rem; /* 높이 감소 */
+    width: 100%;
+    background: linear-gradient(to right, #c16b2e, #c7842e, #c16b2e);
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bookTitle {
+    position: absolute;
+    top: 0; /* 책 표지 위쪽에 위치 */
+    left: 0;
+    width: 100%;
+    height: 100%; /* 책 표지 전체 영역을 덮도록 높이 설정 */
+    background-color: rgba(0, 0, 0, 0.7); /* 반투명 검정 배경 */
+    color: white;
+    display: flex; /* flexbox 사용 */
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    border-radius: 5px;
+  }
+  
+  .shelfItem {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shelfItem:hover .bookTitle {
+    opacity: 1;
+  }
+
+  .bookCover { /* bookCover 스타일 */
+    position: relative; /* bookTitle를 absolute로 배치하기 위해 필요 */
+    width: 140px;
+    height: 210px;
+  }

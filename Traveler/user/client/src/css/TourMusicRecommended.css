@@ -1,0 +1,205 @@
+/* 전체 화면을 덮는 오버레이 (모달 배경) */
+.music-recommended-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 9998 !important;
+}
+
+/* 모달 창 */
+.music-recommended-modal {
+    background: white !important;
+    width: 420px !important;
+    max-width: 90% !important;
+    padding: 24px !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+    text-align: center !important;
+    position: relative !important;
+    z-index: 9999 !important;
+    transform: scale(0.95) !important;
+    opacity: 0 !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+/* 모달 활성화 시 애니메이션 */
+.music-recommended-overlay.active .music-recommended-modal {
+    transform: scale(1) !important;
+    opacity: 1 !important;
+}
+
+/* 모달 헤더 */
+.music-recommended-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    padding-bottom: 10px !important;
+    border-bottom: 2px solid #eee !important;
+}
+
+/* 아이콘과 제목 정렬 */
+.music-recommended-header h2 {
+    display: flex !important;
+    align-items: center !important;
+    font-size: 22px !important;
+    font-weight: bold !important;
+    color: #333 !important;
+}
+
+.music-recommended-header h2 i {
+    margin-right: 8px !important;
+    font-size: 24px !important;
+    color: #ff6b6b !important;
+}
+
+/* 닫기 버튼 */
+.music-recommended-close {
+    background: none !important;
+    border: none !important;
+    font-size: 22px !important;
+    cursor: pointer !important;
+    color: #999 !important;
+    transition: color 0.3s ease-in-out !important;
+}
+
+.music-recommended-close:hover {
+    color: #ff6b6b !important;
+}
+
+.music-recommended-location {
+    font-size: 16px !important;
+    font-weight: bold !important;
+    margin: 10px 0 !important;
+    color: #333 !important;
+    padding: 8px 12px !important;
+    border-radius: 6px !important;
+    display: inline-block !important;
+}
+
+/* 위치 가져오기 버튼 */
+.music-recommended-location-btn {
+    background-color: #ff6b6b !important;
+    color: white !important;
+    padding: 12px 16px !important;
+    border: none !important;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease-in-out !important;
+    width: 100% !important;
+    font-weight: bold !important;
+    margin: 10px 0 !important;
+    font-size: 16px !important;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+.music-recommended-location-btn:hover {
+    background: #e85050 !important;
+    transform: scale(1.05) !important;
+}
+
+/* 노래 리스트 */
+.music-recommended-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    margin-top: 12px !important;
+}
+
+/* 노래 카드 */
+.music-recommended-card {
+    display: flex !important;
+    align-items: center !important;
+    background: #fff6f6 !important;
+    padding: 12px !important;
+    border-radius: 14px !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1) !important;
+    justify-content: space-between !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.music-recommended-card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 앨범 이미지 */
+.music-recommended-cover {
+    width: 55px !important;
+    height: 55px !important;
+    border-radius: 8px !important;
+    object-fit: cover !important;
+}
+
+/* 노래 정보 */
+.music-recommended-info {
+    flex-grow: 1 !important;
+    margin-left: 12px !important;
+    text-align: left !important;
+}
+
+.music-recommended-info h3 {
+    font-size: 16px !important;
+    color: #333 !important;
+    margin: 0 !important;
+}
+
+.music-recommended-info p {
+    font-size: 14px !important;
+    color: #666 !important;
+    margin: 3px 0 0 0 !important;
+}
+
+/* 재생 버튼 */
+.music-recommended-play-btn {
+    background: #ff6b6b !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 50% !important;
+    width: 42px !important;
+    height: 42px !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease-in-out !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.music-recommended-play-btn:hover {
+    background: #e85050 !important;
+    transform: scale(1.1) !important;
+}
+
+
+.music-recommended-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .music-recommended-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .music-recommended-header button {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .music-recommended-header button:hover {
+    color: red;
+    transform: scale(1.1);
+  }

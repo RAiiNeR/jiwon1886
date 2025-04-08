@@ -1,0 +1,152 @@
+/* ✅ AI 추천 버튼 */
+.ai-tour-recommended {
+    background-color: #2f89fc !important;
+    color: white !important;
+    border: none !important;
+    width: 213px !important;
+    height: 58px !important;
+    font-weight: 400 !important;
+    transition: background 0.3s, color 0.3s !important;
+    border-radius: 8px !important;
+    font-size: 16px !important;
+}
+
+.ai-tour-recommended:hover {
+    background-color: white !important;
+    color: #2f89fc !important;
+    border: 1px solid #2f89fc !important;
+}
+
+/* ✅ 전체 컨테이너 레이아웃 */
+.tour-container  {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    max-width: 1100px !important;
+    margin: auto !important;
+    margin-top: 20px !important; /* ✅ 위쪽 사진과 여백 */
+}
+
+/* ✅ 차트 & 추천 여행지 컨테이너 */
+.tour-chart-container {
+    display: flex !important;
+    gap: 20px !important;
+    flex: 3 !important;
+}
+
+/* ✅ 개별 차트 스타일 */
+.tour-chart {
+    flex: 1 !important;
+    background: white !important;
+    padding: 20px !important;
+    border-radius: 12px !important;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1) !important;
+    height: 360px !important; /* ✅ 높이 수정 */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+/* ✅ 차트 제목 스타일 */
+.tour-chart-wrapper {
+    width: 370px;
+    margin-top: 10px;
+    font-size: 16px;
+    padding: auto;
+} 
+.tour-chart-wrapper h2{
+   font-size: 20px;
+   font-family: 'Caveat', sans-serif;
+} 
+
+/* ✅ 랜덤 추천 여행지 스타일 */
+.tour-recommendation {
+    flex: 1 !important;
+    font-family: 'Caveat', sans-serif;
+    text-align: center !important;
+    background: white !important;
+    padding: 15px !important;
+    border-radius: 12px !important;
+    height: 380px !important; /* ✅ 차트와 동일한 높이 설정 */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15) !important;
+    transition: transform 0.3s ease-in-out !important;
+}
+
+.tour-recommendation:hover {
+    transform: translateY(-5px) !important;
+}
+.tour-destination{
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+
+.tour-recommendation .tour-destination:hover {
+    transform: scale(1.05) !important;
+}
+
+/* ✅ 랜덤 추천 여행지 텍스트 */
+.tour-recommendation .tour-text {
+    font-size: 14px !important; /* ✅ 글씨 크기 줄임 */
+    font-weight: 500 !important;
+    color: #555 !important;
+    margin-top: 5px !important;
+}
+
+/* ✅ 추천 여행지 타이틀 */
+.tour-recommendation h3 {
+    font-size: 18px !important; /* ✅ 크기 조정 */
+    font-weight: 700 !important;
+    margin-bottom: 30px !important;
+}
+
+/* ✅ 추천 여행지 이름 스타일 */
+.tour-recommendation .tour-place {
+    font-size: 16px !important;
+    font-weight: bold !important;
+    color: #ffffff !important;
+    margin-top: 5px !important;
+}
+
+.tour-review-p{
+    margin-bottom: 0em !important;
+}
+
+.TourList-block-27 ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.TourList-block-27 ul li {
+    margin: 0 3px;
+}
+
+.TourList-block-27 ul li button {
+    border: 1px solid #fdd3d3;
+    background: white;
+    color: #f85959;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+}
+
+.TourList-block-27 ul li.active button {
+    background: #fdd3d3;
+    color: #f85959;
+    font-weight: bold;
+}
