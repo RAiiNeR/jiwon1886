@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="kr.co.noorigun.comple.CompleReplyDao">
+
+    <!-- COMPLE_REPLY 데이터 삭제 -->
+    <delete id="deleteCompleReplyByBoardNum" parameterType="long">
+        DELETE FROM comple_reply
+        WHERE cbnum = #{cbnum}
+    </delete>
+
+ <!-- 답변 추가 -->
+    <insert id="addReply" parameterType="map">
+    INSERT INTO comple_reply (reply_id, cbnum, content, deptno, reply_date)
+    VALUES (
+        comple_reply_seq.NEXTVAL,
+        #{cbnum},
+        #{content},
+        #{deptno},
+        DEFAULT
+    )
+</insert>
+
+    <!-- 특정 게시글의 답변 조회 -->
+    <select id="getRepliesByBoardId" resultType="map" parameterType="Long">
+    SELECT 
+        reply_id AS replyId, 
+        DBMS_LOB.SUBSTR(content, 4000, 1) AS content, 
+        deptno AS deptNo, 
+        TO_CHAR(reply_date, 'YYYY-MM-DD HH24:MI:SS') AS replyDate
+    FROM comple_reply
+    WHERE cbnum = #{cbnum}
+</select>
+
+</mapper>

@@ -1,0 +1,87 @@
+/* 댓글 섹션 컨테이너 스타일 */
+.QnAC {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 댓글 섹션 제목 스타일 */
+  .QnAC-heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #003a6f;
+    margin-bottom: 1rem;
+  }
+  
+  /* 폼 스타일 */
+  .QnAC-form-group {
+    margin-bottom: 1.2rem;
+  }
+  
+  .QnAC-form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  .QnAC-form-control:focus {
+    border-color: #003a6f; /* 포커스 시 파란색 테두리 */
+    outline: none;
+  }
+  
+  /* 댓글 등록 버튼 스타일 */
+  .QnAC-btn {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: none;
+  }
+  
+  .QnAC-btn-primary {
+    background-color: #003a6f;
+    color: white;
+  }
+  
+  .QnAC-btn-primary:hover {
+    background-color: #00284d;
+  }
+  
+  /* 리스트 스타일 */
+  .QnAC-list-group {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 2rem;
+  }
+  
+  .QnAC-list-group-item {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+  }
+  
+  .QnAC-text-muted {
+    color: #888;
+  }
+  
+  /* 반응형 디자인 */
+  @media (max-width: 768px) {
+    .QnAC-form-control {
+      font-size: 0.9rem;
+    }
+  
+    .QnAC-btn {
+      width: 100%;
+      font-size: 1rem;
+    }
+  }

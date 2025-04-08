@@ -1,0 +1,89 @@
+.post-form {
+  max-width: 600px; /* 너비를 약간 늘림 */
+  margin: 50px auto; /* 화면 중앙에 정렬 */
+  padding: 20px;
+  background-color: #f0f8ff; /* 연한 파란색 배경 */
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center; /* 가운데 정렬 */
+}
+
+.post-form h2 {
+  color: #333; /* 제목 파란색 */
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* 각 입력칸 그룹 */
+.form-group {
+  margin-bottom: 20px; /* 각 그룹 간격을 넓힘 */
+  text-align: left; /* 라벨과 입력 칸을 왼쪽 정렬 */
+}
+
+/* 라벨 스타일 */
+.post-form label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* input, textarea 스타일 */
+.post-form input,
+.post-form textarea {
+  width: 100%;
+  padding: 12px; /* padding을 늘려서 공간 확보 */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-sizing: border-box; /* padding이 요소의 크기 안에 포함되도록 */
+}
+
+.post-form textarea {
+  height: 200px; /* 내용 입력란 크기를 키움 */
+}
+
+/* 제출 버튼 스타일 */
+.post-form button.submit-btn {
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 8px 17px;
+  font-size: 16px;
+  background-color: #003a6f; /* 파란색 버튼 */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.post-form button.submit-btn:hover {
+  background-color: #0056b3; /* 호버 시 짙은 파란색 */
+}
+.form-img{
+text-align: left;
+}
+
+/* 에러 메시지 스타일 */
+.post-form .error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.FBF-form-content{
+  width: 100%;
+  height: 6.25em;
+  border: none;
+  resize: none;
+}
+
+.FBF-form-letter {
+  text-align: left;
+  position: relative;
+  top: -0.5cm;
+}

@@ -1,0 +1,496 @@
+/* 리스트 전체 */
+.admin-complelist {
+  min-width: 720px;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 3px 3px 5px 3px #ccc;
+}
+
+.admin-complelist h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.admin-complelist-search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.admin-complelist-search-type-wrapper {
+  position: relative;
+}
+
+.admin-complelist-search-type,
+.admin-complelist-state-dropdown,
+.admin-complelist-dept-dropdown {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.admin-complelist-search-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.admin-complelist-search-button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.admin-complelist-search-button:hover {
+  background-color: #0056b3;
+}
+
+.admin-complelist table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.admin-complelist th,
+.admin-complelist td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.admin-complelist th {
+  background-color: #003a6f;
+  color: white;
+}
+
+.admin-complelist-title-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.admin-complelist-title-button:hover {
+  color: #0056b3;
+}
+
+.admin-complelist-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.admin-complelist-pagination button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.admin-complelist-pagination button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.admin-complelist-pagination button:hover:not(.active) {
+  background-color: #e0e0e0;
+}
+
+.admin-complelist-pagination button:disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+/*디테일*/
+.admin-comple-detail {
+  min-width: 720px;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 3px 3px 5px 3px #ccc;
+}
+
+.admin-comple-detail h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.admin-comple-detail .detail-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.admin-comple-detail .detail-container .detail-meta {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.admin-comple-detail .detail-container .detail-meta p {
+  margin: 5px 0;
+  width: 50%; /* 한 줄에 두 개씩 배치 */
+  font-size: 16px;
+}
+
+.admin-comple-detail .detail-container .content-box {
+  flex: 2;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.admin-comple-detail .image-preview-container {
+  margin-top: 20px;
+}
+
+.admin-comple-detail .image-gallery {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.admin-comple-detail .detail-image {
+  width: 150px;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/*답변*/
+.admin-comple-detail .reply-section {
+  margin-top: 20px;
+}
+
+.admin-comple-detail .reply-section h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.admin-comple-detail .reply-section .reply-item {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+}
+
+.admin-comple-detail .reply-section .reply-item p {
+  margin: 0;
+}
+
+.admin-comple-detail .reply-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-comple-detail .reply-form textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+  overflow-y: auto;
+}
+
+.admin-comple-detail .reply-form button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.admin-comple-detail .reply-form button:hover {
+  background-color: #0056b3;
+}
+
+.admin-comple-detail .action-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.admin-comple-detail .action-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.admin-comple-detail .action-buttons .edit-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.admin-comple-detail .action-buttons .delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}
+
+.admin-comple-detail .action-buttons .list-btn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+}
+
+.admin-comple-detail .action-buttons button:hover {
+  opacity: 0.9;
+}
+
+/*수정*/
+.admin-comple-background{
+  padding: 50px;
+}
+
+.admin-comple-edit {
+  min-width: 720px;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 3px 3px 5px 3px #ccc;
+}
+
+.admin-comple-edit h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.admin-comple-edit .form-group {
+  margin-bottom: 15px;
+}
+
+.admin-comple-edit .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.admin-comple-edit .form-group div {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 16px;
+}
+
+.admin-comple-edit form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.admin-comple-edit form div:last-child {
+  display: flex;
+  justify-content: end;
+  
+  >button{
+    margin-right: 10px;
+  }
+
+  >a{
+    line-height: 30px;
+  }
+}
+
+.admin-comple-edit select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.admin-comple-edit button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.admin-comple-edit button:hover {
+  background-color: #0056b3;
+}
+
+
+/*댓글*/
+.ccomm {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.ccomm-toggle {
+  margin-bottom: 10px;
+}
+
+.ccomm-toggle-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+}
+
+.ccomm-list {
+  margin-top: 20px;
+}
+
+.ccomm-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+/* 댓글 영역 */
+.ccomm-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px; /* 버튼 간 간격을 좁게 설정 */
+  margin-top: 10px; /* 상단 여백 */
+}
+
+.ccomm-pagination button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.ccomm-pagination button:disabled {
+  background-color: #e0e0e0;
+  color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.ccomm-pagination button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.ccomm-pagination .ccomm-page-number.active {
+  background-color: #0056b3;
+  color: white;
+  font-weight: bold;
+  border-color: #004085;
+}
+
+.ccomm-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ccomm-pagination .active-page {
+  background-color: #007bff;
+  color: white;
+}
+.ccomm-pagination button {
+  margin: 0 5px;
+}
+
+.ccomm-textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+  overflow-y: auto;
+}
+
+.ccomm-submit-btn {
+  align-self: flex-end;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ccomm-controls {
+  display: flex;
+  justify-content: flex-end; /* 오른쪽 정렬 */
+  align-items: center;
+  gap: 10px; /* 버튼과 체크박스 사이 간격 */
+  margin-bottom: 10px;
+}
+
+.ccomm-select-all {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ccomm-delete-btn {
+  padding: 8px 16px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.ccomm-delete-btn:hover {
+  background-color: #a71d2a;
+}

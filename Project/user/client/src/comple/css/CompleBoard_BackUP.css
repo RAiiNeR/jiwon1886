@@ -1,0 +1,610 @@
+/* Default styles for CompleBoardList */
+.complelist * {
+  padding: 0;
+  margin: 0;
+  transition: 0.1s;
+}
+
+.complelist ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.complelist p {
+  padding: 0;
+  margin: 0;
+}
+
+/* CompleList CSS */
+.complelist .my-container {
+  padding: 0 20px;
+}
+
+.complelist h2 {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.complelist .table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+.complelist tr {
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.complelist th,
+.complelist td {
+  padding: 12px 0;
+  font-size: 16px;
+  word-break: keep-all;
+}
+
+.complelist td {
+  text-decoration: none;
+  color: #000;
+}
+
+.complelist thead {
+  background-color: #003a6f;
+  color: #fff;
+  border: 1px solid #1280e0;
+}
+
+.complelist tbody>tr:hover {
+  background-color: #f6f6f6;
+  cursor: pointer;
+}
+
+.complelist td.title a {
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.complelist td.title {
+  text-align: left;
+  overflow: hidden;
+}
+
+.complelist tbody tr td:nth-last-child(2) {
+  color: #1280e0;
+  font-weight: 600;
+}
+
+.complelist .invisible {
+  display: none;
+}
+
+.complelist .btn-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* 테이블 컬럼 너비 */
+.complelist .num {
+  min-width: 80px;
+}
+
+.complelist .title {
+  width: 100%;
+}
+
+.complelist .writer {
+  min-width: 120px;
+  
+}
+
+.complelist .date {
+  min-width: 120px;
+}
+
+.complelist .state {
+  min-width: 120px;
+}
+
+/* 반응형 디자인 */
+@media only screen and (min-width: 650px) and (max-width: 1200px) {
+  /* 필요에 따라 스타일 추가 */
+}
+
+/* 글쓰기 버튼 */
+.complelist .write-button {
+  align-self: flex-end;
+  margin-right: 10px;
+  background-color: rgb(0, 58, 111);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* 검색 영역 스타일 */
+.complelist .search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.complelist .search-option,
+.complelist .search-input,
+.complelist .search-button {
+  height: 30px;
+  padding: 0 10px;
+  margin-right: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* 타이틀 높이 조정 */
+.complelist .table th.title {
+  height: auto;
+  padding: 10px;
+}
+
+.complelist .table .title {
+  padding: 8px 12px;
+  line-height: 1.5;
+}
+
+/* 페이지 네비게이션 스타일 */
+.complelist .pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.complelist .page-item {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.complelist .page-item .page-link {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.complelist .page-item.active .page-link {
+  background-color: #003a6f;
+  color: #fff;
+  border-color: #003a6f;
+}
+
+/* 민원 신청 버튼 */
+.complelist .apply-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #003a6f;
+  color: #fff;
+  border-radius: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 민원 신청 버튼 호버 효과 */
+.complelist .apply-button:hover {
+  background-color: #005999;
+}
+
+.complepass-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.complepass-modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+}
+
+.complepass-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.complepass-modal-title {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.complepass-input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.complepass-error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.complepass-modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.complepass-cancel-button {
+  padding: 10px 20px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.complepass-confirm-button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.complepass-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.complepass-table th,
+.complepass-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.complepass-table tr:hover {
+  background-color: #f6f6f6;
+  cursor: pointer;
+}
+
+.comple-form {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comple-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.comple-form label {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.comple-form input[type="text"],
+.comple-form input[type="password"],
+.comple-form input[type="file"],
+.comple-form input[type="radio"] {
+  padding: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.comple-form input[type="radio"] {
+  width: auto;
+  margin-right: 5px;
+}
+
+.comple-form button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.comple-form button:hover {
+  background-color: #0056b3;
+}
+
+.comple-form button[type="button"] {
+  background-color: #6c757d;
+  margin-left: 10px;
+}
+
+.comple-form button[type="button"]:hover {
+  background-color: #5a6268;
+}
+
+.comple-form .preview-images {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.comple-form .preview-images img {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* 댓글 영역 */
+.ccomm-container {
+  margin-top: 20px;
+}
+
+.ccomm-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.ccomm-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.ccomm-form input[type="text"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.ccomm-form button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.ccomm-form button:hover {
+  background-color: #0056b3;
+}
+
+.ccomm-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ccomm-list li {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.ccomm-list .ccomm-writer {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.ccomm-list .ccomm-comment {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.ccomm-list .ccomm-date {
+  font-size: 12px;
+  color: gray;
+}
+
+/* 디테일 */
+.comple-detail {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 헤더 부분 */
+.comple-detail .detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ddd;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.comple-detail .detail-header h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.comple-detail .detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  /* 항목 간격 */
+  font-size: 14px;
+  color: #555;
+}
+
+.comple-detail .detail-meta span {
+  margin-right: 10px;
+}
+
+.comple-detail .detail-meta span strong {
+  font-weight: bold;
+  color: #333;
+}
+
+/* 본문 내용 */
+.comple-detail .detail-content {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.comple-detail .detail-content img {
+  display: inline-block;
+  margin: 10px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.comple-detail p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.state-image img {
+  border: none !important;
+}
+
+.comple-detail img {
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.comple-detail a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.comple-detail a:hover {
+  background-color: #0056b3;
+}
+
+/* 버튼 섹션 */
+.comple-detail .action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 버튼의 수직 정렬을 보장 */
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.comple-detail .action-buttons a,
+.comple-detail .action-buttons button {
+  height: 40px; /* 버튼 높이 고정 */
+  width: 100px; /* 버튼 너비 고정 */
+  display: flex; /* 내부 텍스트 정렬을 위한 flex 사용 */
+  align-items: center; /* 텍스트 수직 중앙 정렬 */
+  justify-content: center; /* 텍스트 수평 중앙 정렬 */
+  font-size: 14px; /* 텍스트 크기 통일 */
+  font-weight: 500; /* 텍스트 두께 통일 */
+  line-height: 1; /* 라인 높이 통일 */
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box; /* 박스 크기 계산 포함 */
+  margin: 0; /* 마진 초기화 */
+}
+
+.comple-detail .action-buttons .list-btn {
+  background-color: #007bff;
+}
+
+.comple-detail .action-buttons .edit-btn {
+  background-color: #4caf50;
+}
+
+.comple-detail .action-buttons .delete-btn {
+  background-color: #f44336;
+}
+
+/* Hover 효과 */
+.comple-detail .action-buttons a:hover,
+.comple-detail .action-buttons button:hover {
+  filter: brightness(0.85);
+}
+
+/* 댓글 수 스타일 */
+.comment-count {
+  font-size: 15px;
+  /* 제목보다 작은 글씨 크기 */
+  color: #e45a23;
+  /* 연한 회색으로 표시 */
+  margin-left: 5px;
+  /* 제목과 댓글 수 사이 간격 */
+  padding: 2px 6px;
+  /* 패딩 추가 */
+  display: inline-block;
+  /* 인라인 박스로 표시 */
+}
+ /* Form content css 추가 */
+.comple-content{
+  width: 100%;
+  height: 10em;
+  /* border: none; */
+  resize: none;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

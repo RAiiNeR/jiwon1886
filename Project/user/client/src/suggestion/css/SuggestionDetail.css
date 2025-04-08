@@ -1,0 +1,252 @@
+/* 전체 콘텐츠 컨테이너 */
+.suggestiondetailform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+
+  /* 메인 컨테이너 */
+  .suggestiondetail {
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+  }
+
+  /* 제목 영역 중앙정렬 */
+  .process {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .suggestiondetail h3 {
+    font-size: 1.8rem;
+    color: #0066cc;
+    /* 파란색 */
+    margin-bottom: 1rem;
+  }
+
+  /* 제목과 본문 내용 스타일 */
+  .suggestiondetail .post-content {
+    margin-bottom: 2rem;
+  }
+
+  .suggestiondetail hr.divider {
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+  }
+
+  /* 게시물 정보 */
+  .suggestiondetail .post-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.8rem;
+  }
+
+  .suggestiondetail .post-content img {
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    max-width: 100%;
+  }
+
+  /* 버튼 그룹 스타일링 */
+  .btn-group {
+    display: flex;
+    /* 버튼들을 나란히 배치 */
+    justify-content: flex-start;
+    gap: 10px;
+    /* 버튼 사이 여백 */
+    margin: 1rem 0;
+  }
+
+  /* 리스트 버튼 스타일링 */
+  .list-btn {
+    background-color: #0066cc;
+    /* 파란색 배경 */
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    /* 링크 기본 밑줄 제거 */
+  }
+
+  .list-btn:hover {
+    background-color: #004080;
+  }
+
+  /* 삭제 버튼 스타일링 */
+  .delete-btn {
+    background-color: #e74c3c;
+    /* 붉은색 배경 */
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .delete-btn:hover {
+    background-color: #c0392b;
+  }
+
+  /* 등록 버튼 스타일링 */
+  .submit-btn {
+    background-color: #0066cc;
+    /* 파란색 배경 */
+    color: #fff;
+    /* 글자색 흰색 */
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .submit-btn:hover {
+    background-color: #004080;
+    /* 마우스 호버 시 어두운 파란색 */
+  }
+
+
+  /* 댓글 폼 스타일링 */
+  .comment-form {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+
+  .comment-form h3 {
+    color: #0066cc;
+    /* 파란색 */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .comment-form .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .comment-form label {
+    font-weight: bold;
+    display: block;
+    color: #444;
+    margin-bottom: 0.5rem;
+  }
+
+  .comment-form input,
+  .comment-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 1rem;
+    color: #333;
+  }
+
+  .comment-form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .comment-form input:focus,
+  .comment-form textarea:focus {
+    outline: none;
+    border-color: #0066cc;
+    background-color: #f9f9f9;
+  }
+
+  /* 댓글 목록 스타일링 */
+  .comments-list {
+    margin-top: 2rem;
+  }
+
+  .comments-list h3 {
+    color: #0066cc;
+    /* 파란색 */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .comment-item {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+
+  .comment-item p {
+    color: #444;
+    font-size: 1rem;
+  }
+
+  .comment-item strong {
+    color: #0066cc;
+  }
+
+  /* 댓글이 없을 경우 메시지 */
+  .comments-list p {
+    color: #888;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  /* 제안의 발자취 스타일 */
+  .btn-primary {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    position: relative;
+    transform: translateY(-9px);
+  }
+
+  /* 역삼각형을 추가하기 위한 ::before */
+  .btn-primary::before {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    /* 버튼 아래에 위치 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #0066cc;
+    /* 역삼각형 색상 */
+  }
+
+  .btn-primary:hover {
+    background-color: #004080;
+  }
+
+}

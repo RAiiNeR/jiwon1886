@@ -1,0 +1,179 @@
+/* 전체적인 배경과 글꼴 설정 */
+/* body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+} */
+
+/* 제안 목록 페이지 스타일 */
+.suggestionlist {
+  width: 90%;
+  margin: 20px auto;
+  /* margin-top: 20px; */
+  padding: 20px 0;
+}
+
+/* 제목 */
+.suggestionlist h2 {
+  font-weight: 600;
+  color: #333; /* Q&A 색상에 맞춤 */
+  text-align: center;
+  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
+  font-size: 2.0rem;
+}
+
+/* 검색 입력 */
+.suggestionlist input {
+  width: 60%;
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.suggestionlist input:focus {
+  border-color: #003a6f;
+}
+
+/* 검색 버튼 */
+.suggestionlist .search {
+  padding: 10px 15px;
+  background-color: #003a6f; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 80px;
+}
+
+.suggestionlist .search:hover {
+  background-color: #00284d;
+  color: white;
+}
+
+/* 테이블 */
+.suggestion-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-table th, .suggestion-table td {
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.suggestion-table th {
+  background-color: #003a6f; 
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.suggestion-table td {
+  background-color: #f9f9f9; /* 테이블의 기본 배경색 */
+}
+
+.suggestion-table tr:nth-child(even) td {
+  background-color: #f2f2f2; /* 짝수 행 배경색 */
+}
+
+.suggestion-table tr:hover {
+  background-color: #f1f1f1; /* 마우스 호버 효과 */
+}
+
+/* 이미지 스타일 */
+.suggestion-table img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* 페이지 네비게이션 */
+.suggestionlist .pagination {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.suggestionlist .pagination .page-item {
+  margin: 0 5px;
+}
+
+.suggestionlist .pagination .page-link {
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #003a6f; 
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.suggestionlist .pagination .page-link:hover {
+  background-color: #f1f1f1;
+}
+
+.suggestionlist .pagination .page-item.active .page-link {
+  background-color: #003a6f;
+  color: white;
+  border-color: #003a6f;
+}
+
+.suggestionlist .pagination .page-item.disabled .page-link {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/* 제안하기 버튼 */
+.suggestion-table tfoot {
+  text-align: center;
+}
+
+.suggestion-table .btn-primary {
+  padding: 10px 15px;
+  background-color: #003a6f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.suggestion-table .btn-primary:hover {
+  background-color: #00284d; 
+  color: #fff;
+}
+
+/* 추가적인 레이아웃 조정 */
+.suggestionlist .mb-4 {
+  margin-bottom: 20px;
+}
+
+.suggestionlist .d-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.suggestionlist .mt-4 {
+  margin-top: 30px;
+}
+
+.suggestionlist .btn-box {
+  text-align: center;
+}

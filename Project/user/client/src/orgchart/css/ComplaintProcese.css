@@ -1,0 +1,149 @@
+/* ComplaintProcese 영역 */
+.complaint {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    /* 전체 배경 및 텍스트 색상 설정 */
+    font-family: Arial, sans-serif;
+    background-color: #f1f9ff;
+    color: #333;
+    overflow: auto;
+  
+    /* 제목 스타일 */
+    #content-title,
+    .title {
+      font-size: 24px;
+      color: #0044cc;
+      margin: 15px 0;
+    }
+  
+    .cuty {
+      display: flex;
+      gap: 20px;
+      justify-content: flex-start;
+      /* 왼쪽 정렬 */
+      flex-wrap: wrap;
+      /* 화면 크기에 맞춰 항목들이 줄바꿈되도록 설정 */
+    }
+  
+    /* 각 항목에 대한 스타일 */
+    .cuty .item {
+      background-color: #67d4f5;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      /* 둥근 모서리 */
+      width: 250px;
+      height: 100px;
+      /* 각 항목의 높이를 고정 */
+      text-align: center;
+      /* 텍스트를 가운데 정렬 */
+      display: flex;
+      /* Flexbox로 아이템을 배치 */
+      flex-direction: column;
+      /* 번호와 제목을 세로로 정렬 */
+      justify-content: center;
+      /* 텍스트가 세로로 중앙 정렬 */
+      align-items: center;
+      /* 텍스트가 가로로 중앙 정렬 */
+    }
+  
+    .cuty ul {
+      list-style-type: none;
+      /* 리스트 점을 없앰 */
+      padding-left: 0;
+    }
+  
+    /* 항목 설명 */
+    .item {
+      display: flex;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: #555;
+    }
+  
+    /* 번호 리스트 */
+    .mtitle {
+      font-size: 20px;
+      color: #0066cc;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+  
+    /* 목록 스타일 */
+    ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+  
+    li {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  
+    .num {
+      font-weight: bold;
+      color: #003366;
+    }
+  
+    .tit {
+      font-weight: bold;
+      color: #0066cc;
+    }
+  
+    /* 담당 부서 정보 */
+    .admin_info {
+      background-color: #e0f1ff;
+      border-radius: 8px;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  
+    .admin_info h3 {
+      font-size: 20px;
+      color: #003366;
+    }
+  
+    .admin_info ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+  
+    .admin_info ul li {
+      font-size: 16px;
+      color: #333;
+    }
+  
+    /* 이미지 스타일 */
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+  
+    /* 스크롤을 위한 스타일 */
+    .content {
+      max-height: 400px;
+      /* 내용이 많을 경우 스크롤을 적용 */
+      overflow-y: auto;
+      padding-right: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+  
+    .content::-webkit-scrollbar {
+      width: 10px;
+    }
+  
+    .content::-webkit-scrollbar-thumb {
+      background-color: #0066cc;
+      border-radius: 10px;
+    }
+  
+    .content::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+  }

@@ -1,0 +1,205 @@
+.compleChart {
+    /********************* Defualt Style *********************/
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    p {
+        margin-bottom: 30px;
+    }
+
+    button {
+        transition: 0.3s;
+        border: 1px solid #003a6f;
+        width: 100px;
+        height: 30px;
+        background-color: #fff;
+        color: #003a6f;
+        border-radius: 10px;
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: #003a6f;
+        color: #fff;
+    }
+
+
+    /********************* Table Style *********************/
+    table {
+        width: 1140px;
+        margin: auto;
+        text-align: center;
+        border-collapse: collapse;
+    }
+
+    tr {
+        border-bottom: 1px solid #ccc;
+    }
+
+    tr th:first-child {
+        border-bottom: none;
+    }
+
+    table.chart-tt thead tr th {
+        padding: 20px 0;
+    }
+
+    th {
+        padding: 15px 0;
+        background-color: #003a6f;
+        color: #fff;
+    }
+
+    td {
+        padding: 15px 0;
+    }
+
+    th,
+    td {
+        border-right: 1px solid #ccc;
+    }
+
+    th:last-child,
+    td:last-child {
+        border-right: none
+    }
+
+    th.dname,
+    td.dname {
+        width: 20%;
+    }
+
+    th.present,
+    td.present {
+        width: 20%;
+    }
+
+
+    /********************* Chart.tsx Style *********************/
+
+    .chart-container {
+        /* 부모 컨테이너 */
+        padding: 0 30px;
+    }
+
+    .tb-container {
+        /* 테이블 컨테이너 */
+        margin-top: 40px;
+    }
+
+    .tb-container h2 {
+        margin-bottom: 20px;
+    }
+
+    /********************* ChartData.tsx Style *********************/
+    .chartbox {
+        width: 400px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .inner {
+        z-index: 1;
+        ;
+        border: 1px solid #1b5e9c;
+        border-radius: 4px;
+        max-width: 1200px;
+        margin: 65px auto;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .left {
+        width: 20%;
+        background-color: #def4ff;
+        padding: 40px 30px;
+    }
+
+    .left-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-box h2 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 22px;
+        background-color: #003a6f;
+        padding: 7px 20px;
+        box-sizing: border-box;
+        border-radius: 50px;
+    }
+
+    .left-box strong {
+        font-size: 36px;
+        color: #003a6f;
+    }
+
+    .left-box strong>span {
+        color: #333;
+        font-size: 20px;
+    }
+
+    .right {
+        padding: 40px 30px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .right .text {
+        margin-left: 15px;
+    }
+
+    .right .text h2 {
+        font-size: 28px;
+        margin-bottom: 12px;
+        color: #333;
+    }
+
+    .right .text p {
+        color: #555;
+        font-size: 16px;
+    }
+
+    .right .img-box {
+        position: absolute;
+        width: 600px;
+        bottom: 70%;
+        right: -120px;
+        z-index: 0;
+    }
+
+    .right .img-box img {
+        position: absolute;
+        width: 100%;
+    }
+
+    .btn-box {
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn-box>button {
+        width: 200px;
+        height: 50px;
+        border-radius: 50px;
+    }
+
+    .btn-box>button:hover .li-back {
+        color: #fff;
+    }
+
+    .li-back {
+        color: #003a6f;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    /* 메인컬러 : 003a6f / 63b4ff */
+}

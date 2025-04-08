@@ -1,0 +1,56 @@
+ .surveyAddForm {
+  padding: 50px;
+
+   #container2 {
+    width: 80%;
+    max-width: 1200px;
+    min-width: 720px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 3px 4px 10px #ccc;
+   }
+
+   table {
+     border-collapse: collapse;
+     width: 100%;
+   }
+
+   th {
+     background-color: #004fa3;
+     color: white;
+   }
+
+   tbody img {
+     width: 100px;
+   }
+
+   th,
+   td {
+     padding: 8px;
+     text-align: left;
+     border-bottom: 1px solid #ddd;
+   }
+
+   tr:hover {
+     background: #757473;
+   }
+
+   input[type="text"],
+   input[type="number"] {
+     width: 100%;
+     padding: 5px;
+     box-sizing: border-box;
+   }
+
+   button {
+     margin: 0 10px;
+   }
+
+   tfoot th {
+     text-align: center;
+     background-color: white;
+     border: none;
+   }
+ }

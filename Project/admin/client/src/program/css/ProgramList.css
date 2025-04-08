@@ -1,0 +1,209 @@
+/* 기본 설정 */
+.ProgramList {
+  padding: 40px;
+  background-color: #f4f4f9;
+  font-family: 'Roboto', sans-serif;
+  max-width: 1300px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* 검색 바 */
+.ProgramList .search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.ProgramList .search-container select,
+.ProgramList .search-container input,
+.ProgramList .search-container button {
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.ProgramList .search-container select {
+  background-color: #ffffff;
+  width: 200px;
+}
+
+.ProgramList .search-container input {
+  width: 250px;
+  margin-right: 10px;
+}
+
+.ProgramList .search-container button {
+  background-color: #003a6f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  min-width: 120px;
+  transition: background-color 0.3s;
+}
+
+.ProgramList .search-container button:hover {
+  background-color: #2563eb;
+}
+
+/* 테이블 스타일 */
+.ProgramList .table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.ProgramList .table th,
+.ProgramList .table td {
+  padding: 18px 22px;
+  text-align: center;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.ProgramList .table th {
+  background-color: #003a6f;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ProgramList .table td {
+  font-size: 14px;
+  color: #555555;
+}
+
+.ProgramList .table td a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.ProgramList .table td a:hover {
+  text-decoration: underline;
+}
+
+/* 체크박스 */
+.ProgramList input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+/* 액션 버튼 */
+.ProgramList .action-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.ProgramList .action-buttons .btn {
+  padding: 14px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.ProgramList .action-buttons .btn-success {
+  background-color: #10b981;
+  color: white;
+  border: none;
+}
+
+.ProgramList .action-buttons .btn-danger {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+}
+
+.ProgramList .action-buttons .btn-success:hover {
+  background-color: #059669;
+}
+
+.ProgramList .action-buttons .btn-danger:hover {
+  background-color: #dc2626;
+}
+
+/* 페이징 스타일 */
+.ProgramList .pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+  list-style: none;
+}
+
+.ProgramList .pagination li {
+  margin: 0;
+}
+
+.ProgramList .pagination li button {
+  background-color: #f4f4f9;
+  border: 1px solid #ddd;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.ProgramList .pagination li button:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.ProgramList .pagination li.active button {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.ProgramList .pagination li button:focus {
+  outline: none;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .ProgramList .search-container {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .ProgramList .search-container select,
+  .ProgramList .search-container input,
+  .ProgramList .search-container button {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  .ProgramList .action-buttons {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .ProgramList .table th, .ProgramList .table td {
+      padding: 12px 15px;
+      font-size: 13px;
+  }
+
+  .ProgramList .pagination {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .ProgramList .pagination li {
+      margin: 5px 0;
+  }
+}

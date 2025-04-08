@@ -1,0 +1,161 @@
+/* 기본 배경색, 텍스트 색상 설정 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+  }
+  
+  /* EDEquipmentDetail 클래스의 스타일 */
+  .EDEquipmentDetail {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* 상단 헤더, 제목 */
+  .EDtitle-section {
+    color: #003A6F;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* 게시글 내용 */
+  .EDpost-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    line-height: 1.6; 
+  }
+  
+  .EDpost-content p {
+    font-size: 16px;
+    margin-bottom: 15px; 
+  }
+  
+  /* 이미지 스타일 */
+  .EDstyled-image {
+    border-radius: 8px;
+    margin: 10px;
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+  }
+  
+  /* 상태 정보 */
+  .EDinfo-left, .EDinfo-right {
+    font-size: 16px;
+    font-weight: normal;
+    margin-right: 25%;
+    display: inline-block;
+  }
+  
+  .EDinfo-left {
+    margin-right: 60px; 
+  }
+  
+  /* 첨부파일 */
+  .EDpost-content a {
+    color: #003A6F;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .EDpost-content a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 대여 정보 */
+  .EDpost-content h3 {
+    color: #003A6F;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  /* 대여 리스트 */
+  .EDpost-content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  .EDpost-content li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  /* 상태 선택 라디오 버튼 */
+  .EDstate-selector {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  .EDstate-selector label {
+    margin-right: 20px;
+    font-weight: normal;
+  }
+  
+  .EDstate-selector input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  /* 버튼 스타일 */
+  .EDbutton-container {
+    display: flex;
+    justify-content: space-between; 
+    gap: 15px; 
+    margin-top: 20px;
+  }
+  
+  .EDbtn, .EDmain-button {
+    background-color: #003A6F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    flex: 1; 
+  }
+  
+  .EDbtn:hover, .EDmain-button:hover {
+    background-color: #002a57;
+  }
+  
+  /* 이전글 / 다음글 네비게이션 */
+  .EDnav-item {
+    margin-top: 10px;
+  }
+  
+  .EDnav-item a {
+    color: #003A6F;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .EDnav-item a:hover {
+    text-decoration: underline;
+  }
+  
+  .EDnav-item span {
+    color: #555;
+    font-size: 14px;
+  }
+  
+  /* 링크 스타일 */
+  .EDEquipmentDetail a {
+    color: #003A6F;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  
+  .EDEquipmentDetail a:hover {
+    text-decoration: underline;
+  }
+  

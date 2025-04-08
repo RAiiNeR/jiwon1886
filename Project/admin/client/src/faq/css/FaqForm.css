@@ -1,0 +1,84 @@
+/* FaqForm 스타일 */
+.FaqForm {
+  max-width: 1200px;
+  width: 80%;
+  min-width: 720px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 제목 스타일 */
+.FaqForm h3 {
+  text-align: center;
+  color: #003A6F;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* 폼 그룹 스타일 */
+.FaqForm .form-group {
+  margin-bottom: 15px;
+}
+
+/* 레이블 스타일 */
+.FaqForm label {
+  font-size: 1rem;
+  color: #003A6F;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* 입력 필드 스타일 */
+.FaqForm input[type="text"],
+.FaqForm textarea,
+.FaqForm select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* 입력 필드에 포커스가 있을 때 */
+.FaqForm input[type="text"]:focus,
+.FaqForm textarea:focus,
+.FaqForm select:focus {
+  border-color: #003A6F;
+  outline: none;
+}
+
+/* 텍스트 영역 스타일 */
+.FaqForm textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* 버튼 스타일 */
+.FaqForm button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #003A6F;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.FaqForm button:hover {
+  background-color: #002c5f;
+}
+
+/* 기본적인 폼 그룹 스타일 */
+.FaqForm .form-group input,
+.FaqForm .form-group select,
+.FaqForm .form-group textarea {
+  margin-top: 5px;
+}
